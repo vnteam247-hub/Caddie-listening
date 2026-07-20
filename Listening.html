@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIẾNG ANH GIAO TIẾP CƠ BẢN CHO CADDIE - LUYỆN NGHE</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; text-align: center; padding: 20px; background-color: #f8f9fa; margin: 0; }
+        .container { max-width: 600px; margin: 0 auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        h1 { color: #1e7e34; font-size: 20px; margin-bottom: 5px; }
+        h2 { color: #555; font-size: 14px; margin-top: 0; margin-bottom: 20px; }
+        
+        #progress { font-size: 15px; color: #6c757d; font-weight: bold; margin-bottom: 10px; }
+        #task-type { font-size: 13px; font-weight: bold; color: #007bff; text-transform: uppercase; letter-spacing: 0.5px; background: #e7f1ff; padding: 6px 12px; border-radius: 12px; display: inline-block; margin-bottom: 15px; }
+        
+        .audio-box { margin: 20px 0; }
+        .btn-audio { background: #17a2b8; color: white; border: none; padding: 14px 24px; font-size: 16px; font-weight: bold; border-radius: 50px; cursor: pointer; box-shadow: 0 4px 8px rgba(23,162,184,0.3); transition: transform 0.1s, background-color 0.2s; }
+        .btn-audio:hover { background-color: #138496; }
+        .btn-audio:active { transform: scale(0.95); }
+        
+        #question-display { font-size: 18px; font-weight: bold; color: #212529; margin: 20px 0; min-height: 50px; display: flex; align-items: center; justify-content: center; line-height: 1.5; }
+        
+        .input-group { margin: 20px 0; }
+        input[type="text"] { width: 85%; padding: 12px; font-size: 16px; border: 2px solid #ced4da; border-radius: 8px; outline: none; text-align: center; box-sizing: border-box; }
+        input[type="text"]:focus { border-color: #17a2b8; }
+        
+        .options-grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 20px 0; }
+        .option-btn { background: #f1f3f5; color: #333; border: 2px solid #e9ecef; padding: 12px 15px; border-radius: 8px; font-size: 15px; font-weight: 500; cursor: pointer; text-align: left; transition: all 0.2s; line-height: 1.4; }
+        .option-btn:hover { background: #e2e6ea; }
+        
+        .btn-group { margin-top: 25px; display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+        button.action-btn { padding: 10px 18px; font-size: 14px; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; }
+        #prev-btn { background: #fd7e14; color: white; }
+        #check-btn { background: #28a745; color: white; }
+        #skip-btn { background: #6c757d; color: white; }
+        
+        #status { font-size: 16px; font-weight: bold; margin-top: 15px; min-height: 24px; }
+        .status-correct { color: #28a745; }
+        .status-incorrect { color: #dc3545; }
+        
+        #item-status { font-size: 13px; font-weight: bold; padding: 4px 10px; border-radius: 20px; display: inline-block; }
+        .status-passed { background-color: #d4edda; color: #155724; }
+        .status-skipped { background-color: #e2e3e5; color: #383d41; }
+        .status-pending { background-color: #fff3cd; color: #856404; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TIẾNG ANH GIAO TIẾP CƠ BẢN CHO CADDIE</h1>
+        <h2>LUYỆN TẬP KỸ NĂNG NGHE (LISTENING PRACTICE)</h2>
+        
+        <div id="progress"></div>
+        <div id="item-status"></div>
+        <br>
+        <div id="task-type"></div>
+        
+        <div class="audio-box">
+            <button class="btn-audio" onclick="playSampleAudio()">🔊 Bấm để nghe âm thanh</button>
+        </div>
+
+        <div id="question-display"></div>
+        <div id="interactive-area"></div>
+
+        <div id="status"></div>
+        
+        <div class="btn-group">
+            <button class="action-btn" id="prev-btn" onclick="goToPrevious()">⏮️ Quay lại</button>
+            <button class="action-btn" id="check-btn" onclick="checkAnswer()">✔️ Kiểm tra</button>
+            <button class="action-btn" id="skip-btn" onclick="markAsSkipped()">⏭️ Bỏ qua</button>
+        </div>
+    </div>
+
+    <script>
+        // Dữ liệu bài tập luyện nghe phân loại theo dạng tác vụ
+        const listeningData = [
+            // Dạng 1: Listen & Type (Nghe & Chép chính tả)
+            { text: "Good morning sir", type: "type" },
+            { text: "Good afternoon madam", type: "type" },
+            { text: "My name is caddie", type: "type" },
+            { text: "I will be your caddie today", type: "type" },
+            { text: "It is a pleasure to serve you", type: "type" },
+
+            // Dạng 2: Listen & Fill in the blank (Nghe & Điền từ thiếu)
+            { text: "Good morning! Are you joining our flight today?", type: "fill", missing: "flight" },
+            { text: "Yes, I am. Hi, I'm Alex. Nice to meet you all!", type: "fill", missing: "meet" },
+            { text: "Nice to meet you! Wish us all a great round today!", type: "fill", missing: "round" },
+            { text: "Thanks! By the way, what’s your index or handicap?", type: "fill", missing: "handicap" },
+            { text: "I’m playing around 18. How about you?", type: "fill", missing: "18" },
+            { text: "I'm a 15. Let's have a good game!", type: "fill", missing: "game" },
+
+            // Dạng 3: Multiple Choice (Nghe & Chọn đáp án đúng)
+            { text: "Whose honor is it?", type: "choice", options: ["Whose honor is it?", "Who is on it?", "Whose owner is it?"] },
+            { text: "You go ahead. After you!", type: "choice", options: ["You go ahead. After you!", "You go head. After you!", "You go away. After you!"] },
+            { text: "Thanks! Mind if I take a practice swing?", type: "choice", options: ["Thanks! Mind if I take a practice swing?", "Thanks! Mind if I take a practice swim?", "Thanks! May I take a practice swing?"] },
+            { text: "Go right ahead. Take your time.", type: "choice", options: ["Go right ahead. Take your time.", "Go right now. Take your time.", "Go write ahead. Take your item."] },
+
+            // Dạng hỗn hợp nâng cao
+            { text: "Great shot! Right down the middle!", type: "fill", missing: "middle" },
+            { text: "Thank you! Lucky shot.", type: "choice", options: ["Thank you! Lucky shot.", "Thank you! Look shot.", "Thank you! Black shot."] },
+            { text: "Would you like me to attend the flag?", type: "fill", missing: "flag" },
+            { text: "No need. You can pull it out. Thanks!", type: "type" },
+            { text: "FORE!", type: "choice", options: ["FORE!", "FOUR!", "FOR!"] },
+
+            { text: "Great game today! Thanks for the wonderful round.", type: "fill", missing: "wonderful" },
+            { text: "I really enjoyed playing with you. How did you shoot?", type: "type" },
+            { text: "Not too bad, 85 today. Let’s grab a drink at the clubhouse!", type: "fill", missing: "clubhouse" },
+            { text: "Sounds great! Here is my business card.", type: "choice", options: ["Sounds great! Here is my business card.", "Sounds good! Here is my busy card.", "Sound great! Here is my business car."] }
+        ];
+
+        let sentenceStatus = new Array(listeningData.length).fill('pending');
+        let currentIndex = 0;
+        let selectedOption = "";
+        let availableVoices = [];
+
+        // Khởi tạo và lọc danh sách giọng đọc tự nhiên (Natural Voices)
+        function initVoices() {
+            if ('speechSynthesis' in window) {
+                availableVoices = window.speechSynthesis.getVoices();
+            }
+        }
+
+        if ('speechSynthesis' in window) {
+            initVoices();
+            window.speechSynthesis.onvoiceschanged = initVoices;
+        }
+
+        function showQuestion() {
+            if (currentIndex < listeningData.length) {
+                const item = listeningData[currentIndex];
+                
+                document.getElementById('progress').innerText = "Câu " + (currentIndex + 1) + "/" + listeningData.length;
+                document.getElementById('status').innerText = "";
+                document.getElementById('status').className = "";
+                selectedOption = "";
+
+                updateStatusTag();
+
+                const taskTypeElem = document.getElementById('task-type');
+                const interactiveArea = document.getElementById('interactive-area');
+                const questionDisplay = document.getElementById('question-display');
+
+                if (item.type === 'type') {
+                    taskTypeElem.innerText = "🎧 Tác vụ 1: Nghe & Chép chính tả (Listen & Type)";
+                    questionDisplay.innerText = "🔊 Bấm nút phát âm thanh và gõ lại chính xác câu bạn nghe được:";
+                    interactiveArea.innerHTML = `<div class="input-group"><input type="text" id="user-input" placeholder="Nhập câu bạn nghe được tại đây..." autocomplete="off"></div>`;
+                } 
+                else if (item.type === 'fill') {
+                    taskTypeElem.innerText = "🎧 Tác vụ 2: Nghe & Điền từ còn thiếu (Fill in the blank)";
+                    let displaySentence = item.text.replace(new RegExp(`\\b${item.missing}\\b`, 'gi'), "_______");
+                    questionDisplay.innerText = displaySentence;
+                    interactiveArea.innerHTML = `<div class="input-group"><input type="text" id="user-input" placeholder="Nhập từ còn thiếu (${item.missing.length} ký tự)..." autocomplete="off"></div>`;
+                } 
+                else if (item.type === 'choice') {
+                    taskTypeElem.innerText = "🎧 Tác vụ 3: Nghe & Chọn đáp án đúng (Multiple Choice)";
+                    questionDisplay.innerText = "🔊 Nghe âm thanh và chọn đáp án chính xác:";
+                    
+                    let optionsHTML = '<div class="options-grid">';
+                    item.options.forEach((opt) => {
+                        optionsHTML += `<button class="option-btn" onclick="selectOption(this, '${opt.replace(/'/g, "\\'")}')">${opt}</button>`;
+                    });
+                    optionsHTML += '</div>';
+                    interactiveArea.innerHTML = optionsHTML;
+                }
+
+                document.getElementById('prev-btn').style.display = (currentIndex === 0) ? 'none' : 'inline-block';
+                document.getElementById('check-btn').style.display = 'inline-block';
+
+                // Tự động phát mẫu sau khi chuyển câu
+                setTimeout(playSampleAudio, 300);
+
+            } else {
+                let finalPassed = sentenceStatus.filter(st => st === 'passed').length;
+                let finalSkipped = sentenceStatus.filter(st => st === 'skipped' || st === 'pending').length;
+
+                document.getElementById('question-display').innerHTML = 
+                    "🎉 Hoàn thành bài luyện nghe!<br><br>" + 
+                    "✅ Đạt: " + finalPassed + "/" + listeningData.length + "<br>" + 
+                    "⏭️ Chưa đạt / Bỏ qua: " + finalSkipped;
+                
+                document.getElementById('task-type').style.display = 'none';
+                document.getElementById('interactive-area').innerHTML = '';
+                document.getElementById('item-status').style.display = 'none';
+                document.getElementById('prev-btn').style.display = 'none';
+                document.getElementById('check-btn').style.display = 'none';
+                document.getElementById('skip-btn').style.display = 'none';
+                document.querySelector('.audio-box').style.display = 'none';
+                document.getElementById('progress').innerText = "";
+                document.getElementById('status').innerText = "";
+            }
+        }
+
+        function updateStatusTag() {
+            const statusTag = document.getElementById('item-status');
+            const currentSt = sentenceStatus[currentIndex];
+            if (currentSt === 'passed') {
+                statusTag.className = "status-passed";
+                statusTag.innerText = "✅ Trạng thái: Đạt";
+            } else if (currentSt === 'skipped') {
+                statusTag.className = "status-skipped";
+                statusTag.innerText = "⏭️ Trạng thái: Đã bỏ qua";
+            } else {
+                statusTag.className = "status-pending";
+                statusTag.innerText = "⏳ Trạng thái: Chưa hoàn thành";
+            }
+        }
+
+        // Hàm phát âm thanh được tối ưu ưu tiên chọn giọng chuẩn/tự nhiên
+        function playSampleAudio() {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                
+                const utterance = new SpeechSynthesisUtterance(listeningData[currentIndex].text);
+                utterance.lang = 'en-US';
+                utterance.rate = 0.85; // Tốc độ tiêu chuẩn cho việc luyện nghe
+
+                if (availableVoices.length === 0) {
+                    availableVoices = window.speechSynthesis.getVoices();
+                }
+
+                // Thuật toán ưu tiên bốc giọng đọc Online/Natural/Google/Enhanced
+                const preferredVoice = availableVoices.find(v => 
+                    v.lang.startsWith('en') && 
+                    (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Enhanced') || v.name.includes('Online'))
+                ) || availableVoices.find(v => v.lang.startsWith('en'));
+
+                if (preferredVoice) {
+                    utterance.voice = preferredVoice;
+                }
+
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+
+        function selectOption(btn, val) {
+            document.querySelectorAll('.option-btn').forEach(b => {
+                b.style.borderColor = '#e9ecef';
+                b.style.backgroundColor = '#f1f3f5';
+            });
+            btn.style.borderColor = '#007bff';
+            btn.style.backgroundColor = '#e7f1ff';
+            selectedOption = val;
+        }
+
+        function cleanText(str) {
+            return str.toLowerCase().replace(/[^a-z0-9]/g, "");
+        }
+
+        function checkAnswer() {
+            const item = listeningData[currentIndex];
+            const statusElem = document.getElementById('status');
+            let isCorrect = false;
+
+            if (item.type === 'type') {
+                const inputVal = document.getElementById('user-input').value;
+                if (cleanText(inputVal) === cleanText(item.text)) {
+                    isCorrect = true;
+                }
+            } else if (item.type === 'fill') {
+                const inputVal = document.getElementById('user-input').value;
+                if (cleanText(inputVal) === cleanText(item.missing)) {
+                    isCorrect = true;
+                }
+            } else if (item.type === 'choice') {
+                if (selectedOption && cleanText(selectedOption) === cleanText(item.text)) {
+                    isCorrect = true;
+                }
+            }
+
+            if (isCorrect) {
+                sentenceStatus[currentIndex] = 'passed';
+                statusElem.innerText = "✅ Chính xác!";
+                statusElem.className = "status-correct";
+                updateStatusTag();
+
+                setTimeout(() => {
+                    currentIndex++;
+                    showQuestion();
+                }, 1200);
+            } else {
+                statusElem.innerText = "❌ Chưa chính xác, hãy nghe lại và thử lại!";
+                statusElem.className = "status-incorrect";
+            }
+        }
+
+        function goToPrevious() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                showQuestion();
+            }
+        }
+
+        function markAsSkipped() {
+            if (sentenceStatus[currentIndex] !== 'passed') {
+                sentenceStatus[currentIndex] = 'skipped';
+            }
+            currentIndex++;
+            showQuestion();
+        }
+
+        // Khởi chạy bài luyện tập đầu tiên
+        showQuestion();
+    </script>
+</body>
+</html>
