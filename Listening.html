@@ -1,303 +1,500 @@
+BRG LEARNING
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIẾNG ANH GIAO TIẾP CƠ BẢN CHO CADDIE - LUYỆN NGHE</title>
+    <title>KIỂM TRA KỸ NĂNG NGHE TIẾNG ANH CADDIE</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; text-align: center; padding: 20px; background-color: #f8f9fa; margin: 0; }
-        .container { max-width: 600px; margin: 0 auto; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        h1 { color: #1e7e34; font-size: 20px; margin-bottom: 5px; }
-        h2 { color: #555; font-size: 14px; margin-top: 0; margin-bottom: 20px; }
+        body { font-family: sans-serif; text-align: center; padding: 15px; background-color: #f8f9fa; margin: 0; }
+        .container { max-width: 600px; margin: 0 auto; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        h1 { color: #1e7e34; font-size: 18px; margin-bottom: 5px; }
+        h2 { color: #555; font-size: 14px; margin-top: 0; margin-bottom: 15px; }
         
-        #progress { font-size: 15px; color: #6c757d; font-weight: bold; margin-bottom: 10px; }
-        #task-type { font-size: 13px; font-weight: bold; color: #007bff; text-transform: uppercase; letter-spacing: 0.5px; background: #e7f1ff; padding: 6px 12px; border-radius: 12px; display: inline-block; margin-bottom: 15px; }
+        .audio-box { background: #e7f1ff; border: 2px dashed #0d6efd; padding: 15px; border-radius: 10px; margin: 15px 0; }
+        #play-btn { background: #0d6efd; color: white; padding: 12px 20px; font-size: 15px; font-weight: bold; border: none; border-radius: 30px; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.15); transition: all 0.2s; }
         
-        .audio-box { margin: 20px 0; }
-        .btn-audio { background: #17a2b8; color: white; border: none; padding: 14px 24px; font-size: 16px; font-weight: bold; border-radius: 50px; cursor: pointer; box-shadow: 0 4px 8px rgba(23,162,184,0.3); transition: transform 0.1s, background-color 0.2s; }
-        .btn-audio:hover { background-color: #138496; }
-        .btn-audio:active { transform: scale(0.95); }
+        .question-title { text-align: left; font-weight: bold; margin-bottom: 8px; color: #212529; font-size: 15px; line-height: 1.4; }
+        .warning-note { text-align: left; font-size: 13px; color: #dc3545; font-weight: bold; margin-bottom: 12px; font-style: italic; }
+
+        /* Trắc nghiệm */
+        .options-container { display: flex; flex-direction: column; gap: 10px; margin: 15px 0; text-align: left; }
+        .option-btn { padding: 12px 15px; font-size: 14px; background: #fff; border: 2px solid #dee2e6; border-radius: 8px; cursor: pointer; font-weight: 500; transition: all 0.2s; line-height: 1.4; }
+        .option-btn:hover:not(:disabled) { background: #f1f3f5; border-color: #adb5bd; }
+        .option-btn.selected { background-color: #d1e7dd !important; border-color: #198754 !important; font-weight: bold; color: #0f5132; }
+        .option-btn:disabled { cursor: not-allowed; opacity: 0.85; }
         
-        #question-display { font-size: 18px; font-weight: bold; color: #212529; margin: 20px 0; min-height: 50px; display: flex; align-items: center; justify-content: center; line-height: 1.5; }
-        
-        .input-group { margin: 20px 0; }
-        input[type="text"] { width: 85%; padding: 12px; font-size: 16px; border: 2px solid #ced4da; border-radius: 8px; outline: none; text-align: center; box-sizing: border-box; }
-        input[type="text"]:focus { border-color: #17a2b8; }
-        
-        .options-grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 20px 0; }
-        .option-btn { background: #f1f3f5; color: #333; border: 2px solid #e9ecef; padding: 12px 15px; border-radius: 8px; font-size: 15px; font-weight: 500; cursor: pointer; text-align: left; transition: all 0.2s; line-height: 1.4; }
-        .option-btn:hover { background: #e2e6ea; }
-        
-        .btn-group { margin-top: 25px; display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
-        button.action-btn { padding: 10px 18px; font-size: 14px; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; }
+        /* Điền từ */
+        .fill-container { margin: 15px 0; text-align: left; background: #f8f9fa; padding: 15px; border-radius: 8px; border: 1px solid #e9ecef; }
+        .blank-sentence { font-size: 18px; font-weight: bold; color: #333; margin-bottom: 12px; line-height: 1.5; }
+        .fill-input { width: 100%; padding: 12px; font-size: 16px; font-weight: bold; border: 2px solid #0d6efd; border-radius: 6px; box-sizing: border-box; text-align: center; color: #0d6efd; }
+        .fill-input:disabled { background-color: #e9ecef; border-color: #198754; color: #0f5132; }
+        .char-hint { font-size: 13px; color: #d63384; font-weight: bold; margin-top: 6px; display: block; }
+
+        .control-group { display: flex; justify-content: space-between; gap: 8px; margin-top: 20px; }
+        .action-btn { padding: 12px 10px; font-size: 13px; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; flex: 1; }
         #prev-btn { background: #fd7e14; color: white; }
-        #check-btn { background: #28a745; color: white; }
         #skip-btn { background: #6c757d; color: white; }
+        #next-btn { background: #198754; color: white; }
         
-        #status { font-size: 16px; font-weight: bold; margin-top: 15px; min-height: 24px; }
-        .status-correct { color: #28a745; }
-        .status-incorrect { color: #dc3545; }
+        #status { font-size: 14px; font-weight: bold; color: #0d6efd; margin-top: 10px; }
+        #progress { font-size: 14px; color: #6c757d; font-weight: bold; }
         
-        #item-status { font-size: 13px; font-weight: bold; padding: 4px 10px; border-radius: 20px; display: inline-block; }
-        .status-passed { background-color: #d4edda; color: #155724; }
-        .status-skipped { background-color: #e2e3e5; color: #383d41; }
-        .status-pending { background-color: #fff3cd; color: #856404; }
+        .result-box { text-align: center; padding: 20px; }
+        .score-num { font-size: 32px; font-weight: bold; color: #1e7e34; margin: 10px 0; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>TIẾNG ANH GIAO TIẾP CƠ BẢN CHO CADDIE</h1>
-        <h2>LUYỆN TẬP KỸ NĂNG NGHE (LISTENING PRACTICE)</h2>
+        <h1>KIỂM TRA KỸ NĂNG NGHE CADDIE CƠ BẢN</h1>
+        <h2>LESSON 0: 20 CÂU TEST TỔNG HỢP NĂNG LỰC NGHE</h2>
         
         <div id="progress"></div>
-        <div id="item-status"></div>
-        <br>
-        <div id="task-type"></div>
         
-        <div class="audio-box">
-            <button class="btn-audio" onclick="playSampleAudio()">🔊 Bấm để nghe âm thanh</button>
+        <div id="quiz-area">
+            <!-- Khung Nghe Âm Thanh -->
+            <div class="audio-box">
+                <p style="margin-top:0; font-weight:bold; color:#0d6efd;">🎧 Bấm nút để nghe âm thanh (Không giới hạn lượt nghe):</p>
+                <button id="play-btn" onclick="playAudio()">🔊 NGHE ÂM THANH</button>
+            </div>
+
+            <div id="question-title" class="question-title">...</div>
+            <div class="warning-note">⚠️ Lưu ý: Bạn chọn đáp án sẽ không thể thay đổi</div>
+            
+            <!-- Khung đáp án Dạng Trắc nghiệm -->
+            <div id="mcq-container" class="options-container"></div>
+
+            <!-- Khung đáp án Dạng Điền từ -->
+            <div id="fill-container" class="fill-container" style="display:none;">
+                <div id="blank-sentence" class="blank-sentence"></div>
+                <input type="text" id="fill-input" class="fill-input" placeholder="Nhập 1 từ duy nhất..." onchange="saveFillAnswer(this.value)">
+                <span id="char-hint" class="char-hint"></span>
+            </div>
+
+            <div class="control-group">
+                <button id="prev-btn" class="action-btn" onclick="goToPrevious()">⏮️ Câu trước</button>
+                <button id="skip-btn" class="action-btn" onclick="skipToNext()">⏭️ Bỏ qua (Làm sau)</button>
+                <button id="next-btn" class="action-btn" onclick="goToNext()">Câu tiếp ⏩</button>
+            </div>
         </div>
 
-        <div id="question-display"></div>
-        <div id="interactive-area"></div>
-
-        <div id="status"></div>
-        
-        <div class="btn-group">
-            <button class="action-btn" id="prev-btn" onclick="goToPrevious()">⏮️ Quay lại</button>
-            <button class="action-btn" id="check-btn" onclick="checkAnswer()">✔️ Kiểm tra</button>
-            <button class="action-btn" id="skip-btn" onclick="markAsSkipped()">⏭️ Bỏ qua</button>
-        </div>
+        <p id="status"></p>
     </div>
 
     <script>
-        // Dữ liệu bài tập luyện nghe phân loại theo dạng tác vụ
-        const listeningData = [
-            // Dạng 1: Listen & Type (Nghe & Chép chính tả)
-            { text: "Good morning sir", type: "type" },
-            { text: "Good afternoon madam", type: "type" },
-            { text: "My name is caddie", type: "type" },
-            { text: "I will be your caddie today", type: "type" },
-            { text: "It is a pleasure to serve you", type: "type" },
+        const quizData = [
+            // ================= DẠNG 1: CHỌN CÂU PHẢN HỒI TIẾNG ANH (CÂU 1 - 5) =================
+            {
+                type: "mcq",
+                title: "Câu 1: Nghe câu thoại và chọn câu PHẢN HỒI BẰNG TIẾNG ANH đúng nhất:",
+                audioText: "Good morning! Are you joining our flight today?",
+                options: [
+                    "A. Yes, I am. Nice to meet you!",
+                    "B. I am playing around 18.",
+                    "C. No need, you can pull it out.",
+                    "D. Great shot! Right down the middle."
+                ],
+                correct: 0
+            },
+            {
+                type: "mcq",
+                title: "Câu 2: Nghe câu thoại và chọn câu PHẢN HỒI BẰNG TIẾNG ANH đúng nhất:",
+                audioText: "Thanks! Mind if I take a practice swing?",
+                options: [
+                    "A. Thank you! Lucky shot.",
+                    "B. Go right ahead. Take your time.",
+                    "C. I'm a 15. Let's have a good game!",
+                    "D. Here is my business card."
+                ],
+                correct: 1
+            },
+            {
+                type: "mcq",
+                title: "Câu 3: Nghe câu thoại và chọn câu PHẢN HỒI BẰNG TIẾNG ANH đúng nhất:",
+                audioText: "Would you like me to attend the flag?",
+                options: [
+                    "A. You go ahead. After you!",
+                    "B. Whose honor is it?",
+                    "C. No need. You can pull it out. Thanks!",
+                    "D. Not too bad, 85 today."
+                ],
+                correct: 2
+            },
+            {
+                type: "mcq",
+                title: "Câu 4: Nghe câu thoại và chọn câu PHẢN HỒI BẰNG TIẾNG ANH đúng nhất:",
+                audioText: "Thanks! By the way, what’s your index or handicap?",
+                options: [
+                    "A. I'm playing around 18.",
+                    "B. Good morning sir!",
+                    "C. It is a pleasure to serve you.",
+                    "D. You can pull it out."
+                ],
+                correct: 0
+            },
+            {
+                type: "mcq",
+                title: "Câu 5: Nghe câu thoại và chọn câu PHẢN HỒI BẰNG TIẾNG ANH đúng nhất:",
+                audioText: "Great game today! Thanks for the wonderful round.",
+                options: [
+                    "A. Whose honor is it?",
+                    "B. Thank you! I really enjoyed playing with you too.",
+                    "C. FORE!",
+                    "D. I will be your caddie today."
+                ],
+                correct: 1
+            },
 
-            // Dạng 2: Listen & Fill in the blank (Nghe & Điền từ thiếu)
-            { text: "Good morning! Are you joining our flight today?", type: "fill", missing: "flight" },
-            { text: "Yes, I am. Hi, I'm Alex. Nice to meet you all!", type: "fill", missing: "meet" },
-            { text: "Nice to meet you! Wish us all a great round today!", type: "fill", missing: "round" },
-            { text: "Thanks! By the way, what’s your index or handicap?", type: "fill", missing: "handicap" },
-            { text: "I’m playing around 18. How about you?", type: "fill", missing: "18" },
-            { text: "I'm a 15. Let's have a good game!", type: "fill", missing: "game" },
+            // ================= DẠNG 2: ĐIỀN 01 TỪ CÒN THIẾU (CÂU 6 - 10) =================
+            {
+                type: "fill",
+                title: "Câu 6: Nghe đoạn thoại và ĐIỀN 01 TỪ CÒN THIẾU vào ô trống:",
+                audioText: "Thanks! By the way, what’s your index or handicap?",
+                displaySentence: "Thanks! By the way, what's your index or _______?",
+                targetWord: "handicap",
+                hint: "💡 Gợi ý: Từ còn thiếu gồm 8 ký tự."
+            },
+            {
+                type: "fill",
+                title: "Câu 7: Nghe đoạn thoại và ĐIỀN 01 TỪ CÒN THIẾU vào ô trống:",
+                audioText: "Great shot! Right down the middle!",
+                displaySentence: "Great shot! Right down the _______!",
+                targetWord: "middle",
+                hint: "💡 Gợi ý: Từ còn thiếu gồm 6 ký tự."
+            },
+            {
+                type: "fill",
+                title: "Câu 8: Nghe đoạn thoại và ĐIỀN 01 TỪ CÒN THIẾU vào ô trống:",
+                audioText: "Let’s grab a drink at the clubhouse!",
+                displaySentence: "Let's grab a drink at the _______!",
+                targetWord: "clubhouse",
+                hint: "💡 Gợi ý: Từ còn thiếu gồm 9 ký tự."
+            },
+            {
+                type: "fill",
+                title: "Câu 9: Nghe đoạn thoại và ĐIỀN 01 TỪ CÒN THIẾU vào ô trống:",
+                audioText: "It is a pleasure to serve you",
+                displaySentence: "It is a _______ to serve you",
+                targetWord: "pleasure",
+                hint: "💡 Gợi ý: Từ còn thiếu gồm 8 ký tự."
+            },
+            {
+                type: "fill",
+                title: "Câu 10: Nghe đoạn thoại và ĐIỀN 01 TỪ CÒN THIẾU vào ô trống:",
+                audioText: "Sounds great! Here is my business card.",
+                displaySentence: "Sounds great! Here is my business _______.",
+                targetWord: "card",
+                hint: "💡 Gợi ý: Từ còn thiếu gồm 4 ký tự."
+            },
 
-            // Dạng 3: Multiple Choice (Nghe & Chọn đáp án đúng)
-            { text: "Whose honor is it?", type: "choice", options: ["Whose honor is it?", "Who is on it?", "Whose owner is it?"] },
-            { text: "You go ahead. After you!", type: "choice", options: ["You go ahead. After you!", "You go head. After you!", "You go away. After you!"] },
-            { text: "Thanks! Mind if I take a practice swing?", type: "choice", options: ["Thanks! Mind if I take a practice swing?", "Thanks! Mind if I take a practice swim?", "Thanks! May I take a practice swing?"] },
-            { text: "Go right ahead. Take your time.", type: "choice", options: ["Go right ahead. Take your time.", "Go right now. Take your time.", "Go write ahead. Take your item."] },
+            // ================= DẠNG 3: NGHE TỪ VỰNG THUẬT NGỮ GOLF -> CHỌN NGHĨA (CÂU 11 - 15) =================
+            {
+                type: "mcq",
+                title: "Câu 11: Nghe TỪ THUẬT NGỮ GOLF và chọn nghĩa Tiếng Việt tương ứng:",
+                audioText: "Tee box",
+                options: [
+                    "A. Khu vực phát bóng",
+                    "B. Bẫy cát",
+                    "C. Khu vực gạt bóng",
+                    "D. Nhà câu lạc bộ"
+                ],
+                correct: 0
+            },
+            {
+                type: "mcq",
+                title: "Câu 12: Nghe TỪ THUẬT NGỮ GOLF và chọn nghĩa Tiếng Việt tương ứng:",
+                audioText: "Green",
+                options: [
+                    "A. Cỏ vùng fairway",
+                    "B. Khu vực quanh cờ / gạt bóng (Putting green)",
+                    "C. Hố nước",
+                    "D. Túi gậy golf"
+                ],
+                correct: 1
+            },
+            {
+                type: "mcq",
+                title: "Câu 13: Nghe TỪ THUẬT NGỮ GOLF và chọn nghĩa Tiếng Việt tương ứng:",
+                audioText: "Practice swing",
+                options: [
+                    "A. Cú đánh chính thức",
+                    "B. Cú gạt bóng hỏng",
+                    "C. Cú đánh nháp / nháp tay",
+                    "D. Cú đánh bóng xa nhất"
+                ],
+                correct: 2
+            },
+            {
+                type: "mcq",
+                title: "Câu 14: Nghe TỪ THUẬT NGỮ GOLF và chọn nghĩa Tiếng Việt tương ứng:",
+                audioText: "Fairway",
+                options: [
+                    "A. Bụi rậm / Cỏ cao (Rough)",
+                    "B. Đường cỏ ngắn giữa hố (Khu vực đánh bóng lý tưởng)",
+                    "C. Nhà Caddie",
+                    "D. Bãi đỗ xe điện"
+                ],
+                correct: 1
+            },
+            {
+                type: "mcq",
+                title: "Câu 15: Nghe TỪ THUẬT NGỮ GOLF và chọn nghĩa Tiếng Việt tương ứng:",
+                audioText: "Business card",
+                options: [
+                    "A. Thẻ hội viên sân golf",
+                    "B. Danh thiếp / Card visit",
+                    "C. Phiếu ghi điểm (Scorecard)",
+                    "D. Hóa đơn thanh toán"
+                ],
+                correct: 1
+            },
 
-            // Dạng hỗn hợp nâng cao
-            { text: "Great shot! Right down the middle!", type: "fill", missing: "middle" },
-            { text: "Thank you! Lucky shot.", type: "choice", options: ["Thank you! Lucky shot.", "Thank you! Look shot.", "Thank you! Black shot."] },
-            { text: "Would you like me to attend the flag?", type: "fill", missing: "flag" },
-            { text: "No need. You can pull it out. Thanks!", type: "type" },
-            { text: "FORE!", type: "choice", options: ["FORE!", "FOUR!", "FOR!"] },
-
-            { text: "Great game today! Thanks for the wonderful round.", type: "fill", missing: "wonderful" },
-            { text: "I really enjoyed playing with you. How did you shoot?", type: "type" },
-            { text: "Not too bad, 85 today. Let’s grab a drink at the clubhouse!", type: "fill", missing: "clubhouse" },
-            { text: "Sounds great! Here is my business card.", type: "choice", options: ["Sounds great! Here is my business card.", "Sounds good! Here is my busy card.", "Sound great! Here is my business car."] }
+            // ================= DẠNG 4: CHỌN NGHĨA TIẾNG VIỆT CỦA CÂU THOẠI (CÂU 16 - 20) =================
+            {
+                type: "mcq",
+                title: "Câu 16: Nghe câu thoại và chọn NGHĨA TIẾNG VIỆT đúng nhất:",
+                audioText: "Whose honor is it?",
+                options: [
+                    "A. Bóng này của ai?",
+                    "B. Đường fairway này dài bao nhiêu yard?",
+                    "C. Ai đánh trước / có danh dự hố này?",
+                    "D. Anh có cần tôi giữ cờ không?"
+                ],
+                correct: 2
+            },
+            {
+                type: "mcq",
+                title: "Câu 17: Nghe câu thoại và chọn NGHĨA TIẾNG VIỆT đúng nhất:",
+                audioText: "You go ahead. After you!",
+                options: [
+                    "A. Anh đánh trước đi. Xin mời anh!",
+                    "B. Hãy dừng lại một chút.",
+                    "C. Bóng rơi vào bẫy cát rồi.",
+                    "D. Chúc anh một ngày tốt lành."
+                ],
+                correct: 0
+            },
+            {
+                type: "mcq",
+                title: "Câu 18: Nghe câu thoại và chọn NGHĨA TIẾNG VIỆT đúng nhất:",
+                audioText: "Would you like me to attend the flag?",
+                options: [
+                    "A. Anh có muốn tôi lau bóng không?",
+                    "B. Anh có muốn tìm bóng ở bụi cây không?",
+                    "C. Anh/chị có cần tôi giữ cờ không ạ?",
+                    "D. Anh có cần lấy túi golf không?"
+                ],
+                correct: 2
+            },
+            {
+                type: "mcq",
+                title: "Câu 19: Nghe câu thoại và chọn NGHĨA TIẾNG VIỆT đúng nhất:",
+                audioText: "FORE!",
+                options: [
+                    "A. Đã xong hố số 4!",
+                    "B. BÓNG NGUY HIỂM! (Cảnh báo bóng bay)",
+                    "C. Hãy đánh tiếp đi!",
+                    "D. Rút cờ ra ngoài!"
+                ],
+                correct: 1
+            },
+            {
+                type: "mcq",
+                title: "Câu 20: Nghe câu thoại và chọn NGHĨA TIẾNG VIỆT đúng nhất:",
+                audioText: "I'm a 15. Let's have a good game!",
+                options: [
+                    "A. Tôi 15 tuổi. Chúc chơi vui vẻ!",
+                    "B. Handicap của tôi là 15. Chúc chúng ta chơi một trận thật hay!",
+                    "C. Tôi chơi hố số 15. Cảm ơn nhé!",
+                    "D. Tôi cần 15 gậy nữa mới hoàn thành."
+                ],
+                correct: 1
+            }
         ];
 
-        let sentenceStatus = new Array(listeningData.length).fill('pending');
+        let userAnswers = new Array(quizData.length).fill(null);
         let currentIndex = 0;
-        let selectedOption = "";
-        let availableVoices = [];
 
-        // Khởi tạo và lọc danh sách giọng đọc tự nhiên (Natural Voices)
-        function initVoices() {
-            if ('speechSynthesis' in window) {
-                availableVoices = window.speechSynthesis.getVoices();
-            }
-        }
-
-        if ('speechSynthesis' in window) {
-            initVoices();
-            window.speechSynthesis.onvoiceschanged = initVoices;
-        }
-
-        function showQuestion() {
-            if (currentIndex < listeningData.length) {
-                const item = listeningData[currentIndex];
+        function loadQuestion() {
+            if (currentIndex < quizData.length) {
+                document.getElementById('progress').innerText = "Câu " + (currentIndex + 1) + " / " + quizData.length;
                 
-                document.getElementById('progress').innerText = "Câu " + (currentIndex + 1) + "/" + listeningData.length;
-                document.getElementById('status').innerText = "";
-                document.getElementById('status').className = "";
-                selectedOption = "";
+                const currentQuiz = quizData[currentIndex];
+                document.getElementById('question-title').innerText = currentQuiz.title;
 
-                updateStatusTag();
+                const mcqContainer = document.getElementById('mcq-container');
+                const fillContainer = document.getElementById('fill-container');
 
-                const taskTypeElem = document.getElementById('task-type');
-                const interactiveArea = document.getElementById('interactive-area');
-                const questionDisplay = document.getElementById('question-display');
+                const isAnswered = userAnswers[currentIndex] !== null;
 
-                if (item.type === 'type') {
-                    taskTypeElem.innerText = "🎧 Tác vụ 1: Nghe & Chép chính tả (Listen & Type)";
-                    questionDisplay.innerText = "🔊 Bấm nút phát âm thanh và gõ lại chính xác câu bạn nghe được:";
-                    interactiveArea.innerHTML = `<div class="input-group"><input type="text" id="user-input" placeholder="Nhập câu bạn nghe được tại đây..." autocomplete="off"></div>`;
-                } 
-                else if (item.type === 'fill') {
-                    taskTypeElem.innerText = "🎧 Tác vụ 2: Nghe & Điền từ còn thiếu (Fill in the blank)";
-                    let displaySentence = item.text.replace(new RegExp(`\\b${item.missing}\\b`, 'gi'), "_______");
-                    questionDisplay.innerText = displaySentence;
-                    interactiveArea.innerHTML = `<div class="input-group"><input type="text" id="user-input" placeholder="Nhập từ còn thiếu (${item.missing.length} ký tự)..." autocomplete="off"></div>`;
-                } 
-                else if (item.type === 'choice') {
-                    taskTypeElem.innerText = "🎧 Tác vụ 3: Nghe & Chọn đáp án đúng (Multiple Choice)";
-                    questionDisplay.innerText = "🔊 Nghe âm thanh và chọn đáp án chính xác:";
-                    
-                    let optionsHTML = '<div class="options-grid">';
-                    item.options.forEach((opt) => {
-                        optionsHTML += `<button class="option-btn" onclick="selectOption(this, '${opt.replace(/'/g, "\\'")}')">${opt}</button>`;
-                    });
-                    optionsHTML += '</div>';
-                    interactiveArea.innerHTML = optionsHTML;
+                if (isAnswered) {
+                    document.getElementById('status').innerText = "🔒 Bạn đã chọn đáp án cho câu này.";
+                } else {
+                    document.getElementById('status').innerText = "";
                 }
 
-                document.getElementById('prev-btn').style.display = (currentIndex === 0) ? 'none' : 'inline-block';
-                document.getElementById('check-btn').style.display = 'inline-block';
+                if (currentQuiz.type === "mcq") {
+                    mcqContainer.style.display = "flex";
+                    fillContainer.style.display = "none";
+                    mcqContainer.innerHTML = "";
 
-                // Tự động phát mẫu sau khi chuyển câu
-                setTimeout(playSampleAudio, 300);
+                    currentQuiz.options.forEach((optText, index) => {
+                        const btn = document.createElement('button');
+                        btn.className = 'option-btn';
+                        btn.innerText = optText;
+
+                        if (userAnswers[currentIndex] === index) {
+                            btn.classList.add('selected');
+                        }
+
+                        if (isAnswered) {
+                            btn.disabled = true;
+                        }
+
+                        btn.onclick = () => selectMcqOption(index);
+                        mcqContainer.appendChild(btn);
+                    });
+                } 
+                else if (currentQuiz.type === "fill") {
+                    mcqContainer.style.display = "none";
+                    fillContainer.style.display = "block";
+
+                    document.getElementById('blank-sentence').innerText = currentQuiz.displaySentence;
+                    document.getElementById('char-hint').innerText = currentQuiz.hint;
+
+                    const fillInput = document.getElementById('fill-input');
+                    fillInput.value = userAnswers[currentIndex] || "";
+
+                    if (isAnswered) {
+                        fillInput.disabled = true;
+                    } else {
+                        fillInput.disabled = false;
+                    }
+                }
+
+                if (currentIndex === 0) {
+                    document.getElementById('prev-btn').style.display = 'none';
+                } else {
+                    document.getElementById('prev-btn').style.display = 'block';
+                }
+
+                const nextBtn = document.getElementById('next-btn');
+                if (currentIndex === quizData.length - 1) {
+                    nextBtn.innerText = "Nộp bài 🏆";
+                } else {
+                    nextBtn.innerText = "Câu tiếp ⏩";
+                }
+
+                setTimeout(playAudio, 300);
 
             } else {
-                let finalPassed = sentenceStatus.filter(st => st === 'passed').length;
-                let finalSkipped = sentenceStatus.filter(st => st === 'skipped' || st === 'pending').length;
-
-                document.getElementById('question-display').innerHTML = 
-                    "🎉 Hoàn thành bài luyện nghe!<br><br>" + 
-                    "✅ Đạt: " + finalPassed + "/" + listeningData.length + "<br>" + 
-                    "⏭️ Chưa đạt / Bỏ qua: " + finalSkipped;
-                
-                document.getElementById('task-type').style.display = 'none';
-                document.getElementById('interactive-area').innerHTML = '';
-                document.getElementById('item-status').style.display = 'none';
-                document.getElementById('prev-btn').style.display = 'none';
-                document.getElementById('check-btn').style.display = 'none';
-                document.getElementById('skip-btn').style.display = 'none';
-                document.querySelector('.audio-box').style.display = 'none';
-                document.getElementById('progress').innerText = "";
-                document.getElementById('status').innerText = "";
+                showResult();
             }
         }
 
-        function updateStatusTag() {
-            const statusTag = document.getElementById('item-status');
-            const currentSt = sentenceStatus[currentIndex];
-            if (currentSt === 'passed') {
-                statusTag.className = "status-passed";
-                statusTag.innerText = "✅ Trạng thái: Đạt";
-            } else if (currentSt === 'skipped') {
-                statusTag.className = "status-skipped";
-                statusTag.innerText = "⏭️ Trạng thái: Đã bỏ qua";
-            } else {
-                statusTag.className = "status-pending";
-                statusTag.innerText = "⏳ Trạng thái: Chưa hoàn thành";
-            }
-        }
-
-        // Hàm phát âm thanh được tối ưu ưu tiên chọn giọng chuẩn/tự nhiên
-        function playSampleAudio() {
+        function playAudio() {
             if ('speechSynthesis' in window) {
                 window.speechSynthesis.cancel();
                 
-                const utterance = new SpeechSynthesisUtterance(listeningData[currentIndex].text);
+                const utterance = new SpeechSynthesisUtterance(quizData[currentIndex].audioText);
                 utterance.lang = 'en-US';
-                utterance.rate = 0.85; // Tốc độ tiêu chuẩn cho việc luyện nghe
+                utterance.rate = 0.85; 
+                utterance.pitch = 1.0; 
 
-                if (availableVoices.length === 0) {
-                    availableVoices = window.speechSynthesis.getVoices();
-                }
-
-                // Thuật toán ưu tiên bốc giọng đọc Online/Natural/Google/Enhanced
-                const preferredVoice = availableVoices.find(v => 
-                    v.lang.startsWith('en') && 
-                    (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Enhanced') || v.name.includes('Online'))
-                ) || availableVoices.find(v => v.lang.startsWith('en'));
+                const voices = window.speechSynthesis.getVoices();
+                const preferredVoice = voices.find(v => 
+                    (v.lang === 'en-US' || v.lang === 'en_US') && 
+                    (v.name.includes('Google') || v.name.includes('Natural') || v.name.includes('Premium') || v.name.includes('Samantha') || v.name.includes('Karen') || v.name.includes('Online'))
+                ) || voices.find(v => v.lang.startsWith('en'));
 
                 if (preferredVoice) {
                     utterance.voice = preferredVoice;
                 }
 
                 window.speechSynthesis.speak(utterance);
+                
+                if (userAnswers[currentIndex] === null) {
+                    document.getElementById('status').innerText = "🔊 Đang phát âm thanh...";
+                }
             }
         }
 
-        function selectOption(btn, val) {
-            document.querySelectorAll('.option-btn').forEach(b => {
-                b.style.borderColor = '#e9ecef';
-                b.style.backgroundColor = '#f1f3f5';
+        function selectMcqOption(selectedIndex) {
+            if (userAnswers[currentIndex] !== null) return;
+
+            userAnswers[currentIndex] = selectedIndex;
+            
+            const buttons = document.querySelectorAll('.option-btn');
+            buttons.forEach((btn, idx) => {
+                btn.disabled = true;
+                if (idx === selectedIndex) {
+                    btn.classList.add('selected');
+                }
             });
-            btn.style.borderColor = '#007bff';
-            btn.style.backgroundColor = '#e7f1ff';
-            selectedOption = val;
+            document.getElementById('status').innerText = "🔒 Đã lưu lựa chọn. Bấm 'Câu tiếp' để sang câu tiếp theo.";
         }
 
-        function cleanText(str) {
-            return str.toLowerCase().replace(/[^a-z0-9]/g, "");
+        function saveFillAnswer(val) {
+            if (val.trim() === "") return;
+            userAnswers[currentIndex] = val.trim();
+            document.getElementById('fill-input').disabled = true;
+            document.getElementById('status').innerText = "🔒 Đã lưu câu trả lời. Bấm 'Câu tiếp' để sang câu tiếp theo.";
         }
 
-        function checkAnswer() {
-            const item = listeningData[currentIndex];
-            const statusElem = document.getElementById('status');
-            let isCorrect = false;
+        function goToNext() {
+            if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+            currentIndex++;
+            loadQuestion();
+        }
 
-            if (item.type === 'type') {
-                const inputVal = document.getElementById('user-input').value;
-                if (cleanText(inputVal) === cleanText(item.text)) {
-                    isCorrect = true;
-                }
-            } else if (item.type === 'fill') {
-                const inputVal = document.getElementById('user-input').value;
-                if (cleanText(inputVal) === cleanText(item.missing)) {
-                    isCorrect = true;
-                }
-            } else if (item.type === 'choice') {
-                if (selectedOption && cleanText(selectedOption) === cleanText(item.text)) {
-                    isCorrect = true;
-                }
-            }
-
-            if (isCorrect) {
-                sentenceStatus[currentIndex] = 'passed';
-                statusElem.innerText = "✅ Chính xác!";
-                statusElem.className = "status-correct";
-                updateStatusTag();
-
-                setTimeout(() => {
-                    currentIndex++;
-                    showQuestion();
-                }, 1200);
-            } else {
-                statusElem.innerText = "❌ Chưa chính xác, hãy nghe lại và thử lại!";
-                statusElem.className = "status-incorrect";
-            }
+        function skipToNext() {
+            if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+            currentIndex++;
+            loadQuestion();
         }
 
         function goToPrevious() {
+            if ('speechSynthesis' in window) window.speechSynthesis.cancel();
             if (currentIndex > 0) {
                 currentIndex--;
-                showQuestion();
+                loadQuestion();
             }
         }
 
-        function markAsSkipped() {
-            if (sentenceStatus[currentIndex] !== 'passed') {
-                sentenceStatus[currentIndex] = 'skipped';
-            }
-            currentIndex++;
-            showQuestion();
+        function showResult() {
+            let correctCount = 0;
+
+            quizData.forEach((item, index) => {
+                const userAns = userAnswers[index];
+                if (item.type === "mcq") {
+                    if (userAns === item.correct) correctCount++;
+                } else if (item.type === "fill") {
+                    if (userAns && userAns.toLowerCase() === item.targetWord.toLowerCase()) {
+                        correctCount++;
+                    }
+                }
+            });
+
+            const scorePercent = Math.round((correctCount / quizData.length) * 100);
+
+            document.getElementById('quiz-area').innerHTML = `
+                <div class="result-box">
+                    🎉 <b>HOÀN THÀNH BÀI KIỂM TRA NGHE (20 CÂU)!</b>
+                    <div class="score-num">${correctCount} / ${quizData.length}</div>
+                    <p><b>Kết quả: ${scorePercent}%</b></p>
+                    <p>${scorePercent >= 70 ? "✅ Caddie đạt chuẩn kỹ năng nghe cơ bản!" : "⚠️ Caddie cần rèn luyện thêm kỹ năng nghe."}</p>
+                    <button onclick="location.reload()" style="padding:12px 24px; background:#0d6efd; color:white; border:none; border-radius:6px; font-weight:bold; cursor:pointer; margin-top:10px;">🔄 Làm lại bài test</button>
+                </div>
+            `;
+            document.getElementById('progress').innerText = "";
+            document.getElementById('status').innerText = "";
         }
 
-        // Khởi chạy bài luyện tập đầu tiên
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.onvoiceschanged = () => { window.speechSynthesis.getVoices(); };
+        }
+
+        showQuestion = loadQuestion;
         showQuestion();
     </script>
 </body>
