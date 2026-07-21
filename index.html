@@ -270,12 +270,22 @@
         let isReviewMode = false;
 
         let totalSeconds = quizData.length * 40; 
+        let elapsedSeconds = 0; // Đếm thời gian làm bài thực tế
         let timerInterval = null;
 
         function formatTime(seconds) {
             const mins = Math.floor(seconds / 60);
             const secs = seconds % 60;
             return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        function formatDuration(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            let res = "";
+            if (mins > 0) res += `${mins} phút `;
+            res += `${secs.toString().padStart(2, '0')} giây`;
+            return res;
         }
 
         function startTotalTimer() {
@@ -286,6 +296,7 @@
 
             timerInterval = setInterval(() => {
                 totalSeconds--;
+                elapsedSeconds++;
                 timeLeftElem.innerText = formatTime(totalSeconds);
 
                 if (totalSeconds <= 180) {
@@ -561,6 +572,9 @@
             const scorePercent = Math.round((correctCount / quizData.length) * 100);
             let titleText = isTimeOut ? "⏰ ĐÃ HẾT THỜI GIAN LÀM BÀI!" : "🎉 HOÀN THÀNH BÀI KIỂM TRA NGHE!";
 
+            const actualTimeStr = formatDuration(elapsedSeconds);
+            const remainingTimeStr = totalSeconds > 0 ? formatTime(totalSeconds) : "00:00 (Hết giờ)";
+
             document.getElementById('quiz-area').innerHTML = `
                 <div class="result-box">
                     <b style="font-size:16px;">${titleText}</b>
@@ -570,6 +584,9 @@
                     
                     <div class="detail-summary">
                         📊 <b>BẢNG THỐNG KÊ CHI TIẾT:</b><br>
+                        • ⏱️ Thời gian đã làm thực tế: <b>${actualTimeStr}</b><br>
+                        • ⏳ Thời gian còn lại: <b>${remainingTimeStr}</b><br>
+                        <hr style="border: 0; border-top: 1px dashed #ccc; margin: 8px 0;">
                         • ✅ Số câu trả lời ĐÚNG: <b>${correctCount}</b> câu<br>
                         • ❌ Số câu trả lời SAI: <b>${incorrectCount}</b> câu<br>
                         • ⏭️ Số câu BỎ QUA: <b>${skippedCount}</b> câu
