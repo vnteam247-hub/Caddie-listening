@@ -49,6 +49,9 @@
         .option-btn.opt-incorrect { background-color: #f8d7da !important; border-color: #dc3545 !important; color: #842029; font-weight: bold; }
         .option-btn:disabled { cursor: default; }
 
+        /* Style bổ sung cho Dịch tiếng Việt */
+        .vi-trans { font-style: italic; font-size: 0.85em; color: #555; font-weight: normal; margin-top: 3px; display: block; }
+
         /* Dạng Điền từ */
         .fill-container { margin: 12px 0; text-align: left; background: #f8f9fa; padding: 12px; border-radius: 8px; border: 1px solid #e9ecef; }
         .blank-sentence { font-size: 16px; font-weight: bold; color: #333; margin-bottom: 10px; line-height: 1.4; }
@@ -128,10 +131,10 @@
                 title: "Nghe câu thoại và chọn câu PHẢN HỒI BẰNG TIẾNG ANH đúng nhất:",
                 audioText: "Good morning! Are you joining our flight today?",
                 options: [
-                    "A. Yes, I am. Nice to meet you!",
-                    "B. I am playing around 18.",
-                    "C. No need, you can pull it out.",
-                    "D. Great shot! Right down the middle."
+                    { en: "A. Yes, I am. Nice to meet you!", vi: "Vâng, đúng vậy. Rất vui được gặp anh/chị!" },
+                    { en: "B. I am playing around 18.", vi: "Tôi chơi khoảng 18 hố." },
+                    { en: "C. No need, you can pull it out.", vi: "Không cần đâu, bạn có thể rút cờ ra." },
+                    { en: "D. Great shot! Right down the middle.", vi: "Cú đánh tuyệt vời! Ngay chính giữa đường." }
                 ],
                 correct: 0
             },
@@ -140,20 +143,21 @@
                 title: "Nghe câu thoại và chọn câu PHẢN HỒI BẰNG TIẾNG ANH đúng nhất:",
                 audioText: "Thanks! Mind if I take a practice swing?",
                 options: [
-                    "A. Thank you! Lucky shot.",
-                    "B. Go right ahead. Take your time.",
-                    "C. I'm a 15. Let's have a good game!",
-                    "D. Here is my business card."
+                    { en: "A. Thank you! Lucky shot.", vi: "Cảm ơn! Cú đánh may mắn thôi." },
+                    { en: "B. Go right ahead. Take your time.", vi: "Xin cứ tự nhiên. Anh/chị từ từ đánh ạ." },
+                    { en: "C. I'm a 15. Let's have a good game!", vi: "Handicap của tôi là 15. Chúc chúng ta chơi tốt!" },
+                    { en: "D. Here is my business card.", vi: "Đây là danh thiếp của tôi." }
                 ],
                 correct: 1
             },
 
-            // DẠNG 2: Nghe tiếng Anh -> Điền 01 từ còn thiếu
+            // DẠNG 2: Nghe tiếng Anh -> Điền 01 từ còn thiếu (Phần dịch giữ chỗ trống để không bị lộ đề)
             {
                 type: "fill",
                 title: "Nghe đoạn thoại và ĐIỀN 01 TỪ CÒN THIẾU vào ô trống:",
                 audioText: "Thanks! By the way, what’s your index or handicap?",
                 displaySentence: "Thanks! By the way, what's your index or _______?",
+                translation: "Cảm ơn! Nhân tiện, chỉ số hoặc _______ của anh/chị là bao nhiêu?",
                 targetWord: "handicap",
                 hint: "💡 Gợi ý: Từ còn thiếu gồm 8 ký tự."
             },
@@ -162,6 +166,7 @@
                 title: "Nghe đoạn thoại và ĐIỀN 01 TỪ CÒN THIẾU vào ô trống:",
                 audioText: "Great shot! Right down the middle!",
                 displaySentence: "Great shot! Right down the _______!",
+                translation: "Cú đánh tuyệt vời! Ngay chính giữa _______!",
                 targetWord: "middle",
                 hint: "💡 Gợi ý: Từ còn thiếu gồm 6 ký tự."
             },
@@ -172,10 +177,10 @@
                 title: "Nghe câu thoại và chọn NGHĨA TIẾNG VIỆT đúng nhất:",
                 audioText: "Whose honor is it?",
                 options: [
-                    "A. Bóng này của ai?",
-                    "B. Đường fairway này dài bao nhiêu yard?",
-                    "C. Ai đánh trước / có danh dự hố này?",
-                    "D. Anh có cần tôi giữ cờ không?"
+                    { en: "A. Bóng này của ai?", vi: "Whose ball is this?" },
+                    { en: "B. Đường fairway này dài bao nhiêu yard?", vi: "How many yards is this fairway?" },
+                    { en: "C. Ai đánh trước / có danh dự hố này?", vi: "Whose honor is it?" },
+                    { en: "D. Anh có cần tôi giữ cờ không?", vi: "Would you like me to attend the flag?" }
                 ],
                 correct: 2
             },
@@ -184,10 +189,10 @@
                 title: "Nghe câu thoại và chọn NGHĨA TIẾNG VIỆT đúng nhất:",
                 audioText: "FORE!",
                 options: [
-                    "A. Đã xong hố số 4!",
-                    "B. BÓNG NGUY HIỂM! (Cảnh báo bóng bay)",
-                    "C. Hãy đánh tiếp đi!",
-                    "D. Rút cờ ra ngoài!"
+                    { en: "A. Đã xong hố số 4!", vi: "Finished hole number 4!" },
+                    { en: "B. BÓNG NGUY HIỂM! (Cảnh báo bóng bay)", vi: "FORE! (Warning)" },
+                    { en: "C. Hãy đánh tiếp đi!", vi: "Please go ahead and hit!" },
+                    { en: "D. Rút cờ ra ngoài!", vi: "Pull the flag out!" }
                 ],
                 correct: 1
             },
@@ -198,10 +203,10 @@
                 title: "Nghe Golfer hỏi khoảng cách và chọn KHOẢNG CÁCH / SỐ HIỆU chính xác:",
                 audioText: "It is about 150 yards to the pin, sir.",
                 options: [
-                    "A. 130 yards",
-                    "B. 150 yards",
-                    "C. 115 yards",
-                    "D. 150 meters"
+                    { en: "A. 130 yards", vi: "130 yard" },
+                    { en: "B. 150 yards", vi: "150 yard" },
+                    { en: "C. 115 yards", vi: "115 yard" },
+                    { en: "D. 150 meters", vi: "150 mét" }
                 ],
                 correct: 1
             },
@@ -210,10 +215,10 @@
                 title: "Nghe yêu cầu chọn gậy của Golfer và chọn TÊN GẬY được yêu cầu:",
                 audioText: "Please give me the 7 iron.",
                 options: [
-                    "A. Gậy sắt số 7 (7-iron)",
-                    "B. Gậy sắt số 8 (8-iron)",
-                    "C. Gậy gạt (Putter)",
-                    "D. Gậy gỗ số 3 (3-wood)"
+                    { en: "A. Gậy sắt số 7 (7-iron)", vi: "7-iron" },
+                    { en: "B. Gậy sắt số 8 (8-iron)", vi: "8-iron" },
+                    { en: "C. Gậy gạt (Putter)", vi: "Putter" },
+                    { en: "D. Gậy gỗ số 3 (3-wood)", vi: "3-wood" }
                 ],
                 correct: 0
             },
@@ -224,10 +229,10 @@
                 title: "Nghe câu thoại của Golfer và chọn HÀNH ĐỘNG CADDIE CẦN THỰC HIỆN:",
                 audioText: "Can you clean my ball, please?",
                 options: [
-                    "A. Rút cờ ra khỏi hố",
-                    "B. Lau sạch bóng cho khách",
-                    "C. Đưa túi golf lên xe điện",
-                    "D. Báo khoảng cách tới hố"
+                    { en: "A. Rút cờ ra khỏi hố", vi: "Remove flagstick" },
+                    { en: "B. Lau sạch bóng cho khách", vi: "Clean the ball" },
+                    { en: "C. Đưa túi golf lên xe điện", vi: "Put bag on golf cart" },
+                    { en: "D. Báo khoảng cách tới hố", vi: "Give distance to pin" }
                 ],
                 correct: 1
             },
@@ -236,10 +241,10 @@
                 title: "Nghe câu thoại của Golfer và chọn HÀNH ĐỘNG CADDIE CẦN THỰC HIỆN:",
                 audioText: "Would you like me to attend the flag?",
                 options: [
-                    "A. Hỏi khách xem có cần Caddie giữ cờ không",
-                    "B. Nhặt bóng khỏi hố nước",
-                    "C. Sửa vết gạt bóng (pitch mark) trên green",
-                    "D. Cào bẫy cát (bunker)"
+                    { en: "A. Hỏi khách xem có cần Caddie giữ cờ không", vi: "Ask golfer if they want flag attended" },
+                    { en: "B. Nhặt bóng khỏi hố nước", vi: "Retrieve ball from water" },
+                    { en: "C. Sửa vết gạt bóng (pitch mark) trên green", vi: "Repair pitch mark" },
+                    { en: "D. Cào bẫy cát (bunker)", vi: "Rake the bunker" }
                 ],
                 correct: 0
             }
@@ -352,10 +357,12 @@
                     fillContainer.style.display = "none";
                     mcqContainer.innerHTML = "";
 
-                    currentQuiz.options.forEach((optText, index) => {
+                    currentQuiz.options.forEach((optObj, index) => {
                         const btn = document.createElement('button');
                         btn.className = 'option-btn';
-                        btn.innerText = optText;
+                        
+                        // Hiển thị tiếng Anh + Dịch tiếng Việt bên dưới
+                        btn.innerHTML = `${optObj.en}<span class="vi-trans">${optObj.vi}</span>`;
 
                         if (!isReviewMode) {
                             if (userAnswers[currentIndex] === index) {
@@ -378,7 +385,10 @@
                     mcqContainer.style.display = "none";
                     fillContainer.style.display = "block";
 
-                    document.getElementById('blank-sentence').innerText = currentQuiz.displaySentence;
+                    document.getElementById('blank-sentence').innerHTML = `
+                        ${currentQuiz.displaySentence}
+                        <span class="vi-trans">${currentQuiz.translation}</span>
+                    `;
                     document.getElementById('char-hint').innerText = currentQuiz.hint;
 
                     const fillInput = document.getElementById('fill-input');
