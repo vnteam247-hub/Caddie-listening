@@ -7,7 +7,7 @@
     <style>
         body { font-family: sans-serif; text-align: center; padding: 15px 10px; background-color: #f8f9fa; margin: 0; }
         
-        /* Header Thương hiệu BRG LEARNING */
+        /* Header Thương hiệu BRG LEARNING - Màu đỏ đậm #B21818 */
         .brand-header { font-size: 20px; font-weight: bold; color: #B21818; letter-spacing: 1.5px; margin-bottom: 10px; text-transform: uppercase; }
         
         .container { max-width: 600px; margin: 0 auto; background: white; padding: 20px 15px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
@@ -119,10 +119,10 @@
         <p id="status"></p>
     </div>
 
-    <!-- KHỞI TẠO MẢNG TRƯỚC KHI NẠP TỆP -->
-    <script> var masterQuizData = []; </script>
+    <!-- KHỞI TẠO MẢNG DỮ LIỆU CHUNG TRƯỚC KHI NẠP TỆP -->
+    <script> window.masterQuizData = []; </script>
 
-    <!-- NẠP CÁC TỆP DỮ LIỆU CÂU HỎI -->
+    <!-- NẠP CÁC TỆP DỮ LIỆU CÂU HỎI TỪ THƯ MỤC DATA -->
     <script src="data/lesson1.js"></script>
     <script src="data/lesson2.js"></script>
     <script src="data/lesson3.js"></script>
@@ -133,24 +133,32 @@
 
     <!-- CORE ENGINE LÀM BÀI -->
     <script>
-        // Dữ liệu dự phòng khẩn cấp nếu các file data chưa sẵn sàng
+        // Dữ liệu dự phòng khẩn cấp nếu các file data chưa kịp nạp
         const fallbackData = [
             { lesson: "L1", section: "section1.1", type: "mcq", title: "[1.1 Chào hỏi] Nghe Golfer đánh vần tên:", audioText: "My name is Arthur, A - R - T - H - U - R.", options: [{ en: "A. ARTHUR", vi: "Arthur" }, { en: "B. AUTHOR", vi: "Author" }, { en: "C. ARCHER", vi: "Archer" }, { en: "D. MARK", vi: "Mark" }], correct: 0 },
             { lesson: "L1", section: "section1.1", type: "fill", title: "[1.1 Chào hỏi] Nghe Caddie tự giới thiệu tên:", audioText: "My name is Rose, R - O - S - E.", displaySentence: "Caddie's name is _______.", translation: "Tên của Caddie là _______.", targetWord: "rose", hint: "💡 Gợi ý: Tên gồm 4 ký tự." },
             { lesson: "L1", section: "section1.2", type: "mcq", title: "[1.2 Số đếm] Nghe khoảng cách:", audioText: "It is 150 yards to the green.", options: [{ en: "A. 130 yards", vi: "130 yard" }, { en: "B. 150 yards", vi: "150 yard" }, { en: "C. 180 yards", vi: "180 yard" }, { en: "D. 200 yards", vi: "200 yard" }], correct: 1 }
         ];
 
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        // ================= THUẬT TOÁN BẢO ĐẢM HIỂN THỊ CHUẨN ĐỦ 30 HOẶC 50 CÂU =================
         function getSmartFilteredQuizData() {
             const urlParams = new URLSearchParams(window.location.search);
             const reqLesson = urlParams.get('lesson');   
             const reqSection = urlParams.get('section'); 
             const reqExam = urlParams.get('exam');       
 
-            // Nếu masterQuizData rỗng, dùng dữ liệu dự phòng ngay lập tức
-            let pool = (masterQuizData && masterQuizData.length > 0) ? [...masterQuizData] : [...fallbackData];
-            let targetCount = 30; 
+            let pool = (window.masterQuizData && window.masterQuizData.length > 0) ? [...window.masterQuizData] : [...fallbackData];
+            let targetCount = 30; // Mặc định 30 câu cho Section
             let titleBanner = "LUYỆN TẬP CƠ BẢN FOR CADDIE";
 
+            // 1. THIẾT LẬP TIÊU ĐỀ VÀ SỐ LƯỢNG MỤC TIÊU
             if (reqExam === "examall") {
                 targetCount = 50;
                 titleBanner = "BÀI KIỂM TRA CUỐI KHÓA - TỔNG QUAN";
@@ -198,31 +206,21 @@
 
             document.getElementById('lesson-title').innerText = titleBanner;
 
-            // Nếu lọc xong mà rỗng (do chưa có dữ liệu section đó), lấy toàn bộ pool
             if (pool.length === 0) pool = [...fallbackData];
 
-            let mcqPool = pool.filter(q => q.type === 'mcq');
-            let fillPool = pool.filter(q => q.type === 'fill');
-
-            shuffleArray(mcqPool);
-            shuffleArray(fillPool);
-
-            let selected = [];
-            let fillCount = Math.min(fillPool.length, Math.floor(targetCount * 0.25)); 
-            let mcqCount = Math.min(mcqPool.length, targetCount - fillCount);
-
-            selected = selected.concat(fillPool.slice(0, fillCount));
-            selected = selected.concat(mcqPool.slice(0, mcqCount));
-
-            shuffleArray(selected);
-            return selected.length > 0 ? selected : pool;
-        }
-
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
+            // 2. NHÂN BẢN VÀ XÁO TRỘN ĐỂ BẢO ĐẢM ĐỦ CHUẨN ĐÚNG SỐ CÂU (30 HOẶC 50 CÂU)
+            let expandedPool = [];
+            while (expandedPool.length < targetCount) {
+                let tempPool = [...pool];
+                shuffleArray(tempPool);
+                expandedPool = expandedPool.concat(tempPool);
             }
+
+            // 3. CẮT ĐÚNG SỐ CÂU MỤC TIÊU VÀ TRỘN CUỐI CÙNG
+            let finalSelection = expandedPool.slice(0, targetCount);
+            shuffleArray(finalSelection);
+
+            return finalSelection;
         }
 
         const quizData = getSmartFilteredQuizData();
