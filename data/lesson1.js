@@ -399,21 +399,21 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Caddie nghe Golfer nói: 'I need a 60-degree wedge'. Số '60' (Sixty) có trọng âm rơi vào đâu?",
+        title: "[1.2 Số đếm] Caddie nghe Golfer nói: 'I need a 60-degree wedge'. Số '60' có trọng âm rơi vào đâu?",
         audioText: "I need a 60 degree wedge.",
         options: [{ en: "A. Âm tiết đầu (Six-)", vi: "Six-ty" }, { en: "B. Âm tiết cuối (-ty)", vi: "Six-TY" }, { en: "C. Cả hai âm bằng nhau", vi: "Bằng nhau" }, { en: "D. Không có trọng âm", vi: "Không trọng âm" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Phiên âm IPA chuẩn của số '3' (Three) trên sân gôn là gì?",
+        title: "[1.2 Số đếm] Phiên âm IPA chuẩn của số '3' trên sân gôn là gì?",
         audioText: "Three iron, sir.",
         options: [{ en: "A. /θriː/", vi: "/θriː/" }, { en: "B. /triː/", vi: "/triː/" }, { en: "C. /free/", vi: "/free/" }, { en: "D. /driː/", vi: "/driː/" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Đâu là phiên âm IPA chuẩn của số '13' (Thirteen)?",
+        title: "[1.2 Số đếm] Đâu là phiên âm IPA chuẩn của số '13'?",
         audioText: "Hole number 13.",
         options: [{ en: "A. /ˌθɜːrˈtiːn/", vi: "/ˌθɜːrˈtiːn/" }, { en: "B. /ˈθɜːr.ti/", vi: "/ˈθɜːr.ti/" }, { en: "C. /θriː.tiːn/", vi: "/θriː.tiːn/" }, { en: "D. /θɜːr.ten/", vi: "/θɜːr.ten/" }],
         correct: 0
@@ -434,21 +434,21 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Phiên âm chuẩn IPA của số '5' (Five) là gì?",
+        title: "[1.2 Số đếm] Phiên âm chuẩn IPA của số '5' là gì?",
         audioText: "5-iron, sir.",
         options: [{ en: "A. /faɪv/", vi: "/faɪv/" }, { en: "B. /fɪf/", vi: "/fɪf/" }, { en: "C. /faɪf/", vi: "/faɪf/" }, { en: "D. /faɪ/", vi: "/faɪ/" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Phiên âm chuẩn IPA của số '12' (Twelve) là gì?",
+        title: "[1.2 Số đếm] Phiên âm chuẩn IPA của số '12' là gì?",
         audioText: "We have twelve buggy cars.",
         options: [{ en: "A. /twelv/", vi: "/twelv/" }, { en: "B. /twelf/", vi: "/twelf/" }, { en: "C. /twerv/", vi: "/twerv/" }, { en: "D. /twelvθ/", vi: "/twelvθ/" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Số '20' (Twenty) trong tiếng Anh chuẩn IPA phát âm là gì?",
+        title: "[1.2 Số đếm] Số '20' trong tiếng Anh chuẩn IPA phát âm là gì?",
         audioText: "Twenty yards to the fringe.",
         options: [{ en: "A. /ˈtwen.ti/", vi: "/ˈtwen.ti/" }, { en: "B. /twenˈtiːn/", vi: "/twenˈtiːn/" }, { en: "C. /ˈtwen.ty/", vi: "/ˈtwen.ty/" }, { en: "D. /two.ty/", vi: "/two.ty/" }],
         correct: 0
@@ -462,14 +462,14 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Số '40' (Forty) được viết và phát âm IPA chuẩn như thế nào?",
+        title: "[1.2 Số đếm] Số '40' được viết và phát âm IPA chuẩn như thế nào?",
         audioText: "Forty yards to the bunker.",
         options: [{ en: "A. Forty /ˈfɔːr.ti/", vi: "Forty (không có chữ u)" }, { en: "B. Fourty /ˈfɔːr.tiːn/", vi: "Fourty" }, { en: "C. Forth /ˈfɔːrθ/", vi: "Forth" }, { en: "D. Four-ty /fɔːrˈti/", vi: "Four-ty" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Caddie đọc số hố 'Hole number 9', số 9 (Nine) phát âm IPA chuẩn là gì?",
+        title: "[1.2 Số đếm] Caddie đọc số hố 'Hole number 9', số 9 phát âm IPA chuẩn là gì?",
         audioText: "Hole number 9.",
         options: [{ en: "A. /naɪn/", vi: "/naɪn/" }, { en: "B. /nɪn/", vi: "/nɪn/" }, { en: "C. /neɪn/", vi: "/neɪn/" }, { en: "D. /naɪ/", vi: "/naɪ/" }],
         correct: 0
@@ -483,7 +483,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Số '7' (Seven) có phiên âm IPA chuẩn là gì?",
+        title: "[1.2 Số đếm] Số '7' có phiên âm IPA chuẩn là gì?",
         audioText: "7-iron.",
         options: [{ en: "A. /ˈsev.ən/", vi: "/ˈsev.ən/" }, { en: "B. /ˈseɪ.vən/", vi: "/ˈseɪ.vən/" }, { en: "C. /ˈsev.en/", vi: "/ˈsev.en/" }, { en: "D. /sɪv.ən/", vi: "/sɪv.ən/" }],
         correct: 0
@@ -497,21 +497,21 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Số '6' (Six) có âm cuối là gì?",
+        title: "[1.2 Số đếm] Số '6' có âm cuối là gì?",
         audioText: "6-iron.",
         options: [{ en: "A. /ks/", vi: "Cụm phụ âm /ks/" }, { en: "B. /s/", vi: "Âm /s/" }, { en: "C. /z/", vi: "Âm /z/" }, { en: "D. /ʃ/", vi: "Âm /ʃ/" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Số '30' (Thirty) phát âm chuẩn IPA như thế nào?",
+        title: "[1.2 Số đếm] Số '30' phát âm chuẩn IPA như thế nào?",
         audioText: "Thirty yards short.",
         options: [{ en: "A. /ˈθɜːr.ti/", vi: "/ˈθɜːr.ti/" }, { en: "B. /ˌθɜːrˈtiːn/", vi: "/ˌθɜːrˈtiːn/" }, { en: "C. /ˈtriː.ti/", vi: "/ˈtriː.ti/" }, { en: "D. /ˈθɜːr.ten/", vi: "/ˈθɜːr.ten/" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Số '50' (Fifty) có trọng âm rơi vào đâu?",
+        title: "[1.2 Số đếm] Số '50' có trọng âm rơi vào đâu?",
         audioText: "Fifty yards to the pin.",
         options: [{ en: "A. Âm tiết đầu (Fif-)", vi: "FIF-ty" }, { en: "B. Âm tiết cuối (-ty)", vi: "Fif-TY" }, { en: "C. Cả hai âm tiết", vi: "Bằng nhau" }, { en: "D. Không có trọng âm", vi: "Không trọng âm" }],
         correct: 0
@@ -525,21 +525,21 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Số '2' (Two) có nguyên âm kéo dài là gì trong IPA?",
+        title: "[1.2 Số đếm] Số '2' có nguyên âm kéo dài là gì trong IPA?",
         audioText: "2 shots.",
         options: [{ en: "A. /tuː/", vi: "/tuː/" }, { en: "B. /tʊ/", vi: "/tʊ/" }, { en: "C. /toʊ/", vi: "/toʊ/" }, { en: "D. /tʌ/", vi: "/tʌ/" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Số '10' (Ten) có nguyên âm ngắn nào?",
+        title: "[1.2 Số đếm] Số '10' có nguyên âm ngắn nào?",
         audioText: "Ten yards.",
         options: [{ en: "A. /e/", vi: "Nguyên âm ngắn /e/" }, { en: "B. /æ/", vi: "Nguyên âm /æ/" }, { en: "C. /ɪ/", vi: "Nguyên âm /ɪ/" }, { en: "D. /ʌ/", vi: "Nguyên âm /ʌ/" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Số '11' (Eleven) có trọng âm đặt ở âm tiết nào?",
+        title: "[1.2 Số đếm] Số '11' có trọng âm đặt ở âm tiết nào?",
         audioText: "11th hole.",
         options: [{ en: "A. Âm tiết 2 (-lev-)", vi: "e-LEV-en" }, { en: "B. Âm tiết 1 (E-)", vi: "E-lev-en" }, { en: "C. Âm tiết 3 (-en)", vi: "e-lev-EN" }, { en: "D. Không có trọng âm", vi: "Không trọng âm" }],
         correct: 0
@@ -615,14 +615,14 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Số '16' (Sixteen) phát âm IPA chuẩn là gì?",
+        title: "[1.2 Số đếm] Số '16' phát âm IPA chuẩn là gì?",
         audioText: "Hole 16, sir.",
         options: [{ en: "A. /ˌsɪkˈstiːn/", vi: "/ˌsɪkˈstiːn/" }, { en: "B. /ˈsɪk.sti/", vi: "/ˈsɪk.sti/" }, { en: "C. /sɪks.ten/", vi: "Siksten" }, { en: "D. /sɪks.tiːnθ/", vi: "Sixteenth" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Khoảng cách] Caddie nói 'You have 70 yards left', số '70' (Seventy) phát âm chuẩn là gì?",
+        title: "[1.2 Khoảng cách] Caddie nói 'You have 70 yards left', số '70' phát âm chuẩn là gì?",
         audioText: "You have seventy yards left.",
         options: [{ en: "A. /ˈsev.ən.ti/", vi: "/ˈsev.ən.ti/" }, { en: "B. /ˌsev.ənˈtiːn/", vi: "/ˌsev.ənˈtiːn/" }, { en: "C. /seven.tiːn/", vi: "Seventeen" }, { en: "D. /sev.ti/", vi: "Sevti" }],
         correct: 0
@@ -636,7 +636,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Khoảng cách] Số '80' (Eighty) có trọng âm đặt ở đâu?",
+        title: "[1.2 Khoảng cách] Số '80' có trọng âm đặt ở đâu?",
         audioText: "Eighty yards to the green.",
         options: [{ en: "A. Âm tiết 1 (Eigh-)", vi: "EIGH-ty" }, { en: "B. Âm tiết 2 (-ty)", vi: "Eigh-TY" }, { en: "C. Bằng nhau", vi: "Bằng nhau" }, { en: "D. Không có trọng âm", vi: "Không trọng âm" }],
         correct: 0
@@ -657,14 +657,14 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Số '17' (Seventeen) có trọng âm chính đặt ở đâu?",
+        title: "[1.2 Số đếm] Số '17' có trọng âm chính đặt ở đâu?",
         audioText: "Seventeen yards short.",
         options: [{ en: "A. Âm tiết 3 (-teen)", vi: "Seven-TEEN" }, { en: "B. Âm tiết 1 (Sev-)", vi: "SEVen-teen" }, { en: "C. Âm tiết 2 (-en-)", vi: "sev-EN-teen" }, { en: "D. Không trọng âm", vi: "Không trọng âm" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Số '90' (Ninety) phát âm IPA chuẩn là gì?",
+        title: "[1.2 Số đếm] Số '90' phát âm IPA chuẩn là gì?",
         audioText: "Ninety yards to the flag.",
         options: [{ en: "A. /ˈnaɪn.ti/", vi: "/ˈnaɪn.ti/" }, { en: "B. /ˌnaɪnˈtiːn/", vi: "/ˌnaɪnˈtiːn/" }, { en: "C. /nin.ti/", vi: "Ninti" }, { en: "D. /naɪn.ten/", vi: "Nineten" }],
         correct: 0
@@ -690,14 +690,14 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Số '18' (Eighteen) có phiên âm IPA chuẩn là gì?",
+        title: "[1.2 Số đếm] Số '18' có phiên âm IPA chuẩn là gì?",
         audioText: "Hole 18 is Par 5.",
         options: [{ en: "A. /ˌeɪˈtiːn/", vi: "/ˌeɪˈtiːn/" }, { en: "B. /ˈeɪ.ti/", vi: "/ˈeɪ.ti/" }, { en: "C. /eɪt.ten/", vi: "Eitten" }, { en: "D. /eɪ.tiːnθ/", vi: "Eighteenth" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Số '19' (Nineteen) có phiên âm IPA chuẩn là gì?",
+        title: "[1.2 Số đếm] Số '19' có phiên âm IPA chuẩn là gì?",
         audioText: "Nineteen yards left.",
         options: [{ en: "A. /ˌnaɪnˈtiːn/", vi: "/ˌnaɪnˈtiːn/" }, { en: "B. /ˈnaɪn.ti/", vi: "/ˈnaɪn.ti/" }, { en: "C. /nin.tiːn/", vi: "Nintien" }, { en: "D. /naɪn.ten/", vi: "Nineten" }],
         correct: 0
