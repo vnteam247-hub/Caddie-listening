@@ -59,7 +59,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Bảng chữ cái] Nghe Golfer báo hãng bóng Callaway và chọn ĐÁP ÁN:",
+        title: "[1.1 Bảng chữ cái] Nghe Golfer báo hãng bóng và chọn ĐÁP ÁN:",
         audioText: "I am playing a Callaway ball, C - A - L - L - A - W - A - Y.",
         options: [{ en: "A. Callaway", vi: "Bóng hãng Callaway" }, { en: "B. Titleist", vi: "Bóng hãng Titleist" }, { en: "C. Srixon", vi: "Bóng hãng Srixon" }, { en: "D. Honma", vi: "Bóng hãng Honma" }],
         correct: 0
@@ -125,7 +125,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Bảng chữ cái] Nghe Golfer đánh vần tên thương hiệu gôn SRIXON và chọn ĐÁP ÁN:",
+        title: "[1.1 Bảng chữ cái] Nghe Golfer đánh vần tên thương hiệu gôn và chọn ĐÁP ÁN:",
         audioText: "My ball brand is Srixon, S - R - I - X - O - N.",
         options: [{ en: "A. Srixon", vi: "Bóng hãng Srixon" }, { en: "B. Titleist", vi: "Bóng hãng Titleist" }, { en: "C. Callaway", vi: "Bóng hãng Callaway" }, { en: "D. TaylorMade", vi: "Bóng hãng TaylorMade" }],
         correct: 0
@@ -174,7 +174,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên David và chọn TÊN ĐÚNG:",
+        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên riêng và chọn TÊN ĐÚNG:",
         audioText: "I am David, D - A - V - I - D.",
         options: [{ en: "A. DAVID", vi: "David" }, { en: "B. DAVIS", vi: "Davis" }, { en: "C. DANIEL", vi: "Daniel" }, { en: "D. DAVIN", vi: "Davin" }],
         correct: 0
@@ -188,7 +188,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Đánh vần] Nghe đánh vần tên thương hiệu HONMA và chọn ĐÁP ÁN:",
+        title: "[1.1 Đánh vần] Nghe đánh vần tên thương hiệu và chọn ĐÁP ÁN:",
         audioText: "Honma club, H - O - N - M - A.",
         options: [{ en: "A. Honma", vi: "Gậy hãng Honma" }, { en: "B. Mizuno", vi: "Gậy hãng Mizuno" }, { en: "C. Miura", vi: "Gậy hãng Miura" }, { en: "D. Majesty", vi: "Gậy hãng Majesty" }],
         correct: 0
@@ -209,14 +209,14 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Bảng chữ cái] Chữ 'G' trong tiếng Anh phát âm IPA phân biệt với 'J' như thế nào?",
+        title: "[1.1 Bảng chữ cái] Chữ 'G' trong tiếng Anh phát âm IPA như thế nào?",
         audioText: "Letter G as in Golf.",
-        options: [{ en: "A. /dʒiː/ (chữ G kết thúc bằng âm iː dài)", vi: "Đọc là /dʒiː/" }, { en: "B. /dʒeɪ/", vi: "Đọc giống chữ J" }, { en: "C. /ɡiː/", vi: "Đọc là Gi" }, { en: "D. /dʒe/ ", vi: "Đọc là Ge" }],
+        options: [{ en: "A. /dʒiː/ (kết thúc bằng âm iː dài)", vi: "Đọc là /dʒiː/" }, { en: "B. /dʒeɪ/", vi: "Đọc giống chữ J" }, { en: "C. /ɡiː/", vi: "Đọc là Gi" }, { en: "D. /dʒe/", vi: "Đọc là Ge" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên John và chọn ĐÁP ÁN:",
+        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên riêng và chọn ĐÁP ÁN:",
         audioText: "My name is John, J - O - H - N.",
         options: [{ en: "A. JOHN", vi: "John" }, { en: "B. JACK", vi: "Jack" }, { en: "C. JIM", vi: "Jim" }, { en: "D. JOE", vi: "Joe" }],
         correct: 0
@@ -231,7 +231,7 @@ window.masterQuizData.push(
     // --- 20 CÂU BỔ SUNG MỚI CHO SECTION 1.1 (CÂU 31 - CÂU 50) ---
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên hãng gậy TaylorMade và chọn ĐÁP ÁN:",
+        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên hãng gậy và chọn ĐÁP ÁN:",
         audioText: "My driver is TaylorMade, T - A - Y - L - O - R - M - A - D - E.",
         options: [{ en: "A. TaylorMade", vi: "Gậy hãng TaylorMade" }, { en: "B. Titleist", vi: "Gậy hãng Titleist" }, { en: "C. Callaway", vi: "Gậy hãng Callaway" }, { en: "D. Ping", vi: "Gậy hãng Ping" }],
         correct: 0
@@ -245,7 +245,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên Alex và chọn ĐÁP ÁN:",
+        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên riêng và chọn ĐÁP ÁN:",
         audioText: "I am Alex, A - L - E - X.",
         options: [{ en: "A. ALEX", vi: "Alex" }, { en: "B. ALAN", vi: "Alan" }, { en: "C. ADAM", vi: "Adam" }, { en: "D. ALEC", vi: "Alec" }],
         correct: 0
@@ -259,14 +259,14 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên hãng bóng Volvik và chọn ĐÁP ÁN:",
+        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên hãng bóng và chọn ĐÁP ÁN:",
         audioText: "I play Volvik ball, V - O - L - V - I - K.",
         options: [{ en: "A. Volvik", vi: "Bóng hãng Volvik" }, { en: "B. Vice", vi: "Bóng hãng Vice" }, { en: "C. Wilson", vi: "Bóng hãng Wilson" }, { en: "D. Bridgestone", vi: "Bóng hãng Bridgestone" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.1", type: "fill",
-        title: "[1.1 Bảng chữ cái] Nghe Golfer đánh vần tên riêng Paul và ĐIỀN TÊN:",
+        title: "[1.1 Bảng chữ cái] Nghe Golfer đánh vần tên riêng và ĐIỀN TÊN:",
         audioText: "Call me Paul, P - A - U - L.",
         displaySentence: "Golfer's name is _______.", translation: "Tên Golfer là _______.",
         targetWord: "paul", hint: "💡 Gợi ý: Tên gồm 4 ký tự."
@@ -287,14 +287,14 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên Tom và chọn ĐÁP ÁN:",
+        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên riêng và chọn ĐÁP ÁN:",
         audioText: "My name is Tom, T - O - M.",
         options: [{ en: "A. TOM", vi: "Tom" }, { en: "B. TIM", vi: "Tim" }, { en: "C. TED", vi: "Ted" }, { en: "D. TODD", vi: "Todd" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.1", type: "fill",
-        title: "[1.1 Bảng chữ cái] Nghe Caddie tự giới thiệu tên Mary và ĐIỀN TÊN:",
+        title: "[1.1 Bảng chữ cái] Nghe Caddie tự giới thiệu tên và ĐIỀN TÊN:",
         audioText: "I am Mary, M - A - R - Y.",
         displaySentence: "Caddie's name is _______.", translation: "Tên Caddie là _______.",
         targetWord: "mary", hint: "💡 Gợi ý: Tên gồm 4 ký tự."
@@ -315,7 +315,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên hãng gậy Cobra và chọn ĐÁP ÁN:",
+        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên hãng gậy và chọn ĐÁP ÁN:",
         audioText: "I use Cobra iron, C - O - B - R - A.",
         options: [{ en: "A. Cobra", vi: "Gậy hãng Cobra" }, { en: "B. Cleveland", vi: "Gậy hãng Cleveland" }, { en: "C. Callaway", vi: "Gậy hãng Callaway" }, { en: "D. Honma", vi: "Gậy hãng Honma" }],
         correct: 0
@@ -329,14 +329,14 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.1", type: "fill",
-        title: "[1.1 Bảng chữ cái] Nghe Golfer đánh vần tên Mark và ĐIỀN TÊN:",
+        title: "[1.1 Bảng chữ cái] Nghe Golfer đánh vần tên riêng và ĐIỀN TÊN:",
         audioText: "I am Mark, M - A - R - K.",
         displaySentence: "Golfer's name is _______.", translation: "Tên Golfer là _______.",
         targetWord: "mark", hint: "💡 Gợi ý: Tên gồm 4 ký tự."
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên Eric và chọn ĐÁP ÁN:",
+        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên riêng và chọn ĐÁP ÁN:",
         audioText: "My name is Eric, E - R - I - C.",
         options: [{ en: "A. ERIC", vi: "Eric" }, { en: "B. EVAN", vi: "Evan" }, { en: "C. EDEN", vi: "Eden" }, { en: "D. EARL", vi: "Earl" }],
         correct: 0
@@ -357,7 +357,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Đánh vần] Nghe đánh vần tên thương hiệu MIZUNO và chọn ĐÁP ÁN:",
+        title: "[1.1 Đánh vần] Nghe đánh vần tên thương hiệu và chọn ĐÁP ÁN:",
         audioText: "Mizuno club, M - I - Z - U - N - O.",
         options: [{ en: "A. Mizuno", vi: "Gậy hãng Mizuno" }, { en: "B. Miura", vi: "Gậy hãng Miura" }, { en: "C. Maruman", vi: "Gậy hãng Maruman" }, { en: "D. Honma", vi: "Gậy hãng Honma" }],
         correct: 0
@@ -378,7 +378,7 @@ window.masterQuizData.push(
         title: "[1.2 Số đếm] Caddie cần nhấn trọng âm 'Fifteen' ở đâu để Golfer không nghe nhầm thành 'Fifty'?",
         audioText: "It is one hundred and fifteen yards to the green.",
         options: [
-            { en: "A. Nhấn mạnh vào âm tiết thứ hai (-teen)", vi: "Giúp phân biệt với Fifty (50)" },
+            { en: "A. Nhấn mạnh vào âm tiết thứ hai (-teen)", vi: "Giúp phân biệt với Fifty" },
             { en: "B. Nhấn mạnh vào âm tiết đầu (Fif-)", vi: "Nhấn âm đầu" },
             { en: "C. Đọc lướt cả hai âm tiết", vi: "Giọng trầm" },
             { en: "D. Nhấn âm vào từ 'yards'", vi: "Nhấn đơn vị đo" }
@@ -601,7 +601,7 @@ window.masterQuizData.push(
     // --- 20 CÂU BỔ SUNG MỚI CHO SECTION 1.2 (CÂU 81 - CÂU 100) ---
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Khoảng cách] Nghe Caddie báo khoảng cách 180 yards tới cờ và chọn ĐÁP ÁN:",
+        title: "[1.2 Khoảng cách] Nghe Caddie báo khoảng cách tới cờ và chọn ĐÁP ÁN:",
         audioText: "It is one hundred and eighty yards to the pin, sir.",
         options: [{ en: "A. 180 yards", vi: "180 yard" }, { en: "B. 108 yards", vi: "108 yard" }, { en: "C. 80 yards", vi: "80 yard" }, { en: "D. 118 yards", vi: "118 yard" }],
         correct: 0
@@ -643,14 +643,14 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Khoảng cách] Nghe Caddie báo khoảng cách 200 yards và chọn ĐÁP ÁN:",
+        title: "[1.2 Khoảng cách] Nghe Caddie báo khoảng cách và chọn ĐÁP ÁN:",
         audioText: "It is two hundred yards from the tee, sir.",
         options: [{ en: "A. 200 yards", vi: "200 yard" }, { en: "B. 120 yards", vi: "120 yard" }, { en: "C. 20 yards", vi: "20 yard" }, { en: "D. 220 yards", vi: "220 yard" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.2", type: "fill",
-        title: "[1.2 Số gậy] Nghe Caddie lấy gậy sắt 8 cho khách và ĐIỀN SỐ GẬY:",
+        title: "[1.2 Số gậy] Nghe Caddie lấy gậy sắt cho khách và ĐIỀN SỐ GẬY:",
         audioText: "Here is your 8 iron, sir.",
         displaySentence: "Here is your _______ iron, sir.", translation: "Đây là gậy sắt số _______ của anh.",
         targetWord: "8", hint: "💡 Gợi ý: Nhập số."
@@ -671,7 +671,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Khoảng cách] Caddie báo '125 yards to the pin', chọn câu viết đúng:",
+        title: "[1.2 Khoảng cách] Caddie báo khoảng cách tới cờ, chọn câu viết đúng:",
         audioText: "It is 125 yards to the pin.",
         options: [
             { en: "A. One hundred and twenty-five yards", vi: "125 yard" },
@@ -711,14 +711,14 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "fill",
-        title: "[1.2 Số gậy] Nghe Caddie đưa gậy gỗ 3 (3 wood) và ĐIỀN SỐ:",
+        title: "[1.2 Số gậy] Nghe Caddie đưa gậy gỗ và ĐIỀN SỐ GẬY:",
         audioText: "Here is your 3 wood, sir.",
         displaySentence: "Here is your _______ wood, sir.", translation: "Đây là gậy gỗ số _______ của anh.",
         targetWord: "3", hint: "💡 Gợi ý: Nhập số."
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Khoảng cách] Caddie báo '160 yards', từ 'One hundred and sixty' viết gọn là gì?",
+        title: "[1.2 Khoảng cách] Nghe Caddie báo khoảng cách, từ 'One hundred and sixty' viết gọn là gì?",
         audioText: "160 yards to the green.",
         options: [{ en: "A. 160 yards", vi: "160 yard" }, { en: "B. 116 yards", vi: "116 yard" }, { en: "C. 60 yards", vi: "60 yard" }, { en: "D. 610 yards", vi: "610 yard" }],
         correct: 0
@@ -739,9 +739,9 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Cách đọc điểm số tổng 72 (Par score) bằng tiếng Anh chuẩn là gì?",
+        title: "[1.2 Số đếm] Cách đọc điểm số tổng 72 bằng tiếng Anh chuẩn là gì?",
         audioText: "Score is 72.",
-        options: [{ en: "A. Seventy-two", vi: "Seventy-two (72)" }, { en: "B. Seven two", vi: "Seven two" }, { en: "C. Seventeen two", vi: "Seventeen two" }, { en: "D. Seventy second", vi: "Seventy second" }],
+        options: [{ en: "A. Seventy-two", vi: "Seventy-two" }, { en: "B. Seven two", vi: "Seven two" }, { en: "C. Seventeen two", vi: "Seventeen two" }, { en: "D. Seventy second", vi: "Seventy second" }],
         correct: 0
     },
 
@@ -817,14 +817,14 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Sở thích] Từ vựng sở thích 'Chạy bộ thể dục' có phiên âm IPA chuẩn là gì?",
+        title: "[1.3 Sở thích] Từ vựng sau đây có phiên âm IPA chuẩn là gì?",
         audioText: "Jogging in the morning.",
         options: [{ en: "A. Jogging /ˈdʒɑː.ɡɪŋ/", vi: "Chạy bộ thể dục" }, { en: "B. Running", vi: "Chạy nhanh" }, { en: "C. Walking", vi: "Đi bộ" }, { en: "D. Jog", vi: "Chạy nhẹ" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Sở thích] Từ vựng sở thích 'Đi du lịch' có phiên âm IPA chuẩn là gì?",
+        title: "[1.3 Sở thích] Từ vựng sau đây có phiên âm IPA chuẩn là gì?",
         audioText: "Travelling around the world.",
         options: [{ en: "A. Travelling /ˈtræv.əl.ɪŋ/", vi: "Đi du lịch" }, { en: "B. Shopping", vi: "Mua sắm" }, { en: "C. Cooking", vi: "Nấu ăn" }, { en: "D. Sleeping", vi: "Ngủ nghỉ" }],
         correct: 0
@@ -843,7 +843,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Sở thích] Golfer nói: 'I like travelling. How about you?'. Caddie đáp lại lịch sự thế nào?",
+        title: "[1.3 Sở thích] Golfer nói về sở thích thích đi du lịch, Caddie đáp lại lịch sự thế nào?",
         audioText: "I like travelling too, Sir! I also like cooking.",
         options: [
             { en: "A. I like travelling too, Sir! I also like cooking.", vi: "Em cũng thích du lịch ạ! Em còn thích nấu ăn nữa." },
@@ -855,28 +855,28 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Sở thích] Từ vựng 'Xem truyền hình/TV' trong bài đọc sở thích phát âm IPA là gì?",
+        title: "[1.3 Sở thích] Từ vựng sau đây phát âm IPA chuẩn là gì?",
         audioText: "Watching TV.",
         options: [{ en: "A. Watching TV /ˈwɑːtʃ.ɪŋ ˌtiːˈviː/", vi: "Xem TV" }, { en: "B. Looking TV", vi: "Nhìn TV" }, { en: "C. Seeing TV", vi: "Thấy TV" }, { en: "D. Listen TV", vi: "Nghe TV" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Sở thích] Từ vựng 'Mua sắm' phát âm IPA chuẩn là gì?",
+        title: "[1.3 Sở thích] Từ vựng sau đây phát âm IPA chuẩn là gì?",
         audioText: "Shopping on weekends.",
         options: [{ en: "A. Shopping /ˈʃɑː.pɪŋ/", vi: "Mua sắm" }, { en: "B. Buying", vi: "Mua hàng" }, { en: "C. Selling", vi: "Bán hàng" }, { en: "D. Market", vi: "Chợ" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Sở thích] Từ vựng 'Nấu ăn' có phiên âm IPA chuẩn là gì?",
+        title: "[1.3 Sở thích] Từ vựng sau đây có phiên âm IPA chuẩn là gì?",
         audioText: "Cooking for my family.",
         options: [{ en: "A. Cooking /ˈkʊk.ɪŋ/", vi: "Nấu ăn" }, { en: "B. Cooked", vi: "Đã nấu" }, { en: "C. Kitchen", vi: "Nhà bếp" }, { en: "D. Chef", vi: "Đầu bếp" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Sở thích] 'Ông thích du lịch hay xem TV hơn?', câu hỏi lựa chọn tiếng Anh đúng là gì?",
+        title: "[1.3 Sở thích] Hỏi Golfer thích đi du lịch hay xem TV hơn, câu hỏi tiếng Anh đúng là gì?",
         audioText: "Do you like travelling or watching TV, Sir?",
         options: [
             { en: "A. Do you like travelling or watching TV, Sir?", vi: "Anh thích đi du lịch hay xem TV hơn ạ?" },
@@ -1005,7 +1005,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Đưa gậy] Khi trao gậy sắt số 5 cho Golfer, Caddie xác nhận lịch sự bằng câu nói nào?",
+        title: "[1.3 Đưa gậy] Khi trao gậy sắt cho Golfer, Caddie xác nhận lịch sự bằng câu nói nào?",
         audioText: "Here is your 5-iron, Sir. Is this the club you need?",
         options: [
             { en: "A. Here is your 5-iron, Sir. Is this the club you need?", vi: "Đây là gậy sắt số 5 của anh ạ. Có đúng cây gậy anh cần không ạ?" },
@@ -1017,7 +1017,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Chỉ hướng] Khuyên Golfer ngắm sang bên trái vì bên phải có bẫy cát (bunker), câu chỉ hướng đúng là gì?",
+        title: "[1.3 Chỉ hướng] Khuyên Golfer ngắm sang bên trái vì bên phải có bẫy cát, câu chỉ hướng đúng là gì?",
         audioText: "Please aim to the left, Sir. There is a bunker on the right.",
         options: [
             { en: "A. Please aim to the left, Sir. There is a bunker on the right.", vi: "Anh ngắm sang bên trái giúp em nhé, có bẫy cát bên phải ạ." },
@@ -1041,7 +1041,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Tư vấn] 'Which club do you prefer, Sir?', câu hỏi này có nghĩa tiếng Việt là gì?",
+        title: "[1.3 Tư vấn] Câu hỏi tư vấn gậy của Caddie có nghĩa tiếng Việt là gì?",
         audioText: "Which club do you prefer, Sir?",
         options: [
             { en: "A. Anh chọn/muốn cây gậy nào ạ?", vi: "Which club do you prefer?" },
@@ -1066,7 +1066,7 @@ window.masterQuizData.push(
     // --- 20 CÂU BỔ SUNG MỚI CHO SECTION 1.3 (CÂU 131 - CÂU 150) ---
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Sở thích] Golfer nói 'I play golf for networking', câu này có nghĩa là gì?",
+        title: "[1.3 Sở thích] Golfer nói về lý do chơi gôn giao lưu kết nối đối tác, câu nói đó là gì?",
         audioText: "I play golf for networking.",
         options: [
             { en: "A. Tôi chơi golf để giao lưu kết nối đối tác", vi: "Golf for networking" },
@@ -1078,7 +1078,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Trò chuyện] Khi Golfer nói 'Besides golf, I love playing tennis', Caddie đáp lại như thế nào?",
+        title: "[1.3 Trò chuyện] Khi Golfer nói thích chơi tennis bên cạnh chơi golf, Caddie đáp lại như thế nào?",
         audioText: "Besides golf, I love playing tennis.",
         options: [
             { en: "A. Oh tennis too? You must be very active, Sir!", vi: "Ồ cả tennis nữa ạ? Anh chắc hẳn rất năng động ạ!" },
@@ -1109,7 +1109,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Trò chuyện] Mẫu câu Caddie khen thời tiết đẹp để mở đầu câu chuyện (Ice-breaker) là gì?",
+        title: "[1.3 Trò chuyện] Mẫu câu Caddie khen thời tiết đẹp để mở đầu câu chuyện là gì?",
         audioText: "Beautiful day, isn't it, Sir?",
         options: [
             { en: "A. Beautiful day, isn't it, Sir?", vi: "Một ngày thời tiết tuyệt vời phải không anh?" },
@@ -1121,7 +1121,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Phản xạ] Golfer nói 'I am here for business', Caddie phản hồi thế nào?",
+        title: "[1.3 Phản xạ] Khi Golfer nói đến sân vì công việc, Caddie phản hồi thế nào?",
         audioText: "I am here for business.",
         options: [
             { en: "A. I see! Do you often play golf to network, Sir?", vi: "Em hiểu rồi ạ! Anh có thường chơi golf để kết nối đối tác không ạ?" },
@@ -1133,14 +1133,14 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Sở thích] Từ vựng 'Bơi lội' (Swimming) phát âm IPA chuẩn là gì?",
+        title: "[1.3 Sở thích] Từ vựng sau đây có phiên âm IPA chuẩn là gì?",
         audioText: "Swimming in summer.",
         options: [{ en: "A. Swimming /ˈswɪm.ɪŋ/", vi: "Bơi lội" }, { en: "B. Diving", vi: "Lặn" }, { en: "C. Running", vi: "Chạy" }, { en: "D. Walking", vi: "Đi bộ" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Sở thích] Từ vựng 'Đọc sách' (Reading) phát âm IPA chuẩn là gì?",
+        title: "[1.3 Sở thích] Từ vựng sau đây có phiên âm IPA chuẩn là gì?",
         audioText: "Reading books.",
         options: [{ en: "A. Reading /ˈriː.dɪŋ/", vi: "Đọc sách" }, { en: "B. Writing", vi: "Viết sách" }, { en: "C. Listening", vi: "Lắng nghe" }, { en: "D. Speaking", vi: "Nói chuyện" }],
         correct: 0
@@ -1159,7 +1159,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Cảnh báo] Khi nhắc Golfer cẩn thận bẫy nước (water hazard), Caddie nói câu nào?",
+        title: "[1.3 Cảnh báo] Khi nhắc Golfer cẩn thận bẫy nước, Caddie nói câu nào?",
         audioText: "Please be careful, there is water behind the green, Sir.",
         options: [
             { en: "A. Please be careful, there is water behind the green, Sir.", vi: "Anh cẩn thận giúp em, có nước ở phía sau green ạ." },
@@ -1190,14 +1190,14 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Sở thích] Từ 'Music' trong cụm 'listening to music' phát âm IPA chuẩn là gì?",
+        title: "[1.3 Sở thích] Từ 'Music' trong cụm từ nghe nhạc có phát âm IPA chuẩn là gì?",
         audioText: "Listening to music.",
         options: [{ en: "A. /ˈmjuː.zɪk/", vi: "/ˈmjuː.zɪk/" }, { en: "B. /ˈmuː.zɪk/", vi: "/ˈmuː.zɪk/" }, { en: "C. /ˈmjuː.sɪk/", vi: "/ˈmjuː.sɪk/" }, { en: "D. /muː.sɪk/", vi: "/muː.sɪk/" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Chỉ hướng] Khi hướng dẫn ngắm đánh thẳng phía trước (Straight ahead), Caddie nói câu nào?",
+        title: "[1.3 Chỉ hướng] Khi hướng dẫn ngắm đánh thẳng phía trước, Caddie nói câu nào?",
         audioText: "Please hit straight ahead, Sir.",
         options: [
             { en: "A. Please hit straight ahead, Sir.", vi: "Anh đánh thẳng phía trước giúp em nhé ạ." },
@@ -1221,7 +1221,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Sở thích] Cụm từ 'Play golf with family' có nghĩa là gì?",
+        title: "[1.3 Sở thích] Cụm từ sau đây có nghĩa tiếng Việt là gì?",
         audioText: "I play golf with my family.",
         options: [
             { en: "A. Tôi chơi golf cùng với gia đình", vi: "Play with family" },
