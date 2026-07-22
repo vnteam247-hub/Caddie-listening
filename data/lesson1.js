@@ -17,14 +17,14 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Bảng chữ cái] Để không nhầm 'P' với 'B' khi nghe 'Peter', Caddie dùng từ NATO nào cho chữ P?",
+        title: "[1.1 Bảng chữ cái] Để không nhầm 'P' với 'B' khi đàm thoại, Caddie dùng từ NATO nào cho chữ P?",
         audioText: "P as in Papa, B as in Bravo.",
         options: [{ en: "A. Papa", vi: "Papa" }, { en: "B. Peter", vi: "Peter" }, { en: "C. Paul", vi: "Paul" }, { en: "D. Pink", vi: "Pink" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Bảng chữ cái] Chữ cái 'H' trong tên loại gậy Hybrid phát âm chuẩn IPA là gì?",
+        title: "[1.1 Bảng chữ cái] Chữ cái 'H' phát âm chuẩn IPA là gì?",
         audioText: "Hybrid starts with letter H.",
         options: [{ en: "A. /eɪtʃ/", vi: "/eɪtʃ/" }, { en: "B. /heɪtʃ/", vi: "/heɪtʃ/" }, { en: "C. /eɪdʒ/", vi: "/eɪdʒ/" }, { en: "D. /ætʃ/", vi: "/ætʃ/" }],
         correct: 0
@@ -160,7 +160,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Bảng chữ cái] Chữ cái 'W' trong từ 'Wedge' được đọc như thế nào trong bảng chữ cái?",
+        title: "[1.1 Bảng chữ cái] Chữ cái 'W' được đọc như thế nào trong bảng chữ cái?",
         audioText: "Wedge starts with Double U.",
         options: [{ en: "A. Double U /ˈdʌb.əl.juː/", vi: "Double U" }, { en: "B. Triple U", vi: "Triple U" }, { en: "C. Way", vi: "Way" }, { en: "D. Ve", vi: "Ve" }],
         correct: 0
@@ -181,7 +181,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Bảng chữ cái] Chữ cái 'K' trong từ 'King' phát âm IPA là gì?",
+        title: "[1.1 Bảng chữ cái] Chữ cái 'K' phát âm IPA là gì?",
         audioText: "Letter K sound.",
         options: [{ en: "A. /keɪ/", vi: "Phát âm /keɪ/" }, { en: "B. /kaɪ/", vi: "Phát âm /kaɪ/" }, { en: "C. /kiː/", vi: "Phát âm /kiː/" }, { en: "D. /kɛ/", vi: "Phát âm /kɛ/" }],
         correct: 0
@@ -202,7 +202,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Bảng chữ cái] Chữ 'J' trong từ 'Jogging' phát âm IPA chuẩn là gì?",
+        title: "[1.1 Bảng chữ cái] Chữ 'J' phát âm IPA chuẩn là gì?",
         audioText: "Letter J sound.",
         options: [{ en: "A. /dʒeɪ/", vi: "Phát âm /dʒeɪ/" }, { en: "B. /ʒeɪ/", vi: "Phát âm /ʒeɪ/" }, { en: "C. /dʒaɪ/", vi: "Phát âm /dʒaɪ/" }, { en: "D. /jeɪ/", vi: "Phát âm /jeɪ/" }],
         correct: 0
@@ -228,7 +228,6 @@ window.masterQuizData.push(
         options: [{ en: "A. /waɪ/", vi: "Phát âm /waɪ/" }, { en: "B. /jaɪ/", vi: "Phát âm /jaɪ/" }, { en: "C. /weɪ/", vi: "Phát âm /weɪ/" }, { en: "D. /yeɪ/", vi: "Phát âm /yeɪ/" }],
         correct: 0
     },
-    // --- 20 CÂU BỔ SUNG MỚI CHO SECTION 1.1 (CÂU 31 - CÂU 50) ---
     {
         lesson: "L1", section: "section1.1", type: "mcq",
         title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên hãng gậy và chọn ĐÁP ÁN:",
@@ -252,7 +251,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Bảng chữ cái] Chữ cái 'X' trong từ 'Srixon' phát âm IPA chuẩn là gì?",
+        title: "[1.1 Bảng chữ cái] Chữ cái 'X' phát âm IPA chuẩn là gì?",
         audioText: "Letter X sound.",
         options: [{ en: "A. /eks/", vi: "Phát âm /eks/" }, { en: "B. /egz/", vi: "Phát âm /egz/" }, { en: "C. /z/", vi: "Phát âm /z/" }, { en: "D. /s/", vi: "Phát âm /s/" }],
         correct: 0
@@ -308,7 +307,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Bảng chữ cái] Chữ 'I' trong từ 'Iron' phát âm IPA chuẩn là gì?",
+        title: "[1.1 Bảng chữ cái] Chữ 'I' phát âm IPA chuẩn là gì?",
         audioText: "Iron starts with I.",
         options: [{ en: "A. /aɪ/", vi: "Phát âm /aɪ/" }, { en: "B. /iː/", vi: "Phát âm /iː/" }, { en: "C. /ɪ/", vi: "Phát âm /ɪ/" }, { en: "D. /eɪ/", vi: "Phát âm /eɪ/" }],
         correct: 0
@@ -322,7 +321,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Bảng chữ cái] Chữ cái 'V' trong từ 'Volvik' phát âm IPA chuẩn là gì?",
+        title: "[1.1 Bảng chữ cái] Chữ cái 'V' phát âm IPA chuẩn là gì?",
         audioText: "Letter V sound.",
         options: [{ en: "A. /viː/", vi: "Phát âm /viː/" }, { en: "B. /weɪ/", vi: "Phát âm /weɪ/" }, { en: "C. /vɑː/", vi: "Phát âm /vɑː/" }, { en: "D. /vɛ/", vi: "Phát âm /vɛ/" }],
         correct: 0
@@ -343,14 +342,14 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Bảng chữ cái] Chữ cái 'S' trong từ 'Srixon' phát âm IPA chuẩn là gì?",
+        title: "[1.1 Bảng chữ cái] Chữ cái 'S' phát âm IPA chuẩn là gì?",
         audioText: "Letter S sound.",
         options: [{ en: "A. /es/", vi: "Phát âm /es/" }, { en: "B. /sɪ/", vi: "Phát âm /sɪ/" }, { en: "C. /ʃiː/", vi: "Phát âm /ʃiː/" }, { en: "D. /z/", vi: "Phát âm /z/" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.1", type: "mcq",
-        title: "[1.1 Bảng chữ cái] Chữ cái 'L' trong từ 'Left' phát âm IPA chuẩn là gì?",
+        title: "[1.1 Bảng chữ cái] Chữ cái 'L' phát âm IPA chuẩn là gì?",
         audioText: "Letter L sound.",
         options: [{ en: "A. /el/", vi: "Phát âm /el/" }, { en: "B. /laɪ/", vi: "Phát âm /laɪ/" }, { en: "C. /leɪ/", vi: "Phát âm /leɪ/" }, { en: "D. /luː/", vi: "Phát âm /luː/" }],
         correct: 0
@@ -387,7 +386,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Khi báo khoảng cách '150 yards', cách đọc tiếng Anh tự nhiên nhất là gì?",
+        title: "[1.2 Số đếm] Khi báo khoảng cách 150 yards, cách đọc tiếng Anh tự nhiên nhất là gì?",
         audioText: "It is one hundred and fifty yards to the green.",
         options: [
             { en: "A. One hundred and fifty yards", vi: "150 yard" },
@@ -399,7 +398,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Caddie nghe Golfer nói: 'I need a 60-degree wedge'. Số '60' có trọng âm rơi vào đâu?",
+        title: "[1.2 Số đếm] Caddie nghe Golfer nói cần gậy góc 60 độ. Số '60' có trọng âm rơi vào đâu?",
         audioText: "I need a 60 degree wedge.",
         options: [{ en: "A. Âm tiết đầu (Six-)", vi: "Six-ty" }, { en: "B. Âm tiết cuối (-ty)", vi: "Six-TY" }, { en: "C. Cả hai âm bằng nhau", vi: "Bằng nhau" }, { en: "D. Không có trọng âm", vi: "Không trọng âm" }],
         correct: 0
@@ -420,7 +419,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Caddie kiểm đếm gậy tại Buggy Station: 'You have 14 golf clubs, sir'. Số '14' đọc là gì?",
+        title: "[1.2 Số đếm] Caddie kiểm đếm thấy túi có 14 cây gậy. Số '14' đọc là gì?",
         audioText: "You have fourteen golf clubs, sir!",
         options: [{ en: "A. Fourteen /ˌfɔːrˈtiːn/", vi: "14 cây gậy" }, { en: "B. Forty /ˈfɔːr.ti/", vi: "40 cây gậy" }, { en: "C. Four /fɔːr/", vi: "4 cây gậy" }, { en: "D. Fourteenth /ˌfɔːrˈtiːnθ/", vi: "Thứ 14" }],
         correct: 0
@@ -469,14 +468,14 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Caddie đọc số hố 'Hole number 9', số 9 phát âm IPA chuẩn là gì?",
+        title: "[1.2 Số đếm] Caddie đọc số hố, số 9 phát âm IPA chuẩn là gì?",
         audioText: "Hole number 9.",
         options: [{ en: "A. /naɪn/", vi: "/naɪn/" }, { en: "B. /nɪn/", vi: "/nɪn/" }, { en: "C. /neɪn/", vi: "/neɪn/" }, { en: "D. /naɪ/", vi: "/naɪ/" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm] Từ 'Eight' (Số 8) đồng âm với từ nào trong tiếng Anh?",
+        title: "[1.2 Số đếm] Từ 'Eight' đồng âm với từ nào trong tiếng Anh?",
         audioText: "8-iron, sir.",
         options: [{ en: "A. Ate", vi: "Ate (/eɪt/)" }, { en: "B. Eat", vi: "Eat (/iːt/)" }, { en: "C. At", vi: "At (/æt/)" }, { en: "D. Height", vi: "Height (/haɪt/)" }],
         correct: 0
@@ -581,7 +580,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Số đếm & Gậy] Khi kiểm gậy thấy thiếu 1 gậy (chỉ có 13 gậy), Caddie báo khách thế nào?",
+        title: "[1.2 Số đếm & Gậy] Khi kiểm gậy thấy thiếu gậy trong túi khách, Caddie báo khách thế nào?",
         audioText: "Excuse me Sir, there are only 13 clubs in your bag. Please check.",
         options: [
             { en: "A. Excuse me Sir, there are only 13 clubs in your bag. Please check.", vi: "Xin lỗi anh, trong túi chỉ có 13 cây gậy thôi ạ. Anh kiểm tra giúp em." },
@@ -598,7 +597,6 @@ window.masterQuizData.push(
         options: [{ en: "A. Âm tiết 1 (Dis-)", vi: "DIS-tance" }, { en: "B. Âm tiết 2 (-tance)", vi: "Dis-TANCE" }, { en: "C. Cả hai âm tiết", vi: "Bằng nhau" }, { en: "D. Không có trọng âm", vi: "Không trọng âm" }],
         correct: 0
     },
-    // --- 20 CÂU BỔ SUNG MỚI CHO SECTION 1.2 (CÂU 81 - CÂU 100) ---
     {
         lesson: "L1", section: "section1.2", type: "mcq",
         title: "[1.2 Khoảng cách] Nghe Caddie báo khoảng cách tới cờ và chọn ĐÁP ÁN:",
@@ -622,7 +620,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Khoảng cách] Caddie nói 'You have 70 yards left', số '70' phát âm chuẩn là gì?",
+        title: "[1.2 Khoảng cách] Caddie báo khoảng cách còn lại, số '70' phát âm chuẩn là gì?",
         audioText: "You have seventy yards left.",
         options: [{ en: "A. /ˈsev.ən.ti/", vi: "/ˈsev.ən.ti/" }, { en: "B. /ˌsev.ənˈtiːn/", vi: "/ˌsev.ənˈtiːn/" }, { en: "C. /seven.tiːn/", vi: "Seventeen" }, { en: "D. /sev.ti/", vi: "Sevti" }],
         correct: 0
@@ -671,7 +669,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Khoảng cách] Caddie báo khoảng cách tới cờ, chọn câu viết đúng:",
+        title: "[1.2 Khoảng cách] Nghe Caddie báo khoảng cách tới cờ và chọn câu viết đúng:",
         audioText: "It is 125 yards to the pin.",
         options: [
             { en: "A. One hundred and twenty-five yards", vi: "125 yard" },
@@ -718,7 +716,7 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Khoảng cách] Nghe Caddie báo khoảng cách, từ 'One hundred and sixty' viết gọn là gì?",
+        title: "[1.2 Khoảng cách] Nghe Caddie báo khoảng cách và chọn ĐÁP ÁN:",
         audioText: "160 yards to the green.",
         options: [{ en: "A. 160 yards", vi: "160 yard" }, { en: "B. 116 yards", vi: "116 yard" }, { en: "C. 60 yards", vi: "60 yard" }, { en: "D. 610 yards", vi: "610 yard" }],
         correct: 0
@@ -1063,7 +1061,6 @@ window.masterQuizData.push(
         ],
         correct: 0
     },
-    // --- 20 CÂU BỔ SUNG MỚI CHO SECTION 1.3 (CÂU 131 - CÂU 150) ---
     {
         lesson: "L1", section: "section1.3", type: "mcq",
         title: "[1.3 Sở thích] Golfer nói về lý do chơi gôn giao lưu kết nối đối tác, câu nói đó là gì?",
