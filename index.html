@@ -15,12 +15,11 @@
         /* Tiêu đề chính */
         h1 { color: #1e7e34; font-size: 18px; margin: 0 0 5px 0; font-weight: bold; text-transform: uppercase; line-height: 1.3; }
         h2 { color: #555; font-size: 12px; margin: 0 0 5px 0; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
-        .lesson-title { color: #0d6efd; font-size: 13px; margin: 0 0 12px 0; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
+        .lesson-title { color: #0d6efd; font-size: 13.5px; margin: 0 0 12px 0; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
 
-        /* THANH HEADER PHÂN CỘT: Trạng thái bên TRÁI | Thời gian làm bài bên PHẢI */
+        /* THANH HEADER PHÂN CỘT */
         .meta-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 8px; }
         
-        /* Thẻ hiển thị Trạng thái (Bên trái) */
         #item-status { font-size: 12px; font-weight: bold; padding: 5px 12px; border-radius: 15px; text-align: left; }
         .status-answered { background-color: #d1e7dd; color: #0f5132; border: 1px solid #badbcc; }
         .status-skipped { background-color: #e2e3e5; color: #383d41; border: 1px solid #d6d8db; }
@@ -28,7 +27,7 @@
         .status-correct { background-color: #d1e7dd; color: #0f5132; border: 1px solid #badbcc; }
         .status-incorrect { background-color: #f8d7da; color: #842029; border: 1px solid #f5c6cb; }
 
-        /* Đồng hồ đếm ngược (Bên phải) */
+        /* Đồng hồ đếm ngược */
         #timer-box { font-size: 12px; font-weight: bold; color: #0d6efd; background: #e7f1ff; padding: 5px 12px; border-radius: 15px; border: 1px solid #b6d4fe; transition: all 0.3s; white-space: nowrap; }
         .timer-warning { color: #dc3545 !important; background: #f8d7da !important; border-color: #f5c6cb !important; animation: blink 1s infinite; }
 
@@ -49,7 +48,7 @@
         .option-btn.opt-incorrect { background-color: #f8d7da !important; border-color: #dc3545 !important; color: #842029; font-weight: bold; }
         .option-btn:disabled { cursor: default; }
 
-        /* Style bổ sung cho Dịch tiếng Việt */
+        /* Style Dịch tiếng Việt */
         .vi-trans { font-style: italic; font-size: 0.85em; color: #555; font-weight: normal; margin-top: 3px; display: block; }
 
         /* Dạng Điền từ */
@@ -59,6 +58,9 @@
         .fill-input:disabled { background-color: #e9ecef; border-color: #adb5bd; color: #495057; }
         .char-hint { font-size: 13px; color: #d63384; font-weight: bold; margin-top: 6px; display: block; }
         .correct-answer-text { font-size: 14px; color: #198754; font-weight: bold; margin-top: 8px; display: block; }
+
+        /* Style highlight cho từ sai */
+        .wrong-word-highlight { color: #dc3545 !important; font-weight: bold !important; font-style: italic !important; text-decoration: underline; }
 
         /* Nút điều hướng */
         .control-group { display: flex; justify-content: space-between; gap: 10px; margin-top: 18px; }
@@ -80,36 +82,30 @@
 </head>
 <body>
 
-    <!-- Header Thương hiệu BRG LEARNING -->
     <div class="brand-header">BRG LEARNING</div>
 
     <div class="container">
-        <!-- Tiêu đề chính -->
         <h1>TIẾNG ANH GIAO TIẾP CƠ BẢN CHO CADDIE</h1>
         <h2>LUYỆN TẬP KỸ NĂNG NGHE (LISTENING PRACTICE)</h2>
-        <h3 id="lesson-title" class="lesson-title">LESSON 1: THỜI TIẾT & GIAO TIẾP TÌNH HUỐNG</h3>
+        <h3 id="lesson-title" class="lesson-title">ĐANG TẢI BÀI HỌC...</h3>
         
-        <!-- Bố cục gộp hàng: BÊN TRÁI là Trạng thái | BÊN PHẢI là Thời gian -->
         <div class="meta-bar">
             <div id="item-status"></div>
-            <div id="timer-box">⏳ Thời gian làm bài: <span id="time-left">08:20</span></div>
+            <div id="timer-box">⏳ Thời gian làm bài: <span id="time-left">00:00</span></div>
         </div>
         
         <div id="quiz-area">
-            <!-- Khung Nghe Âm Thanh -->
             <div class="audio-box">
                 <button id="play-btn" onclick="playAudio()">🔊 NGHE CÂU HỎI</button>
             </div>
 
             <div id="question-title" class="question-title">...</div>
             
-            <!-- Khung Dạng Trắc nghiệm -->
             <div id="mcq-container" class="options-container"></div>
 
-            <!-- Khung Dạng Điền từ -->
             <div id="fill-container" class="fill-container" style="display:none;">
                 <div id="blank-sentence" class="blank-sentence"></div>
-                <input type="text" id="fill-input" class="fill-input" placeholder="Nhập 1 từ duy nhất..." oninput="saveFillAnswer(this.value)">
+                <input type="text" id="fill-input" class="fill-input" placeholder="Nhập từ đơn giản..." oninput="saveFillAnswer(this.value)">
                 <span id="char-hint" class="char-hint"></span>
                 <span id="correct-answer-display" class="correct-answer-text" style="display:none;"></span>
             </div>
@@ -123,134 +119,97 @@
         <p id="status"></p>
     </div>
 
+    <!-- TỰ ĐỘNG NẠP CÁC TỆP DỮ LIỆU CÂU HỎI TỪ THƯ MỤC DATA -->
+    <script src="data/lesson1.js"></script>
+    <script src="data/lesson2.js"></script>
+    <script src="data/lesson3.js"></script>
+    <script src="data/lesson4.js"></script>
+    <script src="data/lesson5.js"></script>
+    <script src="data/lesson6.js"></script>
+    <script src="data/exams.js"></script>
+
+    <!-- CORE ENGINE LÀM BÀI -->
     <script>
-        const quizData = [
-            // DẠNG 1: Nghe tiếng Anh -> Chọn phản hồi bằng Tiếng Anh
-            {
-                type: "mcq",
-                title: "Nghe câu thoại và chọn câu PHẢN HỒI BẰNG TIẾNG ANH đúng nhất:",
-                audioText: "Good morning! Are you joining our flight today?",
-                options: [
-                    { en: "A. Yes, I am. Nice to meet you!", vi: "Vâng, đúng vậy. Rất vui được gặp anh/chị!" },
-                    { en: "B. I am playing around 18.", vi: "Tôi chơi khoảng 18 hố." },
-                    { en: "C. No need, you can pull it out.", vi: "Không cần đâu, bạn có thể rút cờ ra." },
-                    { en: "D. Great shot! Right down the middle.", vi: "Cú đánh tuyệt vời! Ngay chính giữa đường." }
-                ],
-                correct: 0
-            },
-            {
-                type: "mcq",
-                title: "Nghe câu thoại và chọn câu PHẢN HỒI BẰNG TIẾNG ANH đúng nhất:",
-                audioText: "Thanks! Mind if I take a practice swing?",
-                options: [
-                    { en: "A. Thank you! Lucky shot.", vi: "Cảm ơn! Cú đánh may mắn thôi." },
-                    { en: "B. Go right ahead. Take your time.", vi: "Xin cứ tự nhiên. Anh/chị từ từ đánh ạ." },
-                    { en: "C. I'm a 15. Let's have a good game!", vi: "Handicap của tôi là 15. Chúc chúng ta chơi tốt!" },
-                    { en: "D. Here is my business card.", vi: "Đây là danh thiếp của tôi." }
-                ],
-                correct: 1
-            },
+        if (typeof masterQuizData === 'undefined') {
+            var masterQuizData = [];
+        }
 
-            // DẠNG 2: Nghe tiếng Anh -> Điền 01 từ còn thiếu
-            {
-                type: "fill",
-                title: "Nghe đoạn thoại và ĐIỀN 01 TỪ CÒN THIẾU vào ô trống:",
-                audioText: "Thanks! By the way, what’s your index or handicap?",
-                displaySentence: "Thanks! By the way, what's your index or _______?",
-                translation: "Cảm ơn! Nhân tiện, chỉ số hoặc _______ của anh/chị là bao nhiêu?",
-                targetWord: "handicap",
-                hint: "💡 Gợi ý: Từ còn thiếu gồm 8 ký tự."
-            },
-            {
-                type: "fill",
-                title: "Nghe đoạn thoại và ĐIỀN 01 TỪ CÒN THIẾU vào ô trống:",
-                audioText: "Great shot! Right down the middle!",
-                displaySentence: "Great shot! Right down the _______!",
-                translation: "Cú đánh tuyệt vời! Ngay chính giữa _______!",
-                targetWord: "middle",
-                hint: "💡 Gợi ý: Từ còn thiếu gồm 6 ký tự."
-            },
+        // ================= THUẬT TOÁN ĐỌC URL & TỰ ĐỘNG CẬP NHẬT TIÊU ĐỀ CHUẨN =================
+        function getSmartFilteredQuizData() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const reqLesson = urlParams.get('lesson');   // VD: 'L1', 'L2'...
+            const reqSection = urlParams.get('section'); // VD: 'section1.1', 'section1.2'...
+            const reqExam = urlParams.get('exam');       // VD: 'exam1', 'examall'...
 
-            // DẠNG 3: Nghe tiếng Anh -> Chọn nghĩa Tiếng Việt
-            {
-                type: "mcq",
-                title: "Nghe câu thoại và chọn NGHĨA TIẾNG VIỆT đúng nhất:",
-                audioText: "Whose honor is it?",
-                options: [
-                    { en: "A. Bóng này của ai?", vi: "Whose ball is this?" },
-                    { en: "B. Đường fairway này dài bao nhiêu yard?", vi: "How many yards is this fairway?" },
-                    { en: "C. Ai đánh trước / có danh dự hố này?", vi: "Whose honor is it?" },
-                    { en: "D. Anh có cần tôi giữ cờ không?", vi: "Would you like me to attend the flag?" }
-                ],
-                correct: 2
-            },
-            {
-                type: "mcq",
-                title: "Nghe câu thoại và chọn NGHĨA TIẾNG VIỆT đúng nhất:",
-                audioText: "FORE!",
-                options: [
-                    { en: "A. Đã xong hố số 4!", vi: "Finished hole number 4!" },
-                    { en: "B. BÓNG NGUY HIỂM! (Cảnh báo bóng bay)", vi: "FORE! (Warning)" },
-                    { en: "C. Hãy đánh tiếp đi!", vi: "Please go ahead and hit!" },
-                    { en: "D. Rút cờ ra ngoài!", vi: "Pull the flag out!" }
-                ],
-                correct: 1
-            },
+            let pool = [...masterQuizData];
+            let targetCount = 30; 
+            let titleBanner = "LUYỆN TẬP CƠ BẢN FOR CADDIE";
 
-            // DẠNG 4: Nghe Khoảng cách & Chọn gậy / Khoảng cách đúng
-            {
-                type: "mcq",
-                title: "Nghe Golfer hỏi khoảng cách và chọn KHOẢNG CÁCH / SỐ HIỆU chính xác:",
-                audioText: "It is about 150 yards to the pin, sir.",
-                options: [
-                    { en: "A. 130 yards", vi: "130 yard" },
-                    { en: "B. 150 yards", vi: "150 yard" },
-                    { en: "C. 115 yards", vi: "115 yard" },
-                    { en: "D. 150 meters", vi: "150 mét" }
-                ],
-                correct: 1
-            },
-            {
-                type: "mcq",
-                title: "Nghe yêu cầu chọn gậy của Golfer và chọn TÊN GẬY được yêu cầu:",
-                audioText: "Please give me the 7 iron.",
-                options: [
-                    { en: "A. Gậy sắt số 7 (7-iron)", vi: "7-iron" },
-                    { en: "B. Gậy sắt số 8 (8-iron)", vi: "8-iron" },
-                    { en: "C. Gậy gạt (Putter)", vi: "Putter" },
-                    { en: "D. Gậy gỗ số 3 (3-wood)", vi: "3-wood" }
-                ],
-                correct: 0
-            },
-
-            // DẠNG 5: Nghe Tình huống & Nhận diện Hành động Caddie
-            {
-                type: "mcq",
-                title: "Nghe câu thoại của Golfer và chọn HÀNH ĐỘNG CADDIE CẦN THỰC HIỆN:",
-                audioText: "Can you clean my ball, please?",
-                options: [
-                    { en: "A. Rút cờ ra khỏi hố", vi: "Remove flagstick" },
-                    { en: "B. Lau sạch bóng cho khách", vi: "Clean the ball" },
-                    { en: "C. Đưa túi golf lên xe điện", vi: "Put bag on golf cart" },
-                    { en: "D. Báo khoảng cách tới hố", vi: "Give distance to pin" }
-                ],
-                correct: 1
-            },
-            {
-                type: "mcq",
-                title: "Nghe câu thoại của Golfer và chọn HÀNH ĐỘNG CADDIE CẦN THỰC HIỆN:",
-                audioText: "Would you like me to attend the flag?",
-                options: [
-                    { en: "A. Hỏi khách xem có cần Caddie giữ cờ không", vi: "Ask golfer if they want flag attended" },
-                    { en: "B. Nhặt bóng khỏi hố nước", vi: "Retrieve ball from water" },
-                    { en: "C. Sửa vết gạt bóng (pitch mark) trên green", vi: "Repair pitch mark" },
-                    { en: "D. Cào bẫy cát (bunker)", vi: "Rake the bunker" }
-                ],
-                correct: 0
+            // 1. TỰ ĐỘNG ĐỔI TIÊU ĐỀ KIỂM TRA (EXAM)
+            if (reqExam === "examall") {
+                targetCount = 50;
+                titleBanner = "BÀI KIỂM TRA CUỐI KHÓA - TỔNG QUAN";
+            } else if (reqExam === "exam1") {
+                pool = pool.filter(q => q.lesson === "L1");
+                targetCount = 50;
+                titleBanner = "BÀI KIỂM TRA GIAI ĐOẠN 1";
+            } else if (reqExam === "exam2") {
+                pool = pool.filter(q => q.lesson === "L2" || q.lesson === "L3");
+                targetCount = 50;
+                titleBanner = "BÀI KIỂM TRA GIAI ĐOẠN 2";
+            } else if (reqExam === "exam3") {
+                pool = pool.filter(q => q.lesson === "L4" || q.lesson === "L5");
+                targetCount = 50;
+                titleBanner = "BÀI KIỂM TRA GIAI ĐOẠN 3";
+            } else if (reqExam === "exam4") {
+                pool = pool.filter(q => q.lesson === "L6");
+                targetCount = 50;
+                titleBanner = "BÀI KIỂM TRA GIAI ĐOẠN 4";
+            } else if (reqExam) {
+                targetCount = 50;
+                titleBanner = "BÀI KIỂM TRA";
             }
-        ];
+            // 2. TỰ ĐỘNG ĐỔI TIÊU ĐỀ LUYỆN TẬP BÀI (LESSON / SECTION)
+            else if (reqSection || reqLesson) {
+                let lessonNum = "1"; 
+                if (reqLesson) {
+                    lessonNum = reqLesson.replace('L', '');
+                } else if (reqSection) {
+                    const secClean = reqSection.replace('section', '');
+                    lessonNum = secClean.split('.')[0];
+                }
 
-        // Thuật toán xáo trộn câu hỏi ngẫu nhiên Fisher-Yates
+                titleBanner = `LUYỆN TẬP LESSON ${lessonNum}`;
+
+                if (reqSection) {
+                    pool = pool.filter(q => q.section === reqSection);
+                    targetCount = 30;
+                } else if (reqLesson) {
+                    pool = pool.filter(q => q.lesson === reqLesson);
+                    targetCount = 50;
+                }
+            }
+
+            document.getElementById('lesson-title').innerText = titleBanner;
+
+            // Lọc & Cân bằng số lượng bài trắc nghiệm và điền từ
+            let mcqPool = pool.filter(q => q.type === 'mcq');
+            let fillPool = pool.filter(q => q.type === 'fill');
+
+            shuffleArray(mcqPool);
+            shuffleArray(fillPool);
+
+            let selected = [];
+            let fillCount = Math.min(fillPool.length, Math.floor(targetCount * 0.25)); 
+            let mcqCount = Math.min(mcqPool.length, targetCount - fillCount);
+
+            selected = selected.concat(fillPool.slice(0, fillCount));
+            selected = selected.concat(mcqPool.slice(0, mcqCount));
+
+            shuffleArray(selected);
+            return selected.length > 0 ? selected : pool;
+        }
+
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -258,10 +217,10 @@
             }
         }
 
-        shuffleArray(quizData);
+        const quizData = getSmartFilteredQuizData();
 
         const MAX_LISTEN_PER_QUESTION = 3; 
-        const DELAY_BEFORE_AUDIO_MS = 3000; 
+        const DELAY_BEFORE_AUDIO_MS = 2500; 
         let autoPlayTimer = null; 
 
         let listenCounts = new Array(quizData.length).fill(0); 
@@ -269,10 +228,24 @@
         let currentIndex = 0;
         let isReviewMode = false;
 
-        // Cấu hình thời gian làm bài trung bình 50 giây/câu
-        let totalSeconds = quizData.length * 50; 
-        let elapsedSeconds = 0; // Đếm thời gian làm bài thực tế
+        let totalSeconds = quizData.length * 45; 
+        let elapsedSeconds = 0; 
         let timerInterval = null;
+
+        function highlightWrongWords(userText, correctText) {
+            const userWords = userText.split(" ");
+            const correctWords = correctText.split(" ");
+
+            return userWords.map((word, idx) => {
+                const cleanUserWord = word.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+                const cleanCorrectWord = correctWords[idx] ? correctWords[idx].replace(/[^a-zA-Z0-9]/g, "").toLowerCase() : "";
+
+                if (cleanUserWord !== cleanCorrectWord && cleanUserWord !== "") {
+                    return `<span class="wrong-word-highlight">${word}</span>`;
+                }
+                return word;
+            }).join(" ");
+        }
 
         function formatTime(seconds) {
             const mins = Math.floor(seconds / 60);
@@ -369,11 +342,13 @@
                     fillContainer.style.display = "none";
                     mcqContainer.innerHTML = "";
 
+                    const correctObj = currentQuiz.options[currentQuiz.correct];
+
                     currentQuiz.options.forEach((optObj, index) => {
                         const btn = document.createElement('button');
                         btn.className = 'option-btn';
                         
-                        btn.innerHTML = `${optObj.en}<span class="vi-trans">${optObj.vi}</span>`;
+                        let displayEnText = optObj.en;
 
                         if (!isReviewMode) {
                             if (userAnswers[currentIndex] === index) {
@@ -387,8 +362,11 @@
                             }
                             if (userAnswers[currentIndex] === index && index !== currentQuiz.correct) {
                                 btn.classList.add('opt-incorrect');
+                                displayEnText = highlightWrongWords(optObj.en, correctObj.en);
                             }
                         }
+
+                        btn.innerHTML = `${displayEnText}<span class="vi-trans">${optObj.vi}</span>`;
                         mcqContainer.appendChild(btn);
                     });
                 } 
@@ -408,7 +386,16 @@
                     if (isReviewMode) {
                         fillInput.disabled = true;
                         correctDisplay.style.display = "block";
-                        correctDisplay.innerText = "🎯 Đáp án đúng: " + currentQuiz.targetWord;
+                        
+                        const userVal = userAnswers[currentIndex] || "";
+                        if (userVal.toLowerCase() === currentQuiz.targetWord.toLowerCase()) {
+                            correctDisplay.innerHTML = "🎯 Đáp án đúng: " + currentQuiz.targetWord;
+                        } else {
+                            const wrongWordFormatted = userVal !== "" 
+                                ? `<span class="wrong-word-highlight">${userVal}</span>` 
+                                : `<span class="wrong-word-highlight">(Bỏ trống)</span>`;
+                            correctDisplay.innerHTML = `❌ Bạn nhập sai: ${wrongWordFormatted} <br>🎯 Đáp án chính xác: <b style="color:#198754;">${currentQuiz.targetWord}</b>`;
+                        }
                     } else {
                         fillInput.disabled = false;
                         correctDisplay.style.display = "none";
