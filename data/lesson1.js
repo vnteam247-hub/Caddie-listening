@@ -310,7 +310,7 @@ window.masterQuizData.push(
         title: "[1.2 Số đếm] Nghe thông báo khoảng cách và ĐIỀN SỐ DẠNG CƠ BẢN:",
         audioText: "The distance to the green is 150 yards.",
         displaySentence: "The distance to the green is _______ yards.", translation: "Khoảng cách đến green là _______ yard.",
-        targetWord: "150", hint: "💡 Gợi ý: Nhập số 150."
+        targetWord: "150", hint: "💡 Gợi ý: Nhập số."
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
