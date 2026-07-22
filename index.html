@@ -7,7 +7,7 @@
     <style>
         body { font-family: sans-serif; text-align: center; padding: 15px 10px; background-color: #f8f9fa; margin: 0; }
         
-        /* Header Thương hiệu BRG LEARNING - Màu đỏ đậm #B21818 */
+        /* Header Thương hiệu BRG LEARNING */
         .brand-header { font-size: 20px; font-weight: bold; color: #B21818; letter-spacing: 1.5px; margin-bottom: 10px; text-transform: uppercase; }
         
         .container { max-width: 600px; margin: 0 auto; background: white; padding: 20px 15px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
@@ -147,7 +147,7 @@
             }
         }
 
-        // ================= THUẬT TOÁN BẢO ĐẢM HIỂN THỊ CHUẨN ĐỦ 30 HOẶC 50 CÂU =================
+        // ================= THUẬT TOÁN ĐỌC URL & LỌC ĐỘC BẢN KHÔNG TRÙNG LẶP =================
         function getSmartFilteredQuizData() {
             const urlParams = new URLSearchParams(window.location.search);
             const reqLesson = urlParams.get('lesson');   
@@ -155,10 +155,10 @@
             const reqExam = urlParams.get('exam');       
 
             let pool = (window.masterQuizData && window.masterQuizData.length > 0) ? [...window.masterQuizData] : [...fallbackData];
-            let targetCount = 30; // Mặc định 30 câu cho Section
+            let targetCount = 30; // Mặc định tối đa 30 câu cho Section
             let titleBanner = "LUYỆN TẬP CƠ BẢN FOR CADDIE";
 
-            // 1. THIẾT LẬP TIÊU ĐỀ VÀ SỐ LƯỢNG MỤC TIÊU
+            // 1. THIẾT LẬP TIÊU ĐỀ VÀ MỤC TIÊU SỐ CÂU
             if (reqExam === "examall") {
                 targetCount = 50;
                 titleBanner = "BÀI KIỂM TRA CUỐI KHÓA - TỔNG QUAN";
@@ -208,17 +208,9 @@
 
             if (pool.length === 0) pool = [...fallbackData];
 
-            // 2. NHÂN BẢN VÀ XÁO TRỘN ĐỂ BẢO ĐẢM ĐỦ CHUẨN ĐÚNG SỐ CÂU (30 HOẶC 50 CÂU)
-            let expandedPool = [];
-            while (expandedPool.length < targetCount) {
-                let tempPool = [...pool];
-                shuffleArray(tempPool);
-                expandedPool = expandedPool.concat(tempPool);
-            }
-
-            // 3. CẮT ĐÚNG SỐ CÂU MỤC TIÊU VÀ TRỘN CUỐI CÙNG
-            let finalSelection = expandedPool.slice(0, targetCount);
-            shuffleArray(finalSelection);
+            // 2. XÁO TRỘN CÂU HỎI ĐỘC BẢN VÀ CẮT TỐI ĐA N NẾU CÓ DƯ CÂU HỎI
+            shuffleArray(pool);
+            let finalSelection = pool.slice(0, Math.min(targetCount, pool.length));
 
             return finalSelection;
         }
