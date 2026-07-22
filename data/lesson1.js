@@ -563,7 +563,7 @@ window.masterQuizData.push(
         title: "[1.2 Số đếm] Nghe khoảng cách ngắn tới cờ và ĐIỀN SỐ CƠ BẢN:",
         audioText: "You have 100 yards left to the pin, sir.",
         displaySentence: "You have _______ yards left to the pin.", translation: "Anh còn _______ yard nữa là tới cờ.",
-        targetWord: "100", hint: "💡 Gợi ý: Nhập số 100."
+        targetWord: "100", hint: "💡 Gợi ý: Nhập số."
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
@@ -611,13 +611,13 @@ window.masterQuizData.push(
         title: "[1.2 Số đếm] Nghe Caddie báo số hố gôn và ĐIỀN SỐ CƠ BẢN:",
         audioText: "This is hole number 5, sir.",
         displaySentence: "This is hole number _______.", translation: "Đây là hố số _______.",
-        targetWord: "5", hint: "💡 Gợi ý: Nhập số 5."
+        targetWord: "5", hint: "💡 Gợi ý: Nhập số."
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
         title: "[1.2 Số đếm] Số '16' (Sixteen) phát âm IPA chuẩn là gì?",
         audioText: "Hole 16, sir.",
-        options: [{ en: "A. /ˌsɪkˈstiːn/", vi: "/ˌsɪkˈstiːn/" }, { en: "B. /ˈsɪk.sti/", vi: "/ˈsɪk.sti/" }, { en: "C. /sɪks.ten/", vi: "/sɪks.ten/" }, { en: "D. /sɪks.tiːnθ/", vi: "/sɪks.tiːnθ/" }],
+        options: [{ en: "A. /ˌsɪkˈstiːn/", vi: "/ˌsɪkˈstiːn/" }, { en: "B. /ˈsɪk.sti/", vi: "/ˈsɪk.sti/" }, { en: "C. /sɪks.ten/", vi: "Siksten" }, { en: "D. /sɪks.tiːnθ/", vi: "Sixteenth" }],
         correct: 0
     },
     {
@@ -632,7 +632,7 @@ window.masterQuizData.push(
         title: "[1.2 Số đếm] Nghe Golfer hỏi số gậy par của hố và ĐIỀN SỐ:",
         audioText: "This is a Par 4 hole, sir.",
         displaySentence: "This is a Par _______ hole.", translation: "Đây là hố Par _______.",
-        targetWord: "4", hint: "💡 Gợi ý: Nhập số 4."
+        targetWord: "4", hint: "💡 Gợi ý: Nhập số."
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
@@ -653,7 +653,7 @@ window.masterQuizData.push(
         title: "[1.2 Số gậy] Nghe Caddie lấy gậy sắt 8 cho khách và ĐIỀN SỐ GẬY:",
         audioText: "Here is your 8 iron, sir.",
         displaySentence: "Here is your _______ iron, sir.", translation: "Đây là gậy sắt số _______ của anh.",
-        targetWord: "8", hint: "💡 Gợi ý: Nhập số 8."
+        targetWord: "8", hint: "💡 Gợi ý: Nhập số."
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
@@ -686,7 +686,7 @@ window.masterQuizData.push(
         title: "[1.2 Số gậy] Nghe Caddie kiểm đếm số cú đánh (shots) và ĐIỀN SỐ:",
         audioText: "That was 2 shots, sir.",
         displaySentence: "That was _______ shots, sir.", translation: "Đó là _______ cú đánh ạ.",
-        targetWord: "2", hint: "💡 Gợi ý: Nhập số 2."
+        targetWord: "2", hint: "💡 Gợi ý: Nhập số."
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
@@ -714,7 +714,7 @@ window.masterQuizData.push(
         title: "[1.2 Số gậy] Nghe Caddie đưa gậy gỗ 3 (3 wood) và ĐIỀN SỐ:",
         audioText: "Here is your 3 wood, sir.",
         displaySentence: "Here is your _______ wood, sir.", translation: "Đây là gậy gỗ số _______ của anh.",
-        targetWord: "3", hint: "💡 Gợi ý: Nhập số 3."
+        targetWord: "3", hint: "💡 Gợi ý: Nhập số."
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
