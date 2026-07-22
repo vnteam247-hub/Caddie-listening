@@ -3,10 +3,10 @@ if (typeof window.masterQuizData === 'undefined') {
     window.masterQuizData = [];
 }
 
-// NẠP ĐẦY ĐỦ 90 CÂU HỎI CỦA LESSON 1 VÀO MẢNG CHUNG
+// NẠP ĐẦY ĐỦ 150 CÂU HỎI ĐỘC BẢN CHO LESSON 1 VÀO MẢNG CHUNG (MỖI SECTION 50 CÂU)
 window.masterQuizData.push(
     // =========================================================================
-    // SECTION 1.1: BẢNG CHỮ CÁI, PHÁT ÂM & ĐÁNH VẦN (CÂU 1 - CÂU 15)
+    // SECTION 1.1: BẢNG CHỮ CÁI & ĐÁNH VẦN (CÂU 1 - CÂU 50)
     // =========================================================================
     {
         lesson: "L1", section: "section1.1", type: "mcq",
@@ -123,9 +123,255 @@ window.masterQuizData.push(
         options: [{ en: "A. /aɪ/", vi: "Nguyên âm đôi /aɪ/" }, { en: "B. /eɪ/", vi: "Nguyên âm đôi /eɪ/" }, { en: "C. /oʊ/", vi: "Nguyên âm đôi /oʊ/" }, { en: "D. /aʊ/", vi: "Nguyên âm đôi /aʊ/" }],
         correct: 0
     },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Bảng chữ cái] Nghe Golfer đánh vần tên thương hiệu gôn SRIXON và chọn ĐÁP ÁN:",
+        audioText: "My ball brand is Srixon, S - R - I - X - O - N.",
+        options: [{ en: "A. Srixon", vi: "Bóng hãng Srixon" }, { en: "B. Titleist", vi: "Bóng hãng Titleist" }, { en: "C. Callaway", vi: "Bóng hãng Callaway" }, { en: "D. TaylorMade", vi: "Bóng hãng TaylorMade" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "fill",
+        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên riêng và ĐIỀN TÊN VÀO Ô TRỐNG:",
+        audioText: "My name is Mike, spelled M - I - K - E.",
+        displaySentence: "Golfer's name is _______.", translation: "Tên của Golfer là _______.",
+        targetWord: "mike", hint: "💡 Gợi ý: Tên đơn giản gồm 4 ký tự."
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Bảng chữ cái] Khi nghe đánh vần 'M - A - R - K', chữ cái 'A' phát âm IPA là gì?",
+        audioText: "Mark is spelled M - A - R - K.",
+        options: [{ en: "A. /eɪ/", vi: "Phát âm /eɪ/" }, { en: "B. /ɑːr/", vi: "Phát âm /ɑːr/" }, { en: "C. /æ/", vi: "Phát âm /æ/" }, { en: "D. /e/", vi: "Phát âm /e/" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "fill",
+        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên mã gậy gạt và ĐIỀN TỪ CƠ BẢN:",
+        audioText: "My putter model is P - I - N - G.",
+        displaySentence: "Putter brand is _______.", translation: "Hãng gậy gạt là _______.",
+        targetWord: "ping", hint: "💡 Gợi ý: Tên gồm 4 ký tự."
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Bảng chữ cái] Chữ cái 'Z' theo giọng Anh-Mỹ thường phát âm IPA là gì?",
+        audioText: "Letter Z in American English.",
+        options: [{ en: "A. /ziː/", vi: "Đọc là Zee (/ziː/)" }, { en: "B. /zed/", vi: "Đọc là Zed (/zed/)" }, { en: "C. /zaɪ/", vi: "Đọc là Zai" }, { en: "D. /zoʊ/", vi: "Đọc là Zo" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Bảng chữ cái] Chữ cái 'W' trong từ 'Wedge' được đọc như thế nào trong bảng chữ cái?",
+        audioText: "Wedge starts with Double U.",
+        options: [{ en: "A. Double U /ˈdʌb.əl.juː/", vi: "Double U" }, { en: "B. Triple U", vi: "Triple U" }, { en: "C. Way", vi: "Way" }, { en: "D. Ve", vi: "Ve" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Bảng chữ cái] Chữ 'R' trong tiếng Anh-Mỹ (US) có đặc điểm phát âm gì?",
+        audioText: "Letter R in English.",
+        options: [{ en: "A. Uốn cong đầu lưỡi về phía sau", vi: "Phát âm uốn lưỡi /ɑːr/" }, { en: "B. Rung đầu lưỡi mạnh", vi: "Giống tiếng Việt" }, { en: "C. Bật môi vô thanh", vi: "Không uốn lưỡi" }, { en: "D. Đọc giống chữ L", vi: "Đọc là L" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên David và chọn TÊN ĐÚNG:",
+        audioText: "I am David, D - A - V - I - D.",
+        options: [{ en: "A. DAVID", vi: "David" }, { en: "B. DAVIS", vi: "Davis" }, { en: "C. DANIEL", vi: "Daniel" }, { en: "D. DAVIN", vi: "Davin" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Bảng chữ cái] Chữ cái 'K' trong từ 'King' phát âm IPA là gì?",
+        audioText: "Letter K sound.",
+        options: [{ en: "A. /keɪ/", vi: "Phát âm /keɪ/" }, { en: "B. /kaɪ/", vi: "Phát âm /kaɪ/" }, { en: "C. /kiː/", vi: "Phát âm /kiː/" }, { en: "D. /kɛ/", vi: "Phát âm /kɛ/" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Đánh vần] Nghe đánh vần tên thương hiệu HONMA và chọn ĐÁP ÁN:",
+        audioText: "Honma club, H - O - N - M - A.",
+        options: [{ en: "A. Honma", vi: "Gậy hãng Honma" }, { en: "B. Mizuno", vi: "Gậy hãng Mizuno" }, { en: "C. Miura", vi: "Gậy hãng Miura" }, { en: "D. Majesty", vi: "Gậy hãng Majesty" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Bảng chữ cái] Chữ 'E' trong bảng chữ cái tiếng Anh phát âm IPA chuẩn là gì?",
+        audioText: "Letter E sound.",
+        options: [{ en: "A. /iː/", vi: "Phát âm /iː/" }, { en: "B. /eɪ/", vi: "Phát âm /eɪ/" }, { en: "C. /e/", vi: "Phát âm /e/" }, { en: "D. /aɪ/", vi: "Phát âm /aɪ/" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Bảng chữ cái] Chữ 'J' trong từ 'Jogging' phát âm IPA chuẩn là gì?",
+        audioText: "Letter J sound.",
+        options: [{ en: "A. /dʒeɪ/", vi: "Phát âm /dʒeɪ/" }, { en: "B. /ʒeɪ/", vi: "Phát âm /ʒeɪ/" }, { en: "C. /dʒaɪ/", vi: "Phát âm /dʒaɪ/" }, { en: "D. /jeɪ/", vi: "Phát âm /jeɪ/" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Bảng chữ cái] Chữ 'G' trong tiếng Anh phát âm IPA phân biệt với 'J' như thế nào?",
+        audioText: "Letter G as in Golf.",
+        options: [{ en: "A. /dʒiː/ (chữ G kết thúc bằng âm iː dài)", vi: "Đọc là /dʒiː/" }, { en: "B. /dʒeɪ/", vi: "Đọc giống chữ J" }, { en: "C. /ɡiː/", vi: "Đọc là Gi" }, { en: "D. /dʒe/ ", vi: "Đọc là Ge" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên John và chọn ĐÁP ÁN:",
+        audioText: "My name is John, J - O - H - N.",
+        options: [{ en: "A. JOHN", vi: "John" }, { en: "B. JACK", vi: "Jack" }, { en: "C. JIM", vi: "Jim" }, { en: "D. JOE", vi: "Joe" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Bảng chữ cái] Chữ 'Y' trong tiếng Anh phát âm IPA chuẩn là gì?",
+        audioText: "Letter Y sound.",
+        options: [{ en: "A. /waɪ/", vi: "Phát âm /waɪ/" }, { en: "B. /jaɪ/", vi: "Phát âm /jaɪ/" }, { en: "C. /weɪ/", vi: "Phát âm /weɪ/" }, { en: "D. /yeɪ/", vi: "Phát âm /yeɪ/" }],
+        correct: 0
+    },
+    // --- 20 CÂU BỔ SUNG MỚI CHO SECTION 1.1 (CÂU 31 - CÂU 50) ---
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên hãng gậy TaylorMade và chọn ĐÁP ÁN:",
+        audioText: "My driver is TaylorMade, T - A - Y - L - O - R - M - A - D - E.",
+        options: [{ en: "A. TaylorMade", vi: "Gậy hãng TaylorMade" }, { en: "B. Titleist", vi: "Gậy hãng Titleist" }, { en: "C. Callaway", vi: "Gậy hãng Callaway" }, { en: "D. Ping", vi: "Gậy hãng Ping" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "fill",
+        title: "[1.1 Bảng chữ cái] Nghe Caddie đánh vần tên mình và ĐIỀN TÊN VÀO Ô TRỐNG:",
+        audioText: "My name is Anna, A - N - N - A.",
+        displaySentence: "Caddie's name is _______.", translation: "Tên Caddie là _______.",
+        targetWord: "anna", hint: "💡 Gợi ý: Tên đơn giản gồm 4 ký tự."
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên Alex và chọn ĐÁP ÁN:",
+        audioText: "I am Alex, A - L - E - X.",
+        options: [{ en: "A. ALEX", vi: "Alex" }, { en: "B. ALAN", vi: "Alan" }, { en: "C. ADAM", vi: "Adam" }, { en: "D. ALEC", vi: "Alec" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Bảng chữ cái] Chữ cái 'X' trong từ 'Srixon' phát âm IPA chuẩn là gì?",
+        audioText: "Letter X sound.",
+        options: [{ en: "A. /eks/", vi: "Phát âm /eks/" }, { en: "B. /egz/", vi: "Phát âm /egz/" }, { en: "C. /z/", vi: "Phát âm /z/" }, { en: "D. /s/", vi: "Phát âm /s/" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên hãng bóng Volvik và chọn ĐÁP ÁN:",
+        audioText: "I play Volvik ball, V - O - L - V - I - K.",
+        options: [{ en: "A. Volvik", vi: "Bóng hãng Volvik" }, { en: "B. Vice", vi: "Bóng hãng Vice" }, { en: "C. Wilson", vi: "Bóng hãng Wilson" }, { en: "D. Bridgestone", vi: "Bóng hãng Bridgestone" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "fill",
+        title: "[1.1 Bảng chữ cái] Nghe Golfer đánh vần tên riêng Paul và ĐIỀN TÊN:",
+        audioText: "Call me Paul, P - A - U - L.",
+        displaySentence: "Golfer's name is _______.", translation: "Tên Golfer là _______.",
+        targetWord: "paul", hint: "💡 Gợi ý: Tên gồm 4 ký tự."
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Bảng chữ cái] Chữ cái 'U' trong bảng chữ cái phát âm IPA chuẩn là gì?",
+        audioText: "Letter U sound.",
+        options: [{ en: "A. /juː/", vi: "Phát âm /juː/" }, { en: "B. /uː/", vi: "Phát âm /uː/" }, { en: "C. /ʌ/", vi: "Phát âm /ʌ/" }, { en: "D. /aʊ/", vi: "Phát âm /aʊ/" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Bảng chữ cái] Chữ cái 'Q' trong bảng chữ cái phát âm IPA chuẩn là gì?",
+        audioText: "Letter Q sound.",
+        options: [{ en: "A. /kjuː/", vi: "Phát âm /kjuː/" }, { en: "B. /kuː/", vi: "Phát âm /kuː/" }, { en: "C. /kwɑː/", vi: "Phát âm /kwɑː/" }, { en: "D. /kju/", vi: "Phát âm /kju/" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên Tom và chọn ĐÁP ÁN:",
+        audioText: "My name is Tom, T - O - M.",
+        options: [{ en: "A. TOM", vi: "Tom" }, { en: "B. TIM", vi: "Tim" }, { en: "C. TED", vi: "Ted" }, { en: "D. TODD", vi: "Todd" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "fill",
+        title: "[1.1 Bảng chữ cái] Nghe Caddie tự giới thiệu tên Mary và ĐIỀN TÊN:",
+        audioText: "I am Mary, M - A - R - Y.",
+        displaySentence: "Caddie's name is _______.", translation: "Tên Caddie là _______.",
+        targetWord: "mary", hint: "💡 Gợi ý: Tên gồm 4 ký tự."
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Bảng chữ cái] Chữ 'O' trong bảng chữ cái tiếng Anh phát âm IPA chuẩn là gì?",
+        audioText: "Letter O sound.",
+        options: [{ en: "A. /oʊ/", vi: "Phát âm /oʊ/" }, { en: "B. /ɒ/", vi: "Phát âm /ɒ/" }, { en: "C. /ɔː/", vi: "Phát âm /ɔː/" }, { en: "D. /uː/", vi: "Phát âm /uː/" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Bảng chữ cái] Chữ 'I' trong từ 'Iron' phát âm IPA chuẩn là gì?",
+        audioText: "Iron starts with I.",
+        options: [{ en: "A. /aɪ/", vi: "Phát âm /aɪ/" }, { en: "B. /iː/", vi: "Phát âm /iː/" }, { en: "C. /ɪ/", vi: "Phát âm /ɪ/" }, { en: "D. /eɪ/", vi: "Phát âm /eɪ/" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên hãng gậy Cobra và chọn ĐÁP ÁN:",
+        audioText: "I use Cobra iron, C - O - B - R - A.",
+        options: [{ en: "A. Cobra", vi: "Gậy hãng Cobra" }, { en: "B. Cleveland", vi: "Gậy hãng Cleveland" }, { en: "C. Callaway", vi: "Gậy hãng Callaway" }, { en: "D. Honma", vi: "Gậy hãng Honma" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Bảng chữ cái] Chữ cái 'V' trong từ 'Volvik' phát âm IPA chuẩn là gì?",
+        audioText: "Letter V sound.",
+        options: [{ en: "A. /viː/", vi: "Phát âm /viː/" }, { en: "B. /weɪ/", vi: "Phát âm /weɪ/" }, { en: "C. /vɑː/", vi: "Phát âm /vɑː/" }, { en: "D. /vɛ/", vi: "Phát âm /vɛ/" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "fill",
+        title: "[1.1 Bảng chữ cái] Nghe Golfer đánh vần tên Mark và ĐIỀN TÊN:",
+        audioText: "I am Mark, M - A - R - K.",
+        displaySentence: "Golfer's name is _______.", translation: "Tên Golfer là _______.",
+        targetWord: "mark", hint: "💡 Gợi ý: Tên gồm 4 ký tự."
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Đánh vần] Nghe Golfer đánh vần tên Eric và chọn ĐÁP ÁN:",
+        audioText: "My name is Eric, E - R - I - C.",
+        options: [{ en: "A. ERIC", vi: "Eric" }, { en: "B. EVAN", vi: "Evan" }, { en: "C. EDEN", vi: "Eden" }, { en: "D. EARL", vi: "Earl" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Bảng chữ cái] Chữ cái 'S' trong từ 'Srixon' phát âm IPA chuẩn là gì?",
+        audioText: "Letter S sound.",
+        options: [{ en: "A. /es/", vi: "Phát âm /es/" }, { en: "B. /sɪ/", vi: "Phát âm /sɪ/" }, { en: "C. /ʃiː/", vi: "Phát âm /ʃiː/" }, { en: "D. /z/", vi: "Phát âm /z/" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Bảng chữ cái] Chữ cái 'L' trong từ 'Left' phát âm IPA chuẩn là gì?",
+        audioText: "Letter L sound.",
+        options: [{ en: "A. /el/", vi: "Phát âm /el/" }, { en: "B. /laɪ/", vi: "Phát âm /laɪ/" }, { en: "C. /leɪ/", vi: "Phát âm /leɪ/" }, { en: "D. /luː/", vi: "Phát âm /luː/" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Đánh vần] Nghe đánh vần tên thương hiệu MIZUNO và chọn ĐÁP ÁN:",
+        audioText: "Mizuno club, M - I - Z - U - N - O.",
+        options: [{ en: "A. Mizuno", vi: "Gậy hãng Mizuno" }, { en: "B. Miura", vi: "Gậy hãng Miura" }, { en: "C. Maruman", vi: "Gậy hãng Maruman" }, { en: "D. Honma", vi: "Gậy hãng Honma" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.1", type: "mcq",
+        title: "[1.1 Bảng chữ cái] Chữ cái 'N' trong tiếng Anh phát âm phân biệt với 'M' như thế nào?",
+        audioText: "Letter N sound.",
+        options: [{ en: "A. /en/ (nguyên âm e ngắn kết thúc âm mũi n)", vi: "Phát âm /en/" }, { en: "B. /em/", vi: "Phát âm /em/" }, { en: "C. /enː/", vi: "Kéo dài" }, { en: "D. /an/", vi: "Phát âm /an/" }],
+        correct: 0
+    },
 
     // =========================================================================
-    // SECTION 1.2: SỐ ĐẾM & KHOẢNG CÁCH (CÂU 16 - CÂU 50)
+    // SECTION 1.2: SỐ ĐẾM & KHOẢNG CÁCH (CÂU 51 - CÂU 100)
     // =========================================================================
     {
         lesson: "L1", section: "section1.2", type: "mcq",
@@ -310,7 +556,14 @@ window.masterQuizData.push(
         title: "[1.2 Số đếm] Nghe thông báo khoảng cách và ĐIỀN SỐ DẠNG CƠ BẢN:",
         audioText: "The distance to the green is 150 yards.",
         displaySentence: "The distance to the green is _______ yards.", translation: "Khoảng cách đến green là _______ yard.",
-        targetWord: "150", hint: "💡 Gợi ý: Nhập số."
+        targetWord: "150", hint: "💡 Gợi ý: Nhập số 150."
+    },
+    {
+        lesson: "L1", section: "section1.2", type: "fill",
+        title: "[1.2 Số đếm] Nghe khoảng cách ngắn tới cờ và ĐIỀN SỐ CƠ BẢN:",
+        audioText: "You have 100 yards left to the pin, sir.",
+        displaySentence: "You have _______ yards left to the pin.", translation: "Anh còn _______ yard nữa là tới cờ.",
+        targetWord: "100", hint: "💡 Gợi ý: Nhập số 100."
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
@@ -345,30 +598,162 @@ window.masterQuizData.push(
         options: [{ en: "A. Âm tiết 1 (Dis-)", vi: "DIS-tance" }, { en: "B. Âm tiết 2 (-tance)", vi: "Dis-TANCE" }, { en: "C. Cả hai âm tiết", vi: "Bằng nhau" }, { en: "D. Không có trọng âm", vi: "Không trọng âm" }],
         correct: 0
     },
+    // --- 20 CÂU BỔ SUNG MỚI CHO SECTION 1.2 (CÂU 81 - CÂU 100) ---
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Thuật ngữ] Từ 'Pin' (cột cờ) có nguyên âm ngắn nào?",
-        audioText: "Distance to the pin.",
-        options: [{ en: "A. /ɪ/", vi: "Nguyên âm ngắn /ɪ/" }, { en: "B. /iː/", vi: "Nguyên âm /iː/" }, { en: "C. /e/", vi: "Nguyên âm /e/" }, { en: "D. /æ/", vi: "Nguyên âm /æ/" }],
+        title: "[1.2 Khoảng cách] Nghe Caddie báo khoảng cách 180 yards tới cờ và chọn ĐÁP ÁN:",
+        audioText: "It is one hundred and eighty yards to the pin, sir.",
+        options: [{ en: "A. 180 yards", vi: "180 yard" }, { en: "B. 108 yards", vi: "108 yard" }, { en: "C. 80 yards", vi: "80 yard" }, { en: "D. 118 yards", vi: "118 yard" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.2", type: "fill",
+        title: "[1.2 Số đếm] Nghe Caddie báo số hố gôn và ĐIỀN SỐ CƠ BẢN:",
+        audioText: "This is hole number 5, sir.",
+        displaySentence: "This is hole number _______.", translation: "Đây là hố số _______.",
+        targetWord: "5", hint: "💡 Gợi ý: Nhập số 5."
+    },
+    {
+        lesson: "L1", section: "section1.2", type: "mcq",
+        title: "[1.2 Số đếm] Số '16' (Sixteen) phát âm IPA chuẩn là gì?",
+        audioText: "Hole 16, sir.",
+        options: [{ en: "A. /ˌsɪkˈstiːn/", vi: "/ˌsɪkˈstiːn/" }, { en: "B. /ˈsɪk.sti/", vi: "/ˈsɪk.sti/" }, { en: "C. /sɪks.ten/", vi: "/sɪks.ten/" }, { en: "D. /sɪks.tiːnθ/", vi: "/sɪks.tiːnθ/" }],
         correct: 0
     },
     {
         lesson: "L1", section: "section1.2", type: "mcq",
-        title: "[1.2 Thuật ngữ] Đâu là từ phát âm đúng của từ 'Flag' (cờ chỉ hố gôn)?",
-        audioText: "135 yards to the flag.",
-        options: [{ en: "A. /flæɡ/", vi: "/flæɡ/" }, { en: "B. /fleɡ/", vi: "/fleɡ/" }, { en: "C. /flɑːɡ/", vi: "/flɑːɡ/" }, { en: "D. /fleɪɡ/", vi: "/fleɪɡ/" }],
+        title: "[1.2 Khoảng cách] Caddie nói 'You have 70 yards left', số '70' (Seventy) phát âm chuẩn là gì?",
+        audioText: "You have seventy yards left.",
+        options: [{ en: "A. /ˈsev.ən.ti/", vi: "/ˈsev.ən.ti/" }, { en: "B. /ˌsev.ənˈtiːn/", vi: "/ˌsev.ənˈtiːn/" }, { en: "C. /seven.tiːn/", vi: "Seventeen" }, { en: "D. /sev.ti/", vi: "Sevti" }],
         correct: 0
-    },[source: 10]
+    },
+    {
+        lesson: "L1", section: "section1.2", type: "fill",
+        title: "[1.2 Số đếm] Nghe Golfer hỏi số gậy par của hố và ĐIỀN SỐ:",
+        audioText: "This is a Par 4 hole, sir.",
+        displaySentence: "This is a Par _______ hole.", translation: "Đây là hố Par _______.",
+        targetWord: "4", hint: "💡 Gợi ý: Nhập số 4."
+    },
+    {
+        lesson: "L1", section: "section1.2", type: "mcq",
+        title: "[1.2 Khoảng cách] Số '80' (Eighty) có trọng âm đặt ở đâu?",
+        audioText: "Eighty yards to the green.",
+        options: [{ en: "A. Âm tiết 1 (Eigh-)", vi: "EIGH-ty" }, { en: "B. Âm tiết 2 (-ty)", vi: "Eigh-TY" }, { en: "C. Bằng nhau", vi: "Bằng nhau" }, { en: "D. Không có trọng âm", vi: "Không trọng âm" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.2", type: "mcq",
+        title: "[1.2 Khoảng cách] Nghe Caddie báo khoảng cách 200 yards và chọn ĐÁP ÁN:",
+        audioText: "It is two hundred yards from the tee, sir.",
+        options: [{ en: "A. 200 yards", vi: "200 yard" }, { en: "B. 120 yards", vi: "120 yard" }, { en: "C. 20 yards", vi: "20 yard" }, { en: "D. 220 yards", vi: "220 yard" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.2", type: "fill",
+        title: "[1.2 Số gậy] Nghe Caddie lấy gậy sắt 8 cho khách và ĐIỀN SỐ GẬY:",
+        audioText: "Here is your 8 iron, sir.",
+        displaySentence: "Here is your _______ iron, sir.", translation: "Đây là gậy sắt số _______ của anh.",
+        targetWord: "8", hint: "💡 Gợi ý: Nhập số 8."
+    },
+    {
+        lesson: "L1", section: "section1.2", type: "mcq",
+        title: "[1.2 Số đếm] Số '17' (Seventeen) có trọng âm chính đặt ở đâu?",
+        audioText: "Seventeen yards short.",
+        options: [{ en: "A. Âm tiết 3 (-teen)", vi: "Seven-TEEN" }, { en: "B. Âm tiết 1 (Sev-)", vi: "SEVen-teen" }, { en: "C. Âm tiết 2 (-en-)", vi: "sev-EN-teen" }, { en: "D. Không trọng âm", vi: "Không trọng âm" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.2", type: "mcq",
+        title: "[1.2 Số đếm] Số '90' (Ninety) phát âm IPA chuẩn là gì?",
+        audioText: "Ninety yards to the flag.",
+        options: [{ en: "A. /ˈnaɪn.ti/", vi: "/ˈnaɪn.ti/" }, { en: "B. /ˌnaɪnˈtiːn/", vi: "/ˌnaɪnˈtiːn/" }, { en: "C. /nin.ti/", vi: "Ninti" }, { en: "D. /naɪn.ten/", vi: "Nineten" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.2", type: "mcq",
+        title: "[1.2 Khoảng cách] Caddie báo '125 yards to the pin', chọn câu viết đúng:",
+        audioText: "It is 125 yards to the pin.",
+        options: [
+            { en: "A. One hundred and twenty-five yards", vi: "125 yard" },
+            { en: "B. Twelve five yards", vi: "125 yard" },
+            { en: "C. One twenty yards", vi: "120 yard" },
+            { en: "D. Two hundred yards", vi: "200 yard" }
+        ],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.2", type: "fill",
+        title: "[1.2 Số gậy] Nghe Caddie kiểm đếm số cú đánh (shots) và ĐIỀN SỐ:",
+        audioText: "That was 2 shots, sir.",
+        displaySentence: "That was _______ shots, sir.", translation: "Đó là _______ cú đánh ạ.",
+        targetWord: "2", hint: "💡 Gợi ý: Nhập số 2."
+    },
+    {
+        lesson: "L1", section: "section1.2", type: "mcq",
+        title: "[1.2 Số đếm] Số '18' (Eighteen) có phiên âm IPA chuẩn là gì?",
+        audioText: "Hole 18 is Par 5.",
+        options: [{ en: "A. /ˌeɪˈtiːn/", vi: "/ˌeɪˈtiːn/" }, { en: "B. /ˈeɪ.ti/", vi: "/ˈeɪ.ti/" }, { en: "C. /eɪt.ten/", vi: "Eitten" }, { en: "D. /eɪ.tiːnθ/", vi: "Eighteenth" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.2", type: "mcq",
+        title: "[1.2 Số đếm] Số '19' (Nineteen) có phiên âm IPA chuẩn là gì?",
+        audioText: "Nineteen yards left.",
+        options: [{ en: "A. /ˌnaɪnˈtiːn/", vi: "/ˌnaɪnˈtiːn/" }, { en: "B. /ˈnaɪn.ti/", vi: "/ˈnaɪn.ti/" }, { en: "C. /nin.tiːn/", vi: "Nintien" }, { en: "D. /naɪn.ten/", vi: "Nineten" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.2", type: "mcq",
+        title: "[1.2 Khoảng cách] Caddie đo khoảng cách bằng thước yards, từ 'Yard' phát âm IPA chuẩn là gì?",
+        audioText: "Distance in yards.",
+        options: [{ en: "A. /jɑːrd/", vi: "Phát âm /jɑːrd/" }, { en: "B. /jærd/", vi: "Phát âm /jærd/" }, { en: "C. /jɔːrd/", vi: "Phát âm /jɔːrd/" }, { en: "D. /jʊərd/", vi: "Phát âm /jʊərd/" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.2", type: "fill",
+        title: "[1.2 Số gậy] Nghe Caddie đưa gậy gỗ 3 (3 wood) và ĐIỀN SỐ:",
+        audioText: "Here is your 3 wood, sir.",
+        displaySentence: "Here is your _______ wood, sir.", translation: "Đây là gậy gỗ số _______ của anh.",
+        targetWord: "3", hint: "💡 Gợi ý: Nhập số 3."
+    },
+    {
+        lesson: "L1", section: "section1.2", type: "mcq",
+        title: "[1.2 Khoảng cách] Caddie báo '160 yards', từ 'One hundred and sixty' viết gọn là gì?",
+        audioText: "160 yards to the green.",
+        options: [{ en: "A. 160 yards", vi: "160 yard" }, { en: "B. 116 yards", vi: "116 yard" }, { en: "C. 60 yards", vi: "60 yard" }, { en: "D. 610 yards", vi: "610 yard" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.2", type: "mcq",
+        title: "[1.2 Số đếm] Cách đọc thứ tự hố số 1 ('1st hole') bằng tiếng Anh là gì?",
+        audioText: "1st hole.",
+        options: [{ en: "A. First hole /fɜːrst həʊl/", vi: "Hố thứ nhất" }, { en: "B. One hole", vi: "Hố một" }, { en: "C. Single hole", vi: "Hố đơn" }, { en: "D. Initial hole", vi: "Hố đầu" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.2", type: "mcq",
+        title: "[1.2 Số đếm] Cách đọc thứ tự hố số 2 ('2nd hole') bằng tiếng Anh là gì?",
+        audioText: "2nd hole.",
+        options: [{ en: "A. Second hole /ˈsek.ənd həʊl/", vi: "Hố thứ hai" }, { en: "B. Two hole", vi: "Hố hai" }, { en: "C. Double hole", vi: "Hố kép" }, { en: "D. Twice hole", vi: "Hố gấp đôi" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.2", type: "mcq",
+        title: "[1.2 Số đếm] Cách đọc điểm số tổng 72 (Par score) bằng tiếng Anh chuẩn là gì?",
+        audioText: "Score is 72.",
+        options: [{ en: "A. Seventy-two", vi: "Seventy-two (72)" }, { en: "B. Seven two", vi: "Seven two" }, { en: "C. Seventeen two", vi: "Seventeen two" }, { en: "D. Seventy second", vi: "Seventy second" }],
+        correct: 0
+    },
 
     // =========================================================================
-    // SECTION 1.3: LỜI CHÀO, CHĂM SÓC & TRÒ CHUYỆN SỞ THÍCH (CÂU 51 - CÂU 90)
+    // SECTION 1.3: LỜI CHÀO, CHĂM SÓC & TRÒ CHUYỆN SỞ THÍCH (CÂU 101 - CÂU 150)
     // =========================================================================
     {
         lesson: "L1", section: "section1.3", type: "mcq",
         title: "[1.3 Chào hỏi] Khi gặp Golfer lần đầu tại Tee box hố 1, câu chào nào thể hiện sự chuyên nghiệp nhất?",
         audioText: "Good morning, Sir! Welcome to our golf club. I am your Caddie today. I am here to assist you.",
         options: [
-            { en: "A. Good morning, Sir! Welcome to our golf club. I am your Caddie today.", vi: "Chào buổi sáng anh! Chào mừng anh tới sân gôn. Em là Caddie của anh hôm nay." },
+            { en: "A. Good morning, Sir! Welcome to our golf club. I am your Caddie today. I am here to assist you.", vi: "Chào buổi sáng anh! Chào mừng anh tới sân gôn. Em là Caddie của anh hôm nay." },
             { en: "B. Hello Sir! Give me your bag now.", vi: "Chào anh! Đưa túi gậy đây." },
             { en: "C. Hi! Are you ready to play now?", vi: "Chào! Sẵn sàng chơi chưa?" },
             { en: "D. Morning, let's go quickly!", vi: "Chào buổi sáng, đi nhanh lên!" }
@@ -668,79 +1053,6 @@ window.masterQuizData.push(
     },
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Thuật ngữ] Động từ 'Aim' trong câu 'Please aim to the left' có nghĩa là gì?",
-        audioText: "Please aim to the left.",
-        options: [{ en: "A. Ngắm / Hướng cú đánh", vi: "Aim = Ngắm hướng" }, { en: "B. Đánh thật mạnh", vi: "Hit hard" }, { en: "C. Lau sạch gậy", vi: "Clean club" }, { en: "D. Đặt bóng xuống", vi: "Place ball" }],
-        correct: 0
-    },
-    {
-        lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Thuật ngữ] Từ 'Bunker' (bẫy cát) có âm tiết thứ nhất chứa nguyên âm nào?",
-        audioText: "Watch out for the bunker.",
-        options: [{ en: "A. /ʌ/", vi: "Nguyên âm /ʌ/" }, { en: "B. /æ/", vi: "Nguyên âm /æ/" }, { en: "C. /ʊ/", vi: "Nguyên âm /ʊ/" }, { en: "D. /ɒ/", vi: "Nguyên âm /ɒ/" }],
-        correct: 0
-    },
-    {
-        lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Phục vụ] Lau sạch rãnh mặt gậy trước khi giao cho khách, Caddie nói câu nào?",
-        audioText: "I have cleaned the club head for you, Sir.",
-        options: [
-            { en: "A. I have cleaned the club head for you, Sir.", vi: "Em đã lau sạch đầu gậy cho anh rồi ạ." },
-            { en: "B. The club is dirty, take it.", vi: "Gậy bẩn đấy, cầm lấy." },
-            { en: "C. Don't touch the club.", vi: "Đừng chạm vào gậy." },
-            { en: "D. This club is old.", vi: "Gậy này cũ rồi." }
-        ],
-        correct: 0
-    },
-    {
-        lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Thuật ngữ] Từ 'Water hazard' (bẫy nước) phát âm IPA chuẩn là gì?",
-        audioText: "Watch out for the water hazard.",
-        options: [{ en: "A. /ˈwɔː.tər ˈhæz.ərd/", vi: "/ˈwɔː.tər ˈhæz.ərd/" }, { en: "B. /ˈwɑː.tər ˈhɑː.zɑːrd/", vi: "/ˈwɑː.tər ˈhɑː.zɑːrd/" }, { en: "C. /ˈwɔː.tə ˈhæ.zɑːd/", vi: "/ˈwɔː.tə ˈhæ.zɑːd/" }, { en: "D. /ˈwɔː.tər ˈhæz.əd/", vi: "/ˈwɔː.tər ˈhæz.əd/" }],
-        correct: 0
-    },
-    {
-        lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Thuật ngữ] Từ 'Fairway' có trọng âm rơi vào đâu?",
-        audioText: "The ball is on the fairway.",
-        options: [{ en: "A. Âm tiết 1 (Fair-)", vi: "FAIR-way" }, { en: "B. Âm tiết 2 (-way)", vi: "Fair-WAY" }, { en: "C. Cả hai âm tiết", vi: "Bằng nhau" }, { en: "D. Không có trọng âm", vi: "Không trọng âm" }],
-        correct: 0
-    },
-    {
-        lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 An toàn] Cảnh báo bóng nguy hiểm bay về phía người khác, Caddie hô từ gì theo luật quốc tế?",
-        audioText: "FORE!",
-        options: [{ en: "A. FORE!", vi: "FORE! (Bóng nguy hiểm)" }, { en: "B. FOUR!", vi: "FOUR!" }, { en: "C. BALL!", vi: "BALL!" }, { en: "D. LOOK OUT!", vi: "LOOK OUT!" }],
-        correct: 0
-    },
-    {
-        lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Thuật ngữ] Mảng cỏ bị xới lên sau cú đánh gậy sắt trên Fairway gọi là gì?",
-        audioText: "Please replace the divot.",
-        options: [{ en: "A. Divot", vi: "Divot (/ˈdɪv.ət/)" }, { en: "B. Pitch", vi: "Pitch" }, { en: "C. Grass", vi: "Grass" }, { en: "D. Piot", vi: "Piot" }],
-        correct: 0
-    },
-    {
-        lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Phục vụ] Khi Golfer nhờ thay/đặt lại mảng cỏ divot, Caddie thực hiện và đáp lại thế nào?",
-        audioText: "I will replace the divot right away, Sir.",
-        options: [
-            { en: "A. I will replace the divot right away, Sir.", vi: "Em sẽ đặt lại mảng cỏ divot ngay lập tức ạ." },
-            { en: "B. Fix it yourself.", vi: "Tự sửa đi." },
-            { en: "C. Divot is no problem, leave it.", vi: "Mảng cỏ không sao, kệ nó." },
-            { en: "D. Don't hit divot again.", vi: "Đừng đánh tróc cỏ nữa." }
-        ],
-        correct: 0
-    },
-    {
-        lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Thuật ngữ] Từ 'Rough' (vùng cỏ cao bẫy) có phát âm âm cuối là gì?",
-        audioText: "The ball is in the rough.",
-        options: [{ en: "A. /f/", vi: "Âm /f/ (/rʌf/)" }, { en: "B. /ɡ/", vi: "Âm /ɡ/" }, { en: "C. /k/", vi: "Âm /k/" }, { en: "D. /p/", vi: "Âm /p/" }],
-        correct: 0
-    },
-    {
-        lesson: "L1", section: "section1.3", type: "mcq",
         title: "[1.3 Bàn giao] Khi bàn giao túi gậy đã làm sạch hoàn tất cuối buổi chơi, Caddie nói câu nào?",
         audioText: "Here is your golf bag, Sir. All clubs are clean and verified. Thank you!",
         options: [
@@ -751,15 +1063,219 @@ window.masterQuizData.push(
         ],
         correct: 0
     },
+    // --- 20 CÂU BỔ SUNG MỚI CHO SECTION 1.3 (CÂU 131 - CÂU 150) ---
     {
         lesson: "L1", section: "section1.3", type: "mcq",
-        title: "[1.3 Phản xạ] Golfer hỏi vị trí ngắm phát bóng, Caddie trả lời hướng dẫn đúng chuẩn là gì?",
-        audioText: "Please aim to the left, Sir. Watch out for the bunker on the right.",
+        title: "[1.3 Sở thích] Golfer nói 'I play golf for networking', câu này có nghĩa là gì?",
+        audioText: "I play golf for networking.",
         options: [
-            { en: "A. Please aim to the left, Sir. Watch out for the bunker on the right.", vi: "Anh ngắm sang bên trái giúp em nhé, chú ý bẫy cát bên phải ạ." },
-            { en: "B. Hit anywhere you like, Sir.", vi: "Đánh đâu tùy thích anh ơi." },
-            { en: "C. Shoot straight to the water hazard.", vi: "Bắn thẳng vào bẫy nước đi." },
-            { en: "D. Don't hit today, it is dangerous.", vi: "Hôm nay đừng đánh, nguy hiểm lắm." }
+            { en: "A. Tôi chơi golf để giao lưu kết nối đối tác", vi: "Golf for networking" },
+            { en: "B. Tôi chơi golf để tập thể dục", vi: "Golf for fitness" },
+            { en: "C. Tôi chơi golf vì bạn bè rủ", vi: "Golf with friends" },
+            { en: "D. Tôi chơi golf để thi đấu chuyên nghiệp", vi: "Golf for tournament" }
+        ],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.3", type: "mcq",
+        title: "[1.3 Trò chuyện] Khi Golfer nói 'Besides golf, I love playing tennis', Caddie đáp lại như thế nào?",
+        audioText: "Besides golf, I love playing tennis.",
+        options: [
+            { en: "A. Oh tennis too? You must be very active, Sir!", vi: "Ồ cả tennis nữa ạ? Anh chắc hẳn rất năng động ạ!" },
+            { en: "B. Tennis is boring.", vi: "Tennis chán lắm." },
+            { en: "C. Don't play tennis, play golf only.", vi: "Đừng chơi tennis, chỉ chơi golf thôi." },
+            { en: "D. I don't know tennis.", vi: "Em không biết tennis." }
+        ],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.3", type: "mcq",
+        title: "[1.3 Chăm sóc] Mẫu câu chủ động hỏi Golfer có cần ô che nắng/mưa không là gì?",
+        audioText: "Would you like an umbrella, Sir?",
+        options: [
+            { en: "A. Would you like an umbrella, Sir?", vi: "Anh có muốn dùng ô che không ạ?" },
+            { en: "B. Take umbrella yourself.", vi: "Tự lấy ô đi." },
+            { en: "C. Do you buy an umbrella?", vi: "Anh có mua ô không?" },
+            { en: "D. Umbrella is heavy.", vi: "Ô nặng lắm." }
+        ],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.3", type: "fill",
+        title: "[1.3 Chăm sóc] Nghe Caddie hỏi khách dùng nước lạnh và ĐIỀN TỪ:",
+        audioText: "Would you like some cold water, Sir?",
+        displaySentence: "Would you like some cold _______, Sir?", translation: "Anh có muốn dùng chút _______ lạnh không ạ?",
+        targetWord: "water", hint: "💡 Gợi ý: Từ gồm 5 ký tự chỉ nước."
+    },
+    {
+        lesson: "L1", section: "section1.3", type: "mcq",
+        title: "[1.3 Trò chuyện] Mẫu câu Caddie khen thời tiết đẹp để mở đầu câu chuyện (Ice-breaker) là gì?",
+        audioText: "Beautiful day, isn't it, Sir?",
+        options: [
+            { en: "A. Beautiful day, isn't it, Sir?", vi: "Một ngày thời tiết tuyệt vời phải không anh?" },
+            { en: "B. Weather is terrible today.", vi: "Thời tiết hôm nay tệ quá." },
+            { en: "C. Why are you playing today?", vi: "Sao hôm nay anh lại chơi?" },
+            { en: "D. Rain is coming soon.", vi: "Trời sắp mưa rồi." }
+        ],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.3", type: "mcq",
+        title: "[1.3 Phản xạ] Golfer nói 'I am here for business', Caddie phản hồi thế nào?",
+        audioText: "I am here for business.",
+        options: [
+            { en: "A. I see! Do you often play golf to network, Sir?", vi: "Em hiểu rồi ạ! Anh có thường chơi golf để kết nối đối tác không ạ?" },
+            { en: "B. Business is boring.", vi: "Kinh doanh chán lắm." },
+            { en: "C. Don't talk about business here.", vi: "Đừng bàn công việc ở đây." },
+            { en: "D. You are very rich.", vi: "Anh giàu quá." }
+        ],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.3", type: "mcq",
+        title: "[1.3 Sở thích] Từ vựng 'Bơi lội' (Swimming) phát âm IPA chuẩn là gì?",
+        audioText: "Swimming in summer.",
+        options: [{ en: "A. Swimming /ˈswɪm.ɪŋ/", vi: "Bơi lội" }, { en: "B. Diving", vi: "Lặn" }, { en: "C. Running", vi: "Chạy" }, { en: "D. Walking", vi: "Đi bộ" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.3", type: "mcq",
+        title: "[1.3 Sở thích] Từ vựng 'Đọc sách' (Reading) phát âm IPA chuẩn là gì?",
+        audioText: "Reading books.",
+        options: [{ en: "A. Reading /ˈriː.dɪŋ/", vi: "Đọc sách" }, { en: "B. Writing", vi: "Viết sách" }, { en: "C. Listening", vi: "Lắng nghe" }, { en: "D. Speaking", vi: "Nói chuyện" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.3", type: "mcq",
+        title: "[1.3 Khích lệ] Khi Golfer ghi được birdie, Caddie chúc mừng hào hứng thế nào?",
+        audioText: "Congratulations on your birdie, Sir!",
+        options: [
+            { en: "A. Congratulations on your birdie, Sir!", vi: "Chúc mừng anh đã đạt điểm Birdie ạ!" },
+            { en: "B. Birdie is easy.", vi: "Birdie dễ mà." },
+            { en: "C. Lucky shot only.", vi: "Đánh may thôi." },
+            { en: "D. You can do better next time.", vi: "Lần sau anh làm tốt hơn." }
+        ],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.3", type: "mcq",
+        title: "[1.3 Cảnh báo] Khi nhắc Golfer cẩn thận bẫy nước (water hazard), Caddie nói câu nào?",
+        audioText: "Please be careful, there is water behind the green, Sir.",
+        options: [
+            { en: "A. Please be careful, there is water behind the green, Sir.", vi: "Anh cẩn thận giúp em, có nước ở phía sau green ạ." },
+            { en: "B. Hit straight into the water.", vi: "Đánh thẳng xuống nước đi." },
+            { en: "C. Water is clean and safe.", vi: "Nước sạch và an toàn." },
+            { en: "D. Don't worry about water.", vi: "Đừng lo về nước." }
+        ],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.3", type: "mcq",
+        title: "[1.3 Phục vụ] Khi lau sạch bóng gạt trên Green cho Golfer, Caddie trả lại bóng và nói câu nào?",
+        audioText: "Your ball is clean now, Sir. Good luck with your putt!",
+        options: [
+            { en: "A. Your ball is clean now, Sir. Good luck with your putt!", vi: "Bóng của anh đã được lau sạch rồi ạ. Chúc anh gạt bóng may mắn ạ!" },
+            { en: "B. Take your dirty ball.", vi: "Cầm lấy bóng bẩn này." },
+            { en: "C. Clean ball yourself next time.", vi: "Lần sau tự lau bóng." },
+            { en: "D. Ball is too old.", vi: "Bóng cũ quá." }
+        ],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.3", type: "fill",
+        title: "[1.3 Chăm sóc] Nghe Caddie chúc Golfer chơi may mắn và ĐIỀN TỪ DỄ:",
+        audioText: "Good luck with your shot, Sir!",
+        displaySentence: "Good _______ with your shot, Sir!", translation: "Chúc anh _______ mắn với cú đánh ạ!",
+        targetWord: "luck", hint: "💡 Gợi ý: Từ gồm 4 ký tự chỉ sự may mắn."
+    },
+    {
+        lesson: "L1", section: "section1.3", type: "mcq",
+        title: "[1.3 Sở thích] Từ 'Music' trong cụm 'listening to music' phát âm IPA chuẩn là gì?",
+        audioText: "Listening to music.",
+        options: [{ en: "A. /ˈmjuː.zɪk/", vi: "/ˈmjuː.zɪk/" }, { en: "B. /ˈmuː.zɪk/", vi: "/ˈmuː.zɪk/" }, { en: "C. /ˈmjuː.sɪk/", vi: "/ˈmjuː.sɪk/" }, { en: "D. /muː.sɪk/", vi: "/muː.sɪk/" }],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.3", type: "mcq",
+        title: "[1.3 Chỉ hướng] Khi hướng dẫn ngắm đánh thẳng phía trước (Straight ahead), Caddie nói câu nào?",
+        audioText: "Please hit straight ahead, Sir.",
+        options: [
+            { en: "A. Please hit straight ahead, Sir.", vi: "Anh đánh thẳng phía trước giúp em nhé ạ." },
+            { en: "B. Aim left side only.", vi: "Ngắm bên trái thôi." },
+            { en: "C. Aim right side only.", vi: "Ngắm bên phải thôi." },
+            { en: "D. Hit backward, Sir.", vi: "Đánh ngược về sau." }
+        ],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.3", type: "mcq",
+        title: "[1.3 An toàn] Khi thấy có bão/sấm sét tiến gần, Caddie mời Golfer về nhà câu lạc bộ thế nào?",
+        audioText: "The storm is coming near. Let's go back to the clubhouse, Sir.",
+        options: [
+            { en: "A. The storm is coming near. Let's go back to the clubhouse, Sir.", vi: "Cơn bão đang đến gần rồi ạ. Chúng ta nên quay về nhà câu lạc bộ cho an toàn thưa anh." },
+            { en: "B. Keep playing in the rain.", vi: "Cứ tiếp tục chơi trong mưa." },
+            { en: "C. Sit under the tall tree.", vi: "Ngồi dưới cây to." },
+            { en: "D. Lightning is not dangerous.", vi: "Sấm sét không nguy hiểm." }
+        ],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.3", type: "mcq",
+        title: "[1.3 Sở thích] Cụm từ 'Play golf with family' có nghĩa là gì?",
+        audioText: "I play golf with my family.",
+        options: [
+            { en: "A. Tôi chơi golf cùng với gia đình", vi: "Play with family" },
+            { en: "B. Tôi chơi golf một mình", vi: "Play alone" },
+            { en: "C. Tôi chơi golf với đồng nghiệp", vi: "Play with coworkers" },
+            { en: "D. Tôi chơi golf với Caddie", vi: "Play with caddie" }
+        ],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.3", type: "mcq",
+        title: "[1.3 Phản xạ] Khi Golfer đánh bóng vào cỏ rough sâu, Caddie trấn an khách thế nào?",
+        audioText: "Don't worry, Sir. I will find your ball.",
+        options: [
+            { en: "A. Don't worry, Sir. I will find your ball.", vi: "Anh đừng lo lắng ạ. Em sẽ tìm bóng giúp anh ngay." },
+            { en: "B. Ball is lost, buy new ball.", vi: "Mất bóng rồi, mua bóng mới đi." },
+            { en: "C. Find it yourself, Sir.", vi: "Tự đi mà tìm." },
+            { en: "D. You hit very bad.", vi: "Anh đánh tệ quá." }
+        ],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.3", type: "mcq",
+        title: "[1.3 Động viên] Mẫu câu khuyên Golfer bình tĩnh tập trung trước cú gạt quan trọng là gì?",
+        audioText: "Take your time, Sir.",
+        options: [
+            { en: "A. Take your time, Sir.", vi: "Anh cứ từ tốn bình tĩnh thôi ạ." },
+            { en: "B. Hit quickly and go.", vi: "Đánh nhanh lên rồi đi." },
+            { en: "C. Hurry up, we are slow.", vi: "Nhanh lên, chúng ta chậm rồi." },
+            { en: "D. Don't think too much.", vi: "Đừng suy nghĩ." }
+        ],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.3", type: "mcq",
+        title: "[1.3 Chăm sóc] Khi Golfer bị mệt do đi bộ, Caddie đề nghị hỗ trợ gì?",
+        audioText: "Would you like to sit and rest for a moment, Sir?",
+        options: [
+            { en: "A. Would you like to sit and rest for a moment, Sir?", vi: "Anh có muốn ngồi nghỉ ngơi một chút không ạ?" },
+            { en: "B. Keep running, Sir.", vi: "Tiếp tục chạy đi anh." },
+            { en: "C. You are too weak.", vi: "Anh yếu quá." },
+            { en: "D. Walk faster, Sir.", vi: "Đi nhanh lên anh." }
+        ],
+        correct: 0
+    },
+    {
+        lesson: "L1", section: "section1.3", type: "mcq",
+        title: "[1.3 Tạm biệt] Lời chúc Golfer có một trận đấu hay trước khi bắt đầu vòng chơi là gì?",
+        audioText: "Have a great game today, Sir!",
+        options: [
+            { en: "A. Have a great game today, Sir!", vi: "Chúc anh có một trận đấu tuyệt vời hôm nay ạ!" },
+            { en: "B. You will lose today.", vi: "Hôm nay anh sẽ thua." },
+            { en: "C. Pay money now.", vi: "Trả tiền ngay." },
+            { en: "D. Bye bye, Sir.", vi: "Tạm biệt anh." }
         ],
         correct: 0
     }
