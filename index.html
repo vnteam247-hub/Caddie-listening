@@ -92,7 +92,7 @@
         <!-- Bố cục gộp hàng: BÊN TRÁI là Trạng thái | BÊN PHẢI là Thời gian -->
         <div class="meta-bar">
             <div id="item-status"></div>
-            <div id="timer-box">⏳ Thời gian làm bài: <span id="time-left">06:40</span></div>
+            <div id="timer-box">⏳ Thời gian làm bài: <span id="time-left">08:20</span></div>
         </div>
         
         <div id="quiz-area">
@@ -151,7 +151,7 @@
                 correct: 1
             },
 
-            // DẠNG 2: Nghe tiếng Anh -> Điền 01 từ còn thiếu (Phần dịch giữ chỗ trống để không bị lộ đề)
+            // DẠNG 2: Nghe tiếng Anh -> Điền 01 từ còn thiếu
             {
                 type: "fill",
                 title: "Nghe đoạn thoại và ĐIỀN 01 TỪ CÒN THIẾU vào ô trống:",
@@ -269,7 +269,8 @@
         let currentIndex = 0;
         let isReviewMode = false;
 
-        let totalSeconds = quizData.length * 40; 
+        // Cấu hình thời gian làm bài trung bình 50 giây/câu
+        let totalSeconds = quizData.length * 50; 
         let elapsedSeconds = 0; // Đếm thời gian làm bài thực tế
         let timerInterval = null;
 
@@ -372,7 +373,6 @@
                         const btn = document.createElement('button');
                         btn.className = 'option-btn';
                         
-                        // Hiển thị tiếng Anh + Dịch tiếng Việt bên dưới
                         btn.innerHTML = `${optObj.en}<span class="vi-trans">${optObj.vi}</span>`;
 
                         if (!isReviewMode) {
