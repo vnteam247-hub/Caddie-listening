@@ -3,23 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIẾNG ANH GIAO TIẾP CƠ BẢN CHO CADDIE - BRG LEARNING</title>
+    <title>TIẾNG ANH GIAO TIẾP CƠ BẢN CHO CADDIE - LUYỆN TẬP NGHE</title>
     <style>
         body { font-family: sans-serif; text-align: center; padding: 15px 10px; background-color: #f8f9fa; margin: 0; }
-        
-        /* Header Thương hiệu BRG LEARNING */
         .brand-header { font-size: 20px; font-weight: bold; color: #B21818; letter-spacing: 1.5px; margin-bottom: 10px; text-transform: uppercase; }
-        
         .container { max-width: 600px; margin: 0 auto; background: white; padding: 20px 15px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         
-        /* Tiêu đề chính */
         h1 { color: #1e7e34; font-size: 18px; margin: 0 0 5px 0; font-weight: bold; text-transform: uppercase; line-height: 1.3; }
         h2 { color: #555; font-size: 12px; margin: 0 0 5px 0; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
         .lesson-title { color: #0d6efd; font-size: 13.5px; margin: 0 0 12px 0; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
 
-        /* THANH HEADER PHÂN CỘT */
-        .meta-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 8px; }
-        
+        .meta-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 8px; flex-wrap: wrap; }
         #item-status { font-size: 12px; font-weight: bold; padding: 5px 12px; border-radius: 15px; text-align: left; }
         .status-answered { background-color: #d1e7dd; color: #0f5132; border: 1px solid #badbcc; }
         .status-skipped { background-color: #e2e3e5; color: #383d41; border: 1px solid #d6d8db; }
@@ -27,7 +21,6 @@
         .status-correct { background-color: #d1e7dd; color: #0f5132; border: 1px solid #badbcc; }
         .status-incorrect { background-color: #f8d7da; color: #842029; border: 1px solid #f5c6cb; }
 
-        /* Đồng hồ đếm ngược */
         #timer-box { font-size: 12px; font-weight: bold; color: #0d6efd; background: #e7f1ff; padding: 5px 12px; border-radius: 15px; border: 1px solid #b6d4fe; transition: all 0.3s; white-space: nowrap; }
         .timer-warning { color: #dc3545 !important; background: #f8d7da !important; border-color: #f5c6cb !important; animation: blink 1s infinite; }
 
@@ -38,8 +31,6 @@
         #play-btn:disabled { background: #adb5bd; cursor: not-allowed; box-shadow: none; }
         
         .question-title { text-align: left; font-weight: bold; margin-bottom: 10px; color: #212529; font-size: 14.5px; line-height: 1.4; }
-        
-        /* Dạng Trắc nghiệm */
         .options-container { display: flex; flex-direction: column; gap: 10px; margin: 12px 0; text-align: left; }
         .option-btn { padding: 11px 14px; font-size: 14px; background: #fff; border: 2px solid #dee2e6; border-radius: 8px; cursor: pointer; font-weight: 500; transition: all 0.2s; line-height: 1.4; }
         .option-btn:hover:not(:disabled) { background: #f1f3f5; border-color: #adb5bd; }
@@ -48,49 +39,44 @@
         .option-btn.opt-incorrect { background-color: #f8d7da !important; border-color: #dc3545 !important; color: #842029; font-weight: bold; }
         .option-btn:disabled { cursor: default; }
 
-        /* Style Dịch tiếng Việt */
         .vi-trans { font-style: italic; font-size: 0.85em; color: #555; font-weight: normal; margin-top: 3px; display: block; }
-
-        /* Dạng Điền từ */
         .fill-container { margin: 12px 0; text-align: left; background: #f8f9fa; padding: 12px; border-radius: 8px; border: 1px solid #e9ecef; }
         .blank-sentence { font-size: 16px; font-weight: bold; color: #333; margin-bottom: 10px; line-height: 1.4; }
         .fill-input { width: 100%; padding: 11px; font-size: 15px; font-weight: bold; border: 2px solid #0d6efd; border-radius: 6px; box-sizing: border-box; text-align: center; color: #0d6efd; }
         .fill-input:disabled { background-color: #e9ecef; border-color: #adb5bd; color: #495057; }
         .char-hint { font-size: 13px; color: #d63384; font-weight: bold; margin-top: 6px; display: block; }
         .correct-answer-text { font-size: 14px; color: #198754; font-weight: bold; margin-top: 8px; display: block; }
-
-        /* Style highlight cho từ sai */
         .wrong-word-highlight { color: #dc3545 !important; font-weight: bold !important; font-style: italic !important; text-decoration: underline; }
 
-        /* Nút điều hướng */
         .control-group { display: flex; justify-content: space-between; gap: 10px; margin-top: 18px; }
         .action-btn { padding: 11px 16px; font-size: 13.5px; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; flex: 1; }
         #prev-btn { background: #fd7e14; color: white; }
         #next-btn { background: #198754; color: white; }
-        
         #status { font-size: 13.5px; font-weight: bold; color: #0d6efd; margin-top: 10px; }
         
-        /* Màn hình tổng kết */
-        .result-box { text-align: center; padding: 10px 0; }
-        .score-num { font-size: 32px; font-weight: bold; color: #1e7e34; margin: 10px 0; }
-        .detail-summary { margin-top: 15px; text-align: left; background: #f8f9fa; padding: 12px; border-radius: 8px; font-size: 13.5px; line-height: 1.6; border: 1px solid #dee2e6; }
-        .result-btn-group { display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap; }
-        .btn-result { flex: 1; min-width: 140px; padding: 12px; font-size: 13.5px; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; }
-        #review-btn { background: #17a2b8; color: white; }
-        #reload-btn { background: #0d6efd; color: white; }
+        .result-card { text-align: center; }
+        .score-box { font-size: 36px; font-weight: bold; color: #1e7e34; margin: 8px 0 4px 0; }
+        .level-badge { display: inline-block; padding: 6px 16px; border-radius: 20px; font-weight: bold; font-size: 14px; margin-bottom: 10px; }
+        .level-excellent { background-color: #d1e7dd; color: #0f5132; border: 1px solid #badbcc; }
+        .level-passed { background-color: #cff4fc; color: #055160; border: 1px solid #b6effb; }
+        .level-needs-improvement { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .stats-box { background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 8px; padding: 12px; margin: 15px 0; text-align: left; font-size: 13.5px; line-height: 1.6; }
+        .action-buttons { display: flex; gap: 10px; justify-content: center; margin-top: 15px; flex-wrap: wrap; }
+        .btn-review { background: #17a2b8; color: white; flex: 1; padding: 11px; border-radius: 6px; font-weight: bold; border: none; cursor: pointer; min-width: 130px; }
+        .btn-retry { background: #0d6efd; color: white; flex: 1; padding: 11px; border-radius: 6px; font-weight: bold; border: none; cursor: pointer; min-width: 130px; }
     </style>
 </head>
 <body>
 
     <div class="brand-header">BRG LEARNING</div>
 
-    <div class="container">
+    <div class="container" id="main-container">
         <h1>TIẾNG ANH GIAO TIẾP CƠ BẢN CHO CADDIE</h1>
         <h2>LUYỆN TẬP KỸ NĂNG NGHE (LISTENING PRACTICE)</h2>
         <h3 id="lesson-title" class="lesson-title">ĐANG TẢI BÀI HỌC...</h3>
         
-        <div class="meta-bar">
-            <div id="item-status"></div>
+        <div class="meta-bar" id="top-meta-bar">
+            <div id="item-status" class="status-pending">⏳ Trạng thái: Chưa hoàn thành</div>
             <div id="timer-box">⏳ Thời gian làm bài: <span id="time-left">00:00</span></div>
         </div>
         
@@ -105,7 +91,7 @@
 
             <div id="fill-container" class="fill-container" style="display:none;">
                 <div id="blank-sentence" class="blank-sentence"></div>
-                <input type="text" id="fill-input" class="fill-input" placeholder="Nhập từ đơn giản..." oninput="saveFillAnswer(this.value)">
+                <input type="text" id="fill-input" class="fill-input" placeholder="Nhập từ còn thiếu..." oninput="saveFillAnswer(this.value)">
                 <span id="char-hint" class="char-hint"></span>
                 <span id="correct-answer-display" class="correct-answer-text" style="display:none;"></span>
             </div>
@@ -119,25 +105,60 @@
         <p id="status"></p>
     </div>
 
-    <!-- KHỞI TẠO MẢNG DỮ LIỆU CHUNG TRƯỚC KHI NẠP TỆP -->
+    <!-- KHỞI TẠO MẢNG DỮ LIỆU CHUNG -->
     <script> window.masterQuizData = []; </script>
 
-    <!-- NẠP CÁC TỆP DỮ LIỆU CÂU HỎI TỪ THƯ MỤC DATA -->
-    <script src="data/lesson1.js"></script>
-    <script src="data/lesson2.js"></script>
-    <script src="data/lesson3.js"></script>
-    <script src="data/lesson4.js"></script>
-    <script src="data/lesson5.js"></script>
-    <script src="data/lesson6.js"></script>
-    <script src="data/exams.js"></script>
-
-    <!-- CORE ENGINE LÀM BÀI -->
+    <!-- TRÌNH NẠP DỮ LIỆU ĐỘNG VÔ HẠN LESSONS & EXAMS -->
     <script>
-        // Dữ liệu dự phòng khẩn cấp nếu các file data chưa kịp nạp
+        (function loadDataFilesDynamically() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const reqLesson = urlParams.get('lesson');
+            const reqSection = urlParams.get('section');
+            const reqExam = urlParams.get('exam');
+
+            const filesToLoad = ['data/exams.js'];
+            let targetLessonNum = null;
+
+            if (reqLesson) {
+                targetLessonNum = parseInt(reqLesson.replace(/[^\d]/g, ''));
+            } else if (reqSection) {
+                let secClean = reqSection.replace('section', '').trim();
+                targetLessonNum = parseInt(secClean.split('.')[0]);
+            }
+
+            if (targetLessonNum && !isNaN(targetLessonNum)) {
+                filesToLoad.push(`data/lesson${targetLessonNum}.js`);
+            } else if (reqExam) {
+                let examClean = reqExam.toLowerCase().trim();
+                let examNum = parseInt(examClean.replace(/[^\d]/g, ''));
+                let maxToLoad = !isNaN(examNum) ? Math.max(examNum, 10) : 20; 
+                for (let i = 1; i <= maxToLoad; i++) {
+                    filesToLoad.push(`data/lesson${i}.js`);
+                }
+            } else {
+                for (let i = 1; i <= 10; i++) {
+                    filesToLoad.push(`data/lesson${i}.js`);
+                }
+            }
+
+            filesToLoad.forEach(src => {
+                const script = document.createElement('script');
+                script.src = src;
+                script.async = false;
+                script.onerror = function() {
+                    console.log(`[BRG Learning] File ${src} chưa được tạo hoặc không tồn tại.`);
+                };
+                document.head.appendChild(script);
+            });
+        })();
+    </script>
+
+    <!-- CORE ENGINE LUYỆN NGHE -->
+    <script>
         const fallbackData = [
-            { lesson: "L1", section: "section1.1", type: "mcq", title: "[1.1 Chào hỏi] Nghe Golfer đánh vần tên:", audioText: "My name is Arthur, A - R - T - H - U - R.", options: [{ en: "A. ARTHUR", vi: "Arthur" }, { en: "B. AUTHOR", vi: "Author" }, { en: "C. ARCHER", vi: "Archer" }, { en: "D. MARK", vi: "Mark" }], correct: 0 },
-            { lesson: "L1", section: "section1.1", type: "fill", title: "[1.1 Chào hỏi] Nghe Caddie tự giới thiệu tên:", audioText: "My name is Rose, R - O - S - E.", displaySentence: "Caddie's name is _______.", translation: "Tên của Caddie là _______.", targetWord: "rose", hint: "💡 Gợi ý: Tên gồm 4 ký tự." },
-            { lesson: "L1", section: "section1.2", type: "mcq", title: "[1.2 Số đếm] Nghe khoảng cách:", audioText: "It is 150 yards to the green.", options: [{ en: "A. 130 yards", vi: "130 yard" }, { en: "B. 150 yards", vi: "150 yard" }, { en: "C. 180 yards", vi: "180 yard" }, { en: "D. 200 yards", vi: "200 yard" }], correct: 1 }
+            { lesson: "1", section: "section1.1", type: "mcq", title: "[1.1 Chào hỏi] Nghe Golfer đánh vần tên:", audioText: "My name is Arthur.", options: [{ en: "A. ARTHUR", vi: "Arthur" }, { en: "B. AUTHOR", vi: "Author" }, { en: "C. ARCHER", vi: "Archer" }, { en: "D. MARK", vi: "Mark" }], correct: 0 },
+            { lesson: "1", section: "section1.1", type: "fill", title: "[1.1 Chào hỏi] Nghe Caddie tự giới thiệu tên:", audioText: "My name is Rose.", displaySentence: "Caddie's name is _______.", translation: "Tên của Caddie là _______.", targetWord: "rose", hint: "💡 Gợi ý: Tên gồm 4 ký tự." },
+            { lesson: "1", section: "section1.3", type: "mcq", title: "[1.3 Số đếm] Nghe khoảng cách:", audioText: "It is 150 yards to the green.", options: [{ en: "A. 130 yards", vi: "130 yard" }, { en: "B. 150 yards", vi: "150 yard" }, { en: "C. 180 yards", vi: "180 yard" }, { en: "D. 200 yards", vi: "200 yard" }], correct: 1 }
         ];
 
         function shuffleArray(array) {
@@ -147,7 +168,6 @@
             }
         }
 
-        // ================= THUẬT TOÁN ĐỌC URL & LỌC ĐỘC BẢN KHÔNG TRÙNG LẶP =================
         function getSmartFilteredQuizData() {
             const urlParams = new URLSearchParams(window.location.search);
             const reqLesson = urlParams.get('lesson');   
@@ -155,82 +175,87 @@
             const reqExam = urlParams.get('exam');       
 
             let pool = (window.masterQuizData && window.masterQuizData.length > 0) ? [...window.masterQuizData] : [...fallbackData];
-            let targetCount = 30; // Mặc định tối đa 30 câu cho Section
-            let titleBanner = "LUYỆN TẬP CƠ BẢN FOR CADDIE";
+            let targetCount = 20; 
+            let titleBanner = "LUYỆN NGHE TỔNG HỢP";
 
-            // 1. THIẾT LẬP TIÊU ĐỀ VÀ MỤC TIÊU SỐ CÂU
-            if (reqExam === "examall") {
-                targetCount = 50;
-                titleBanner = "BÀI KIỂM TRA CUỐI KHÓA - TỔNG QUAN";
-            } else if (reqExam === "exam1") {
-                pool = pool.filter(q => q.lesson === "L1");
-                targetCount = 50;
-                titleBanner = "BÀI KIỂM TRA GIAI ĐOẠN 1";
-            } else if (reqExam === "exam2") {
-                pool = pool.filter(q => q.lesson === "L2" || q.lesson === "L3");
-                targetCount = 50;
-                titleBanner = "BÀI KIỂM TRA GIAI ĐOẠN 2";
-            } else if (reqExam === "exam3") {
-                pool = pool.filter(q => q.lesson === "L4" || q.lesson === "L5");
-                targetCount = 50;
-                titleBanner = "BÀI KIỂM TRA GIAI ĐOẠN 3";
-            } else if (reqExam === "exam4") {
-                pool = pool.filter(q => q.lesson === "L6");
-                targetCount = 50;
-                titleBanner = "BÀI KIỂM TRA GIAI ĐOẠN 4";
-            } else if (reqExam) {
-                targetCount = 50;
-                titleBanner = "BÀI KIỂM TRA";
-            }
+            if (reqExam) {
+                let cleanExam = reqExam.toLowerCase().trim();
+                if (cleanExam === "all" || cleanExam === "examall") {
+                    targetCount = 30;
+                    titleBanner = "KIỂM TRA NGHE CUỐI KHÓA - TỔNG QUAN";
+                } else {
+                    let examNum = cleanExam.replace(/[^\d]/g, '');
+                    if (examNum) {
+                        pool = pool.filter(q => q.lesson === examNum || q.lesson === `L${examNum}` || q.exam === examNum || q.exam === `exam${examNum}`);
+                    }
+                    targetCount = 30;
+                    titleBanner = `KIỂM TRA NGHE GIAI ĐOẠN ${examNum}`;
+                }
+            } 
             else if (reqSection || reqLesson) {
-                let lessonNum = "1"; 
-                if (reqLesson) {
-                    lessonNum = reqLesson.replace('L', '');
-                } else if (reqSection) {
-                    const secClean = reqSection.replace('section', '');
-                    lessonNum = secClean.split('.')[0];
+                let lessonNum = "";
+                let secQuery = reqSection || "";
+
+                if (secQuery && !secQuery.startsWith("section")) {
+                    secQuery = "section" + secQuery;
                 }
 
-                titleBanner = `LUYỆN TẬP LESSON ${lessonNum}`;
+                if (reqLesson) {
+                    lessonNum = reqLesson.replace(/[^\d]/g, '');
+                } else if (secQuery) {
+                    lessonNum = secQuery.replace('section', '').split('.')[0];
+                }
 
                 if (reqSection) {
-                    let sectionFiltered = pool.filter(q => q.section === reqSection);
+                    titleBanner = `LUYỆN NGHE - LESSON ${lessonNum} (${secQuery.toUpperCase()})`;
+                    let sectionFiltered = pool.filter(q => q.section === secQuery || q.section === reqSection);
                     if (sectionFiltered.length > 0) pool = sectionFiltered;
-                    targetCount = 30;
-                } else if (reqLesson) {
-                    let lessonFiltered = pool.filter(q => q.lesson === reqLesson);
+                    targetCount = 20;
+                } else if (lessonNum) {
+                    titleBanner = `LUYỆN NGHE - LESSON ${lessonNum}`;
+                    let lessonFiltered = pool.filter(q => q.lesson === lessonNum || q.lesson === `L${lessonNum}`);
                     if (lessonFiltered.length > 0) pool = lessonFiltered;
-                    targetCount = 50;
+                    targetCount = 30;
                 }
             }
 
-            document.getElementById('lesson-title').innerText = titleBanner;
+            const titleElem = document.getElementById('lesson-title');
+            if (titleElem) titleElem.innerText = titleBanner;
 
             if (pool.length === 0) pool = [...fallbackData];
 
-            // 2. XÁO TRỘN CÂU HỎI ĐỘC BẢN VÀ CẮT TỐI ĐA N NẾU CÓ DƯ CÂU HỎI
             shuffleArray(pool);
-            let finalSelection = pool.slice(0, Math.min(targetCount, pool.length));
-
-            return finalSelection;
+            return pool.slice(0, Math.min(targetCount, pool.length));
         }
 
-        const quizData = getSmartFilteredQuizData();
-
+        let quizData = [];
         const MAX_LISTEN_PER_QUESTION = 3; 
-        const DELAY_BEFORE_AUDIO_MS = 2500; 
+        const DELAY_BEFORE_AUDIO_MS = 1200; 
         let autoPlayTimer = null; 
 
-        let listenCounts = new Array(quizData.length).fill(0); 
-        let userAnswers = new Array(quizData.length).fill(null);
+        let listenCounts = []; 
+        let userAnswers = [];
         let currentIndex = 0;
         let isReviewMode = false;
 
-        let totalSeconds = quizData.length * 45; 
+        let totalSeconds = 0; 
+        let initialSeconds = 0;
         let elapsedSeconds = 0; 
         let timerInterval = null;
 
+        function initApp() {
+            quizData = getSmartFilteredQuizData();
+            listenCounts = new Array(quizData.length).fill(0);
+            userAnswers = new Array(quizData.length).fill(null);
+            initialSeconds = quizData.length * 60; 
+            totalSeconds = initialSeconds;
+
+            startTotalTimer();
+            loadQuestion();
+        }
+
         function highlightWrongWords(userText, correctText) {
+            if (!userText) return "";
             const userWords = userText.split(" ");
             const correctWords = correctText.split(" ");
 
@@ -264,18 +289,19 @@
             const timerBox = document.getElementById('timer-box');
             const timeLeftElem = document.getElementById('time-left');
 
-            timeLeftElem.innerText = formatTime(totalSeconds);
+            if (timeLeftElem) timeLeftElem.innerText = formatTime(totalSeconds);
 
+            clearInterval(timerInterval);
             timerInterval = setInterval(() => {
-                totalSeconds--;
-                elapsedSeconds++;
-                timeLeftElem.innerText = formatTime(totalSeconds);
+                if (totalSeconds > 0) {
+                    totalSeconds--;
+                    elapsedSeconds++;
+                    if (timeLeftElem) timeLeftElem.innerText = formatTime(totalSeconds);
 
-                if (totalSeconds <= 180) {
-                    timerBox.classList.add('timer-warning');
-                }
-
-                if (totalSeconds <= 0) {
+                    if (totalSeconds <= 120 && timerBox) {
+                        timerBox.classList.add('timer-warning');
+                    }
+                } else {
                     clearInterval(timerInterval);
                     clearTimeout(autoPlayTimer);
                     if ('speechSynthesis' in window) window.speechSynthesis.cancel();
@@ -286,6 +312,7 @@
 
         function updateItemStatusTag() {
             const statusTag = document.getElementById('item-status');
+            if (!statusTag) return;
             const userAns = userAnswers[currentIndex];
             const currentQuiz = quizData[currentIndex];
 
@@ -317,6 +344,7 @@
                         statusTag.innerText = "❌ Trạng thái: Chưa chính xác";
                     }
                 }
+                updatePlayButtonState();
             }
         }
 
@@ -324,12 +352,13 @@
             clearTimeout(autoPlayTimer); 
 
             if (currentIndex < quizData.length) {
-                document.getElementById('status').innerText = "";
+                const statusElem = document.getElementById('status');
+                if (statusElem) statusElem.innerText = "";
                 
                 updateItemStatusTag();
 
                 const currentQuiz = quizData[currentIndex];
-                document.getElementById('question-title').innerText = currentQuiz.title;
+                document.getElementById('question-title').innerText = `Câu ${currentIndex + 1}/${quizData.length}: ${currentQuiz.title}`;
 
                 const mcqContainer = document.getElementById('mcq-container');
                 const fillContainer = document.getElementById('fill-container');
@@ -374,9 +403,9 @@
 
                     document.getElementById('blank-sentence').innerHTML = `
                         ${currentQuiz.displaySentence}
-                        <span class="vi-trans">${currentQuiz.translation}</span>
+                        <span class="vi-trans">${currentQuiz.translation || ""}</span>
                     `;
-                    document.getElementById('char-hint').innerText = currentQuiz.hint;
+                    document.getElementById('char-hint').innerText = currentQuiz.hint || "";
 
                     const fillInput = document.getElementById('fill-input');
                     fillInput.value = userAnswers[currentIndex] || "";
@@ -431,6 +460,7 @@
 
         function updatePlayButtonState() {
             const playBtn = document.getElementById('play-btn');
+            if (!playBtn) return;
             const used = listenCounts[currentIndex];
             const remaining = MAX_LISTEN_PER_QUESTION - used;
 
@@ -459,15 +489,18 @@
             if ('speechSynthesis' in window) {
                 window.speechSynthesis.cancel();
                 
-                const utterance = new SpeechSynthesisUtterance(quizData[currentIndex].audioText);
+                const currentQuiz = quizData[currentIndex];
+                const textToRead = currentQuiz.audioText;
+
+                const utterance = new SpeechSynthesisUtterance(textToRead);
                 utterance.lang = 'en-US';
-                utterance.rate = 0.85;  
+                utterance.rate = 0.82;  
                 utterance.pitch = 1.0; 
 
                 const voices = window.speechSynthesis.getVoices();
                 const preferredVoice = voices.find(v => 
                     (v.lang === 'en-US' || v.lang === 'en_US') && 
-                    (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Premium') || v.name.includes('Samantha') || v.name.includes('Karen'))
+                    (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Samantha') || v.name.includes('Karen'))
                 ) || voices.find(v => v.lang.startsWith('en'));
 
                 if (preferredVoice) {
@@ -527,9 +560,41 @@
             isReviewMode = true;
             currentIndex = 0;
             
-            document.getElementById('quiz-area').style.display = 'block';
-            document.querySelector('.meta-bar').style.display = 'flex';
-            
+            const mainContainer = document.getElementById('main-container');
+            mainContainer.innerHTML = `
+                <h1>TIẾNG ANH GIAO TIẾP CƠ BẢN CHO CADDIE</h1>
+                <h2>LUYỆN TẬP KỸ NĂNG NGHE (LISTENING PRACTICE)</h2>
+                <h3 id="lesson-title" class="lesson-title">${document.getElementById('lesson-title') ? document.getElementById('lesson-title').innerText : ''}</h3>
+                
+                <div class="meta-bar" id="top-meta-bar">
+                    <div id="item-status" class="status-pending"></div>
+                    <div id="timer-box">🔍 ĐANG Ở CHẾ ĐỘ XEM LẠI</div>
+                </div>
+                
+                <div id="quiz-area">
+                    <div class="audio-box">
+                        <button id="play-btn" onclick="playAudio()">🔊 NGHE LẠI ÂM THANH</button>
+                    </div>
+
+                    <div id="question-title" class="question-title">...</div>
+                    
+                    <div id="mcq-container" class="options-container"></div>
+
+                    <div id="fill-container" class="fill-container" style="display:none;">
+                        <div id="blank-sentence" class="blank-sentence"></div>
+                        <input type="text" id="fill-input" class="fill-input" disabled>
+                        <span id="char-hint" class="char-hint"></span>
+                        <span id="correct-answer-display" class="correct-answer-text"></span>
+                    </div>
+
+                    <div class="control-group">
+                        <button id="prev-btn" class="action-btn" onclick="goToPrevious()">⏮️ Câu trước</button>
+                        <button id="next-btn" class="action-btn" onclick="goToNext()">Câu tiếp ⏩</button>
+                    </div>
+                </div>
+
+                <p id="status"></p>
+            `;
             loadQuestion();
         }
 
@@ -540,6 +605,7 @@
             let correctCount = 0;
             let incorrectCount = 0;
             let skippedCount = 0;
+            let totalItems = quizData.length;
 
             quizData.forEach((item, index) => {
                 const userAns = userAnswers[index];
@@ -554,68 +620,68 @@
                 }
             });
 
-            const scorePercent = Math.round((correctCount / quizData.length) * 100);
-            let titleText = isTimeOut ? "⏰ ĐÃ HẾT THỜI GIAN LÀM BÀI!" : "🎉 HOÀN THÀNH BÀI KIỂM TRA NGHE!";
+            let calculatedScore = 0;
+            if (totalItems > 0) {
+                calculatedScore = Math.round((correctCount / totalItems) * 100);
+            }
 
+            let levelBadgeHtml = "";
+            let adviceText = "";
+
+            if (calculatedScore >= 90) {
+                levelBadgeHtml = `<div class="level-badge level-excellent">🌟 MỐC NĂNG LỰC: XUẤT SẮC (${calculatedScore}/100)</div>`;
+                adviceText = "<b>Đánh giá:</b> Kỹ năng nghe hiểu đạt trình độ phản xạ tự nhiên, nắm bắt hoàn hảo ngữ điệu và từ vựng.";
+            } else if (calculatedScore >= 70) {
+                levelBadgeHtml = `<div class="level-badge level-passed">✅ MỐC NĂNG LỰC: ĐẠT (${calculatedScore}/100)</div>`;
+                adviceText = "<b>Đánh giá:</b> Nghe hiểu tốt ý chính và thông tin chi tiết; cần chú ý phân biệt các từ dễ nhầm (số đếm, tên riêng).";
+            } else {
+                levelBadgeHtml = `<div class="level-badge level-needs-improvement">⚠️ MỐC NĂNG LỰC: CẦN CẢI THIỆN (${calculatedScore}/100)</div>`;
+                adviceText = "<b>Đánh giá:</b> Chưa đạt yêu cầu phản xạ nghe hiểu; khuyến nghị tập nghe lại nhiều lần kết hợp bài tập chép chính tả (Dictation).";
+            }
+
+            let titleText = isTimeOut ? "⏰ ĐÃ HẾT THỜI GIAN LÀM BÀI!" : "🎉 HOÀN THÀNH BÀI KIỂM TRA NGHE!";
             const actualTimeStr = formatDuration(elapsedSeconds);
             const remainingTimeStr = totalSeconds > 0 ? formatTime(totalSeconds) : "00:00 (Hết giờ)";
 
-            document.getElementById('quiz-area').innerHTML = `
-                <div class="result-box">
-                    <b style="font-size:16px;">${titleText}</b>
-                    <div class="score-num">${correctCount} / ${quizData.length}</div>
-                    <p><b>Tỷ lệ chính xác: ${scorePercent}%</b></p>
-                    <p>${scorePercent >= 70 ? "✅ Caddie đạt chuẩn kỹ năng nghe!" : "⚠️ Caddie cần rèn luyện thêm kỹ năng nghe."}</p>
+            const container = document.getElementById('main-container');
+            container.innerHTML = `
+                <h1>TIẾNG ANH GIAO TIẾP CƠ BẢN CHO CADDIE</h1>
+                <h2>LUYỆN TẬP KỸ NĂNG NGHE (LISTENING PRACTICE)</h2>
+                <div class="result-card">
+                    <b style="font-size:15px;">${titleText}</b>
+                    <div class="score-box">${calculatedScore} <span style="font-size:18px; color:#555;">/ 100 điểm</span></div>
                     
-                    <div class="detail-summary">
+                    ${levelBadgeHtml}
+                    
+                    <p style="font-size:13.5px; line-height:1.5; color:#333; margin: 5px 0 15px 0; background:#e9ecef; padding:10px; border-radius:6px; text-align:left;">
+                        ${adviceText}
+                    </p>
+
+                    <div class="stats-box">
                         📊 <b>BẢNG THỐNG KÊ CHI TIẾT:</b><br>
-                        • ⏱️ Thời gian đã làm thực tế: <b>${actualTimeStr}</b><br>
-                        • ⏳ Thời gian còn lại: <b>${remainingTimeStr}</b><br>
+                        • ✅ Số câu trả lời ĐÚNG: <b>${correctCount} / ${totalItems}</b> câu<br>
+                        • ❌ Số câu trả lời SAI: <b>${incorrectCount} / ${totalItems}</b> câu<br>
+                        • ⏭️ Số câu BỎ QUA: <b>${skippedCount} / ${totalItems}</b> câu<br>
                         <hr style="border: 0; border-top: 1px dashed #ccc; margin: 8px 0;">
-                        • ✅ Số câu trả lời ĐÚNG: <b>${correctCount}</b> câu<br>
-                        • ❌ Số câu trả lời SAI: <b>${incorrectCount}</b> câu<br>
-                        • ⏭️ Số câu BỎ QUA: <b>${skippedCount}</b> câu
+                        • ⏱️ Thời gian đã làm thực tế: <b>${actualTimeStr}</b><br>
+                        • ⏳ Thời gian còn lại: <b>${remainingTimeStr}</b>
                     </div>
 
-                    <div class="result-btn-group">
-                        <button id="review-btn" class="btn-result">🔍 Xem lại chi tiết từng câu</button>
-                        <button id="reload-btn" class="btn-result" onclick="location.reload()">🔄 Làm lại bài test</button>
+                    <div class="action-buttons">
+                        <button class="btn-review" onclick="startReview()">🔍 Xem lại chi tiết</button>
+                        <button class="btn-retry" onclick="location.reload()">🔄 Làm lại bài test</button>
                     </div>
                 </div>
             `;
-            
-            document.getElementById('review-btn').onclick = function() {
-                document.getElementById('quiz-area').innerHTML = `
-                    <div class="audio-box">
-                        <button id="play-btn" onclick="playAudio()">🔊 NGHE CÂU HỎI</button>
-                    </div>
-                    <div id="question-title" class="question-title">...</div>
-                    <div id="mcq-container" class="options-container"></div>
-                    <div id="fill-container" class="fill-container" style="display:none;">
-                        <div id="blank-sentence" class="blank-sentence"></div>
-                        <input type="text" id="fill-input" class="fill-input" disabled>
-                        <span id="char-hint" class="char-hint"></span>
-                        <span id="correct-answer-display" class="correct-answer-text"></span>
-                    </div>
-                    <div class="control-group">
-                        <button id="prev-btn" class="action-btn" onclick="goToPrevious()">⏮️ Câu trước</button>
-                        <button id="next-btn" class="action-btn" onclick="goToNext()">Câu tiếp ⏩</button>
-                    </div>
-                `;
-                startReview();
-            };
-
-            document.querySelector('.meta-bar').style.display = 'none';
-            document.getElementById('status').innerText = "";
         }
 
         if ('speechSynthesis' in window) {
             window.speechSynthesis.onvoiceschanged = () => { window.speechSynthesis.getVoices(); };
         }
 
-        startTotalTimer();
-        showQuestion = loadQuestion;
-        showQuestion();
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(initApp, 300);
+        });
     </script>
 </body>
 </html>
