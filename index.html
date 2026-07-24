@@ -110,7 +110,7 @@
 
     <!-- TRÌNH NẠP DỮ LIỆU ĐỘNG TỐI ƯU & HỖ TRỢ DÃY/RANGE -->
     <script>
-        // Hàm bổ trợ phân tích chuỗi tham số dãy (ví dụ: "1-3,5" => [1, 2, 3, 5])
+        // Hàm phân tích chuỗi dãy (vd: "1-3,5" => [1, 2, 3, 5])
         function parseRangeSequence(inputStr) {
             if (!inputStr) return [];
             let results = new Set();
@@ -142,25 +142,30 @@
 
             const filesToLoad = new Set(['data/exams.js']);
 
+            if (reqSection) {
+                // Rút ra các số lesson từ chuỗi section (vd: "3.1,4.2" => [3, 4])
+                let secMatches = reqSection.match(/\d+/g);
+                if (secMatches) {
+                    secMatches.forEach(numStr => {
+                        let n = parseInt(numStr);
+                        if (!isNaN(n)) filesToLoad.add(`data/lesson${n}.js`);
+                    });
+                }
+            } 
             if (reqLesson) {
                 let lessonNums = parseRangeSequence(reqLesson);
                 lessonNums.forEach(num => filesToLoad.add(`data/lesson${num}.js`));
-            } else if (reqSection) {
-                let secNums = parseRangeSequence(reqSection);
-                if (secNums.length > 0) {
-                    secNums.forEach(num => filesToLoad.add(`data/lesson${num}.js`));
-                } else {
-                    let firstNum = parseInt(reqSection.replace('section', '').split('.')[0]);
-                    if (!isNaN(firstNum)) filesToLoad.add(`data/lesson${firstNum}.js`);
-                }
-            } else if (reqExam) {
+            } 
+            if (reqExam) {
                 let examNums = parseRangeSequence(reqExam);
                 if (examNums.length > 0) {
                     examNums.forEach(num => filesToLoad.add(`data/lesson${num}.js`));
                 } else {
                     for (let i = 1; i <= 20; i++) filesToLoad.add(`data/lesson${i}.js`);
                 }
-            } else {
+            } 
+            
+            if (!reqLesson && !reqSection && !reqExam) {
                 for (let i = 1; i <= 10; i++) filesToLoad.add(`data/lesson${i}.js`);
             }
 
@@ -225,7 +230,26 @@
             } 
             else if (reqSection || reqLesson) {
                 targetCount = 30; 
-                if (reqLesson) {
+
+                // 1. ƯU TIÊN HÀNG ĐẦU DÀNH CHO SECTION NẾU CÓ TRÊN URL
+                if (reqSection) {
+                    let rawSecList = reqSection.split(',');
+                    let cleanSecList = rawSecList.map(s => s.trim().toLowerCase().replace('section', ''));
+
+                    let sectionFiltered = pool.filter(q => {
+                        if (!q.section) return false;
+                        let qSec = String(q.section).trim().toLowerCase().replace('section', '');
+                        return cleanSecList.includes(qSec);
+                    });
+
+                    if (sectionFiltered.length > 0) {
+                        pool = sectionFiltered;
+                    }
+
+                    titleBanner = `LUYỆN NGHE - SECTION (${reqSection.toUpperCase()}) (30 CÂU)`;
+                } 
+                // 2. NẾU KHÔNG CÓ SECTION MỚI LỌC THEO LESSON
+                else if (reqLesson) {
                     let lessonList = parseRangeSequence(reqLesson);
                     if (lessonList.length > 0) {
                         pool = pool.filter(q => {
@@ -238,11 +262,6 @@
                         pool = pool.filter(q => q.lesson === lessonNum || q.lesson === `L${lessonNum}`);
                         titleBanner = `LUYỆN NGHE - LESSON ${lessonNum} (30 CÂU)`;
                     }
-                } else if (reqSection) {
-                    let secClean = reqSection.trim();
-                    titleBanner = `LUYỆN NGHE - SECTION (${secClean.toUpperCase()}) (30 CÂU)`;
-                    let sectionFiltered = pool.filter(q => q.section === secClean || q.section === `section${secClean}`);
-                    if (sectionFiltered.length > 0) pool = sectionFiltered;
                 }
             }
 
@@ -269,10 +288,9 @@
         let initialSeconds = 0;
         let elapsedSeconds = 0; 
         let timerInterval = null;
-        let startTimeFormatted = ""; // Biến lưu thời gian bắt đầu thực tế
+        let startTimeFormatted = "";
 
         function initApp() {
-            // Ghi nhận thời gian bắt đầu thực tế
             const now = new Date();
             const timeStr = now.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
             const dateStr = now.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
