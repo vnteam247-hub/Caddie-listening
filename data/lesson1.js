@@ -1420,7 +1420,7 @@ window.masterQuizData.push(
         audioText: "It is ninety yards to the flag, Sir.", 
         displaySentence: "It is _______ yards to the flag, Sir.", 
         translation: "Khoảng cách tới cờ là _______ yard ạ.",
-        targetWord: "90", phonetic: "/ˈnaɪn.ti/", hint: "💡 Gợi ý: Nhập số (90)."
+        targetWord: "90", phonetic: "/ˈnaɪn.ti/", hint: "💡 Gợi ý: Nhập số."
     },
     {
         lesson: "1", section: "section1.5", type: "mcq",
