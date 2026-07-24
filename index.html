@@ -108,7 +108,7 @@
     <!-- KHỞI TẠO MẢNG DỮ LIỆU CHUNG -->
     <script> window.masterQuizData = []; </script>
 
-    <!-- TRÌNH NẠP DỮ LIỆU ĐỘNG VÔ HẠN LESSONS & EXAMS -->
+    <!-- TRÌNH NẠP DỮ LIỆU ĐỘNG TỐI ƯU -->
     <script>
         (function loadDataFilesDynamically() {
             const urlParams = new URLSearchParams(window.location.search);
@@ -116,28 +116,22 @@
             const reqSection = urlParams.get('section');
             const reqExam = urlParams.get('exam');
 
-            const filesToLoad = ['data/exams.js'];
-            let targetLessonNum = null;
+            const filesToLoad = new Set(['data/exams.js']);
 
             if (reqLesson) {
-                targetLessonNum = parseInt(reqLesson.replace(/[^\d]/g, ''));
+                let num = parseInt(reqLesson.replace(/[^\d]/g, ''));
+                if (!isNaN(num)) filesToLoad.add(`data/lesson${num}.js`);
             } else if (reqSection) {
                 let secClean = reqSection.replace('section', '').trim();
-                targetLessonNum = parseInt(secClean.split('.')[0]);
-            }
-
-            if (targetLessonNum && !isNaN(targetLessonNum)) {
-                filesToLoad.push(`data/lesson${targetLessonNum}.js`);
+                let num = parseInt(secClean.split('.')[0]);
+                if (!isNaN(num)) filesToLoad.add(`data/lesson${num}.js`);
             } else if (reqExam) {
-                let examClean = reqExam.toLowerCase().trim();
-                let examNum = parseInt(examClean.replace(/[^\d]/g, ''));
-                let maxToLoad = !isNaN(examNum) ? Math.max(examNum, 10) : 20; 
-                for (let i = 1; i <= maxToLoad; i++) {
-                    filesToLoad.push(`data/lesson${i}.js`);
+                for (let i = 1; i <= 20; i++) {
+                    filesToLoad.add(`data/lesson${i}.js`);
                 }
             } else {
                 for (let i = 1; i <= 10; i++) {
-                    filesToLoad.push(`data/lesson${i}.js`);
+                    filesToLoad.add(`data/lesson${i}.js`);
                 }
             }
 
@@ -175,24 +169,24 @@
             const reqExam = urlParams.get('exam');       
 
             let pool = (window.masterQuizData && window.masterQuizData.length > 0) ? [...window.masterQuizData] : [...fallbackData];
-            let targetCount = 20; 
+            let targetCount = 30; // Mặc định cho Section / Lesson là 30 câu
             let titleBanner = "LUYỆN NGHE TỔNG HỢP";
 
             if (reqExam) {
+                targetCount = 50; // Cố định cho Exam là 50 câu
                 let cleanExam = reqExam.toLowerCase().trim();
                 if (cleanExam === "all" || cleanExam === "examall") {
-                    targetCount = 30;
-                    titleBanner = "KIỂM TRA NGHE CUỐI KHÓA - TỔNG QUAN";
+                    titleBanner = "KIỂM TRA NGHE CUỐI KHÓA - TỔNG QUAN (50 CÂU)";
                 } else {
                     let examNum = cleanExam.replace(/[^\d]/g, '');
                     if (examNum) {
                         pool = pool.filter(q => q.lesson === examNum || q.lesson === `L${examNum}` || q.exam === examNum || q.exam === `exam${examNum}`);
                     }
-                    targetCount = 30;
-                    titleBanner = `KIỂM TRA NGHE GIAI ĐOẠN ${examNum}`;
+                    titleBanner = `KIỂM TRA NGHE GIAI ĐOẠN ${examNum} (50 CÂU)`;
                 }
             } 
             else if (reqSection || reqLesson) {
+                targetCount = 30; // Cố định cho Section / Lesson là 30 câu
                 let lessonNum = "";
                 let secQuery = reqSection || "";
 
@@ -207,15 +201,13 @@
                 }
 
                 if (reqSection) {
-                    titleBanner = `LUYỆN NGHE - LESSON ${lessonNum} (${secQuery.toUpperCase()})`;
+                    titleBanner = `LUYỆN NGHE - LESSON ${lessonNum} (${secQuery.toUpperCase()}) (30 CÂU)`;
                     let sectionFiltered = pool.filter(q => q.section === secQuery || q.section === reqSection);
                     if (sectionFiltered.length > 0) pool = sectionFiltered;
-                    targetCount = 20;
                 } else if (lessonNum) {
-                    titleBanner = `LUYỆN NGHE - LESSON ${lessonNum}`;
+                    titleBanner = `LUYỆN NGHE - LESSON ${lessonNum} (30 CÂU)`;
                     let lessonFiltered = pool.filter(q => q.lesson === lessonNum || q.lesson === `L${lessonNum}`);
                     if (lessonFiltered.length > 0) pool = lessonFiltered;
-                    targetCount = 30;
                 }
             }
 
@@ -247,7 +239,9 @@
             quizData = getSmartFilteredQuizData();
             listenCounts = new Array(quizData.length).fill(0);
             userAnswers = new Array(quizData.length).fill(null);
-            initialSeconds = quizData.length * 60; 
+            
+            // Cấu hình thời gian trung bình: 45 giây / 1 câu
+            initialSeconds = Math.round(quizData.length * 45); 
             totalSeconds = initialSeconds;
 
             startTotalTimer();
@@ -429,11 +423,7 @@
                     }
                 }
 
-                if (currentIndex === 0) {
-                    document.getElementById('prev-btn').style.display = 'none';
-                } else {
-                    document.getElementById('prev-btn').style.display = 'block';
-                }
+                document.getElementById('prev-btn').style.display = (currentIndex === 0) ? 'none' : 'block';
 
                 const nextBtn = document.getElementById('next-btn');
                 if (currentIndex === quizData.length - 1) {
@@ -449,12 +439,8 @@
                 }
 
             } else {
-                if (isReviewMode) {
-                    showResult(false);
-                } else {
-                    clearInterval(timerInterval);
-                    showResult(false);
-                }
+                clearInterval(timerInterval);
+                showResult(false);
             }
         }
 
