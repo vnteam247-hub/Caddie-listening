@@ -914,3 +914,287 @@ window.masterQuizData.push(
         "correct": 0
     }
 );
+// =========================================================================
+// LESSON 4 EXTENSION: COLORS, BASIC PHRASES, SMALL TALK & FIRST AID
+// (BỔ SUNG BÀI TẬP THỰC CHIẾN TỪ TÀI LIỆU ĐÀO TẠO)
+// =========================================================================
+
+window.masterQuizData.push(
+    // -------------------------------------------------------------------------
+    // SECTION 4.1: BỔ SUNG MÀU SẮC CỌC & CỜ (STAKES & FLAGS)
+    // -------------------------------------------------------------------------
+    {
+        "lesson": "4",
+        "section": "section4.1",
+        "type": "mcq",
+        "title": "[4.1 Luyện nghe] Nghe Caddy báo vị trí cờ cắm trên green:",
+        "audioText": "The pin is blue today, Sir. It is at the back of the green.",
+        "phonetic": "/ðə pɪn ɪz bluː təˈdeɪ, sɜːr. ɪt ɪz æt ðə bæk əv ðə ɡriːn/",
+        "translation": "Hôm nay cờ màu xanh dương thưa ông. Cờ cắm ở phía cuối green ạ.",
+        "options": [
+            { "en": "A. The pin is blue today, Sir. It is at the back of the green.", "vi": "Hôm nay cờ màu xanh dương, cắm ở cuối green ạ" },
+            { "en": "B. The pin is red today, Sir. It is a front pin.", "vi": "Hôm nay cờ màu đỏ, cắm ở đầu green ạ" },
+            { "en": "C. The pin is white today, Sir. It is in the middle.", "vi": "Hôm nay cờ màu trắng, cắm ở giữa green ạ" },
+            { "en": "D. There is no pin on the green today, Sir.", "vi": "Hôm nay không cắm cờ trên green ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "4",
+        "section": "section4.1",
+        "type": "mcq",
+        "title": "[4.1 Luyện nghe] Nghe Caddy cảnh báo ranh giới chướng ngại vật:",
+        "audioText": "Please watch out, there are red hazard stakes along the left side, Sir.",
+        "phonetic": "/pliːz wɑːtʃ aʊt, ðer ɑːr red ˈhæz.ɚd steɪks əˈlɑːŋ ðə left saɪd, sɜːr/",
+        "translation": "Xin ông lưu ý, có các cọc bẫy màu đỏ dọc theo phía bên trái ạ.",
+        "options": [
+            { "en": "A. Please watch out, there are red hazard stakes along the left side, Sir.", "vi": "Lưu ý có cọc bẫy màu đỏ dọc bên trái ạ" },
+            { "en": "B. There are white OB stakes along the right side, Sir.", "vi": "Có cọc OB màu trắng dọc bên phải ạ" },
+            { "en": "C. The fairway is completely clear of stakes, Sir.", "vi": "Fairway hoàn toàn không có cọc ranh giới ạ" },
+            { "en": "D. Turn off the buggy engine near the stakes, Sir.", "vi": "Tắt máy xe điện gần cọc ranh giới ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "4",
+        "section": "section4.1",
+        "type": "mcq",
+        "title": "[4.1 Luyện nghe] Nghe Caddy thông báo tình trạng bóng ra ngoài biên:",
+        "audioText": "Your ball went over the white stakes. I am afraid it is OB, Sir.",
+        "phonetic": "/jʊər bɔːl went ˈoʊ.vɚ ðə waɪt steɪks. aɪ æm əˈfreɪd ɪt ɪz oʊ-biː, sɜːr/",
+        "translation": "Bóng của ông đã bay qua các cọc màu trắng. Tôi e rằng bóng đã ra ngoài biên OB rồi thưa ông.",
+        "options": [
+            { "en": "A. Your ball went over the white stakes. I am afraid it is OB, Sir.", "vi": "Bóng qua cọc trắng, tôi e là bị OB rồi ạ" },
+            { "en": "B. Your ball is safe in the middle of fairway, Sir.", "vi": "Bóng an toàn ở giữa fairway ạ" },
+            { "en": "C. Your ball is on the green surface, Sir.", "vi": "Bóng đã lên mặt green rồi ạ" },
+            { "en": "D. Nice shot over the bunker, Sir.", "vi": "Cú đánh tuyệt vời qua bẫy cát ạ" }
+        ],
+        "correct": 0
+    },
+
+    // -------------------------------------------------------------------------
+    // SECTION 4.2: BỔ SUNG MẪU CÂU LỊCH SỰ & SƠ CỨU Y TẾ (POLITE & FIRST AID)
+    // -------------------------------------------------------------------------
+    {
+        "lesson": "4",
+        "section": "section4.2",
+        "type": "mcq",
+        "title": "[4.2 Luyện nghe] Nghe Caddy đáp lại lời cảm ơn để nâng tầm dịch vụ:",
+        "audioText": "My pleasure, Sir!",
+        "phonetic": "/maɪ ˈpleʒ.ɚ, sɜːr/",
+        "translation": "Rất hân hạnh được phục vụ ông ạ!",
+        "options": [
+            { "en": "A. My pleasure, Sir!", "vi": "Rất hân hạnh được phục vụ ông ạ!" },
+            { "en": "B. You must pay extra for this, Sir.", "vi": "Ông phải trả thêm tiền cho việc này ạ" },
+            { "en": "C. Don't touch my golf bag, Sir.", "vi": "Đừng chạm vào túi gậy của tôi ạ" },
+            { "en": "D. I don't care, Sir.", "vi": "Tôi không quan tâm ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "4",
+        "section": "section4.2",
+        "type": "mcq",
+        "title": "[4.2 Luyện nghe] Nghe Caddy lịch sự yêu cầu khách nhắc lại câu hỏi:",
+        "audioText": "Pardon me, Sir?",
+        "phonetic": "/ˈpɑːr.dən miː, sɜːr/",
+        "translation": "Xin lỗi ông nói gì cơ ạ?",
+        "options": [
+            { "en": "A. Pardon me, Sir?", "vi": "Xin lỗi ông nói gì cơ ạ?" },
+            { "en": "B. Speak louder, I cannot hear, Sir.", "vi": "Nói to lên tôi không nghe thấy ạ" },
+            { "en": "C. You are speaking wrongly, Sir.", "vi": "Ông đang nói sai rồi ạ" },
+            { "en": "D. Stop talking now, Sir.", "vi": "Dừng nói chuyện ngay đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "4",
+        "section": "section4.2",
+        "type": "mcq",
+        "title": "[4.2 Luyện nghe] Nghe Caddy chủ động hỏi thăm hỗ trợ sơ cứu y tế:",
+        "audioText": "Are you feeling hurt anywhere, Sir? We have a first aid kit on the buggy.",
+        "phonetic": "/ɑːr juː ˈfiː.lɪŋ hɜːrt ˈen.i.wer, sɜːr? wiː hæv ə ˌfɜːrst ˈeɪd kɪt ɑːn ðə ˈbʌɡ.i/",
+        "translation": "Ông có bị đau ở đâu không ạ? Chúng tôi có sẵn túi sơ cứu trên xe điện ạ.",
+        "options": [
+            { "en": "A. Are you feeling hurt anywhere, Sir? We have a first aid kit on the buggy.", "vi": "Ông có bị đau ở đâu không? Có túi sơ cứu trên xe ạ" },
+            { "en": "B. Walk faster to finish 18 holes, Sir.", "vi": "Đi nhanh lên cho xong 18 hố ạ" },
+            { "en": "C. You are too weak to play golf, Sir.", "vi": "Ông yếu quá không chơi golf được đâu ạ" },
+            { "en": "D. Go home by yourself, Sir.", "vi": "Tự đi bộ về nhà đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "4",
+        "section": "section4.2",
+        "type": "mcq",
+        "title": "[4.2 Luyện nghe] Nghe Caddy thể hiện sự nhường nhặn lịch thiệp:",
+        "audioText": "After you, Sir.",
+        "phonetic": "/ˈæf.tər juː, sɜːr/",
+        "translation": "Xin mời ông đi trước ạ.",
+        "options": [
+            { "en": "A. After you, Sir.", "vi": "Xin mời ông đi trước ạ" },
+            { "en": "B. I will go first, wait for me, Sir.", "vi": "Tôi sẽ đi trước, chờ tôi ạ" },
+            { "en": "C. Get out of my way, Sir.", "vi": "Tránh đường cho tôi đi ạ" },
+            { "en": "D. Stop moving, Sir.", "vi": "Dừng di chuyển lại ạ" }
+        ],
+        "correct": 0
+    },
+
+    // -------------------------------------------------------------------------
+    // SECTION 4.3: BỔ SUNG TRÒ CHUYỆN XÃ GIAO (SMALL TALKS & SERVICE)
+    // -------------------------------------------------------------------------
+    {
+        "lesson": "4",
+        "section": "section4.3",
+        "type": "mcq",
+        "title": "[4.3 Luyện nghe] Nghe Caddy bắt chuyện hỏi thăm trải nghiệm của khách:",
+        "audioText": "Are you enjoying the game today, Sir?",
+        "phonetic": "/ɑːr juː ɪnˈdʒɔɪ.ɪŋ ðə ɡeɪm təˈdeɪ, sɜːr/",
+        "translation": "Ông có đang tận hưởng trận đấu hôm nay không ạ?",
+        "options": [
+            { "en": "A. Are you enjoying the game today, Sir?", "vi": "Ông có đang tận hưởng trận đấu hôm nay không ạ?" },
+            { "en": "B. Why are you playing so badly today, Sir?", "vi": "Tới sao hôm nay ông đánh tệ thế ạ?" },
+            { "en": "C. Do you want to stop playing now, Sir?", "vi": "Ông có muốn dừng chơi bây giờ không ạ?" },
+            { "en": "D. How much is your golf shoes, Sir?", "vi": "Đôi giày golf của ông bao nhiêu tiền ạ?" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "4",
+        "section": "section4.3",
+        "type": "mcq",
+        "title": "[4.3 Luyện nghe] Nghe Caddy tinh tế khen ngợi trang phục khách:",
+        "audioText": "I like your outfit today. It looks very professional!",
+        "phonetic": "/aɪ laɪk jʊər ˈaʊt.fɪt təˈdeɪ. ɪt lʊks ˈver.i prəˈfeʃ.ən.əl/",
+        "translation": "Tôi rất thích bộ đồ của ông hôm nay. Nhìn rất chuyên nghiệp ạ!",
+        "options": [
+            { "en": "A. I like your outfit today. It looks very professional!", "vi": "Tôi thích bộ đồ hôm nay, nhìn rất chuyên nghiệp ạ!" },
+            { "en": "B. Your outfit is so strange, Sir.", "vi": "Trang phục của ông lạ đời quá ạ" },
+            { "en": "C. Buy new clothes at the proshop, Sir.", "vi": "Đi mua quần áo mới ở proshop đi ạ" },
+            { "en": "D. Your clothes are dirty, Sir.", "vi": "Quần áo của ông bị bẩn rồi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "4",
+        "section": "section4.3",
+        "type": "mcq",
+        "title": "[4.3 Luyện nghe] Nghe Caddy quan tâm sức khỏe và gợi ý điểm nghỉ ngơi:",
+        "audioText": "The sun is quite strong now, Sir. You look a bit tired. Would you like to take a short rest?",
+        "phonetic": "/ðə sʌn ɪz kwaɪt strɑːŋ naʊ, sɜːr. juː lʊk ə bɪt taɪərd. wʊd juː laɪk tə teɪk ə ʃɔːrt rest/",
+        "translation": "Nắng bây giờ khá gắt rồi thưa ông. Trông ông hơi mệt, ông có muốn nghỉ một lát không ạ?",
+        "options": [
+            { "en": "A. The sun is strong, you look tired. Would you like a short rest, Sir?", "vi": "Nắng gắt trông ông hơi mệt, ông muốn nghỉ chút không ạ?" },
+            { "en": "B. Run faster under the sun, Sir.", "vi": "Chạy nhanh hơn dưới nắng đi ạ" },
+            { "en": "C. Stand under the sun for 2 hours, Sir.", "vi": "Đứng dưới nắng 2 tiếng đi ạ" },
+            { "en": "D. No rest allowed on this hole, Sir.", "vi": "Không được nghỉ ở hố này đâu ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "4",
+        "section": "section4.3",
+        "type": "mcq",
+        "title": "[4.3 Luyện nghe] Nghe Caddy gợi ý dịch vụ giải khát tại trạm dừng Kiosk:",
+        "audioText": "We are approaching the Kiosk House, Sir. Our fresh coconut is very refreshing today. Would you like to try one?",
+        "phonetic": "/wiː ɑːr əˈproʊ.tʃɪŋ ðə ˈkiː.ɑːsk haʊs, sɜːr. aʊər freʃ ˈkoʊ.kə.nʌt ɪz ˈver.i rɪˈfreʃ.ɪŋ təˈdeɪ/",
+        "translation": "Chúng ta đang đến gần trạm nghỉ rồi thưa ông. Hôm nay có dừa tươi rất mát, ông có muốn dùng thử không ạ?",
+        "options": [
+            { "en": "A. We are approaching Kiosk. Fresh coconut is refreshing, try one, Sir?", "vi": "Sắp tới Kiosk, dừa tươi rất mát, ông dùng thử không ạ?" },
+            { "en": "B. The Kiosk is closed today, Sir.", "vi": "Nhà chòi Kiosk hôm nay đóng cửa rồi ạ" },
+            { "en": "C. Don't buy anything at Kiosk, Sir.", "vi": "Đừng mua gì ở Kiosk thưa ông" },
+            { "en": "D. Drink lake water instead, Sir.", "vi": "Uống nước hồ thay thế đi ạ" }
+        ],
+        "correct": 0
+    },
+
+    // -------------------------------------------------------------------------
+    // SECTION 4.4: BỔ SUNG ĐÓNG VAI THỰC CHIẾN (ROLE-PLAY DRILLS & KỊCH BẢN)
+    // -------------------------------------------------------------------------
+    {
+        "lesson": "4",
+        "section": "section4.4",
+        "type": "mcq",
+        "title": "[4.4 Đóng vai 1] Tình huống tư vấn vị trí Cờ Đỏ (Front Pin): Khi Golfer hỏi về màu cờ đỏ, Caddy tư vấn hướng đánh và độ dốc:",
+        "audioText": "The flag is red today, Sir. It is a front pin, but stay below the pin because it slopes from back to front.",
+        "phonetic": "/ðə flæɡ ɪz red təˈdeɪ, sɜːr. ɪt ɪz ə frʌnt pɪn, bʌt steɪ bɪˈloʊ ðə pɪn bɪˈkɑːz ɪt sloʊps frəm bæk tə frʌnt/",
+        "translation": "Cờ màu đỏ thưa ông. Cờ cắm ở phía trước green, hãy giữ bóng phía dưới hố gôn vì dốc đổ từ sau ra trước ạ.",
+        "options": [
+            { "en": "A. Red flag is front pin, stay below the pin as it slopes back to front, Sir.", "vi": "Cờ đỏ cờ trước, giữ bóng dưới hố vì dốc đổ từ sau ra trước ạ" },
+            { "en": "B. Red flag means out of bounds, Sir.", "vi": "Cờ đỏ nghĩa là ra ngoài biên OB ạ" },
+            { "en": "C. Hit past the green into the forest, Sir.", "vi": "Đánh qua green vào rừng đi ạ" },
+            { "en": "D. Use driver on the green, Sir.", "vi": "Dùng gậy driver trên green ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "4",
+        "section": "section4.4",
+        "type": "mcq",
+        "title": "[4.4 Đóng vai 2] Tình huống xử lý bóng vượt cọc trắng OB: Khi kiểm tra bóng dính cọc trắng, Caddy bàn giao bóng dự phòng:",
+        "audioText": "The ball is two yards past the white stakes. It is OB, Sir. Here is your provisional ball, take your time!",
+        "phonetic": "/ðə bɔːl ɪz tuː jɑːrdz pæst ðə waɪt steɪks. ɪt ɪz oʊ-biː, sɜːr. hɪər ɪz jʊər prəˈvɪʒ.ən.əl bɔːl/",
+        "translation": "Quả bóng quá cọc trắng 2 yard, bị OB rồi ạ. Bóng dự phòng của ông đây ạ, xin cứ từ tốn đánh!",
+        "options": [
+            { "en": "A. Ball is past white stakes, it's OB. Here is your provisional ball, Sir!", "vi": "Bóng quá cọc trắng bị OB. Đây là bóng dự phòng thưa ông!" },
+            { "en": "B. Ball is safe, no need provisional ball, Sir.", "vi": "Bóng an toàn không cần bóng dự phòng ạ" },
+            { "en": "C. Kick the ball back to fairway with foot, Sir.", "vi": "Dùng chân đá bóng quay lại fairway ạ" },
+            { "en": "D. You win the hole automatically, Sir.", "vi": "Ông thắng hố này tự động ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "4",
+        "section": "section4.4",
+        "type": "mcq",
+        "title": "[4.4 Đóng vai 3] Tình huống sơ cứu khi khách lật cổ chân: Caddy mời khách nghỉ trên xe và lấy bình xịt lạnh:",
+        "audioText": "Please sit down and rest on the buggy, Sir. Don't move your leg. Let me get the cold spray from the first aid kit.",
+        "phonetic": "/pliːz sɪt daʊn ænd rest ɑːn ðə ˈbʌɡ.i, sɜːr. doʊnt muːv jʊər leɡ. let miː ɡet ðə koʊld spreɪ frəm ðə ˌfɜːrst ˈeɪd kɪt/",
+        "translation": "Xin hãy ngồi nghỉ trên xe điện ạ. Đừng di chuyển chân, để tôi lấy chai xịt lạnh từ túi sơ cứu ra ạ.",
+        "options": [
+            { "en": "A. Sit on buggy, don't move. I will get cold spray from first aid kit, Sir.", "vi": "Ngồi nghỉ trên xe, đừng di chuyển. Tôi lấy xịt lạnh từ túi sơ cứu ạ" },
+            { "en": "B. Keep running 5 miles to cure your leg, Sir.", "vi": "Chạy tiếp 5 dặm cho khỏi chân ạ" },
+            { "en": "C. I don't have first aid kit on buggy, Sir.", "vi": "Tôi không có túi sơ cứu trên xe ạ" },
+            { "en": "D. Jump up and down on one foot, Sir.", "vi": "Nhảy lò cò 1 chân đi ạ" }
+        ],
+        "correct": 0
+    },
+
+    // Điền từ bổ sung (Fill-in-the-blank)
+    {
+        "lesson": "4",
+        "section": "section4.4",
+        "type": "fill",
+        "title": "[4.4 Điền từ] Nghe Caddy báo cọc bẫy màu đỏ và ĐIỀN TỪ:",
+        "audioText": "Watch out for the red hazard stakes, Sir.",
+        "phonetic": "/wɑːtʃ aʊt fɔːr ðə red ˈhæz.ɚd steɪks, sɜːr/",
+        "translation": "Hãy cẩn thận các cọc bẫy màu đỏ thưa ông.",
+        "displaySentence": "Watch out for the red hazard _______, Sir.",
+        "targetWord": "stakes",
+        "hint": "💡 Gợi ý: Từ gồm 6 ký tự chỉ cọc ranh giới."
+    },
+    {
+        "lesson": "4",
+        "section": "section4.4",
+        "type": "fill",
+        "title": "[4.4 Điền từ] Nghe Caddy lấy bình xịt lạnh từ túi sơ cứu và ĐIỀN TỪ:",
+        "audioText": "Let me get the cold spray from the first aid kit, Sir.",
+        "phonetic": "/let miː ɡet ðə koʊld spreɪ frəm ðə ˌfɜːrst ˈeɪd kɪt, sɜːr/",
+        "translation": "Để tôi lấy bình xịt lạnh từ túi sơ cứu thưa ông.",
+        "displaySentence": "Let me get the cold spray from the first aid _______, Sir.",
+        "targetWord": "kit",
+        "hint": "💡 Gợi ý: Từ gồm 3 ký tự."
+    },
+    {
+        "lesson": "4",
+        "section": "section4.4",
+        "type": "fill",
+        "title": "[4.4 Điền từ] Nghe Caddy hỏi thăm sở thích khách và ĐIỀN TỪ:",
+        "audioText": "Which golf course is your favorite, Sir?",
+        "phonetic": "/wɪtʃ ɡɑːlf kɔːrs ɪz jʊər ˈfeɪ.vɚ.ɪt, sɜːr/",
+        "translation": "Sân gôn yêu thích của ông là sân nào ạ?",
+        "displaySentence": "Which golf course is your _______, Sir?",
+        "targetWord": "favorite",
+        "hint": "💡 Gợi ý: Từ gồm 8 ký tự nghĩa là yêu thích."
+    }
+);
