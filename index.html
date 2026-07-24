@@ -91,8 +91,7 @@
 
             <div id="fill-container" class="fill-container" style="display:none;">
                 <div id="blank-sentence" class="blank-sentence"></div>
-                <!-- Bổ sung hàm xử lý sự kiện Enter 1 lần trực tiếp tại đây -->
-                <input type="text" id="fill-input" class="fill-input" placeholder="Nhập từ còn thiếu..." oninput="saveFillAnswer(this.value)" onkeydown="handleFillKeydown(event)">
+                <input type="text" id="fill-input" class="fill-input" placeholder="Nhập từ còn thiếu..." oninput="saveFillAnswer(this.value)">
                 <span id="char-hint" class="char-hint"></span>
                 <span id="correct-answer-display" class="correct-answer-text" style="display:none;"></span>
             </div>
@@ -109,7 +108,7 @@
     <!-- KHỞI TẠO MẢNG DỮ LIỆU CHUNG -->
     <script> window.masterQuizData = []; </script>
 
-    <!-- TRÌNH NẠP DỮ LIỆU ĐỘNG TỐI ƯU & HỖ TRỢ DÃY/RANGE -->
+    <!-- TRÌNH NẠP DỮ LIỆU ĐỘNG TỐI ƯU & AN TOÀN TUYỆT ĐỐI -->
     <script>
         function parseRangeSequence(inputStr) {
             if (!inputStr) return [];
@@ -168,12 +167,31 @@
                 for (let i = 1; i <= 10; i++) filesToLoad.add(`data/lesson${i}.js`);
             }
 
-            filesToLoad.forEach(src => {
+            const filesArray = Array.from(filesToLoad);
+            let loadedCount = 0;
+            let isInitialized = false;
+
+            const checkAndInit = () => {
+                if (isInitialized) return;
+                isInitialized = true;
+                initApp();
+            };
+
+            // Cơ chế phòng hờ: Tự động chạy ứng dụng sau tối đa 1.5 giây dù file load chưa xong hẳn
+            const safetyTimeout = setTimeout(() => {
+                checkAndInit();
+            }, 1500);
+
+            filesArray.forEach(src => {
                 const script = document.createElement('script');
                 script.src = src;
                 script.async = false;
-                script.onerror = function() {
-                    console.log(`[BRG Learning] File ${src} chưa được tạo hoặc không tồn tại.`);
+                script.onload = script.onerror = () => {
+                    loadedCount++;
+                    if (loadedCount === filesArray.length) {
+                        clearTimeout(safetyTimeout);
+                        checkAndInit();
+                    }
                 };
                 document.head.appendChild(script);
             });
@@ -198,8 +216,8 @@
         function getSmartFilteredQuizData() {
             const urlParams = new URLSearchParams(window.location.search);
             const reqLesson = urlParams.get('lesson');   
-            const reqSection = urlParams.get('section'); 
-            const reqExam = urlParams.get('exam');       
+            const reqSection = urlParams.get('section');  
+            const reqExam = urlParams.get('exam');        
 
             let pool = (window.masterQuizData && window.masterQuizData.length > 0) ? [...window.masterQuizData] : [...fallbackData];
             let targetCount = 30; 
@@ -476,8 +494,6 @@
                     } else {
                         fillInput.disabled = false;
                         correctDisplay.style.display = "none";
-                        // Tự động focus vào ô nhập từ khi chuyển câu mới
-                        setTimeout(() => fillInput.focus(), 100);
                     }
                 }
 
@@ -582,18 +598,6 @@
             if (isReviewMode) return;
             userAnswers[currentIndex] = val.trim();
             updateItemStatusTag();
-        }
-
-        // ================= HÀM XỬ LÝ SỰ KIỆN ENTER 1 LẦN DỨT ĐIỂM =================
-        function handleFillKeydown(event) {
-            // Chặn nhận phím Enter khi đang dùng bộ gõ tiếng Việt (IME composing)
-            if (event.isComposing || event.keyCode === 229) return;
-
-            if (event.key === 'Enter') {
-                event.preventDefault(); // Chặn hành vi submit form / reload mặc định
-                saveFillAnswer(event.target.value); // Cập nhật lại câu trả lời mới nhất
-                goToNext(); // Chuyển câu lập tức chỉ sau 1 lần Enter
-            }
         }
 
         function goToNext() {
@@ -736,10 +740,6 @@
         if ('speechSynthesis' in window) {
             window.speechSynthesis.onvoiceschanged = () => { window.speechSynthesis.getVoices(); };
         }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            setTimeout(initApp, 300);
-        });
     </script>
 </body>
 </html>
