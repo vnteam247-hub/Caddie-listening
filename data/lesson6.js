@@ -1,0 +1,1594 @@
+// =========================================================================
+// LESSON 6: HEALTH, EMOTIONS, EMERGENCY SITUATIONS & ON-COURSE DRILLS
+// File: lesson6.js (FULL 120 QUESTIONS - MINIMUM 30 QUESTIONS PER SECTION)
+// =========================================================================
+
+if (typeof window.masterQuizData === 'undefined') {
+    window.masterQuizData = [];
+}
+
+window.masterQuizData.push(
+    // =========================================================================
+    // SECTION 6.1: SỨC KHỎE (HEALTH & PHYSICAL CONDITION) - 30 CÂU
+    // =========================================================================
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "mcq",
+        "title": "[6.1 Luyện nghe] Nghe Caddy hỏi thăm khi phát hiện khách mệt mỏi:",
+        "audioText": "Are you feeling okay, Sir? You look a bit tired.",
+        "phonetic": "/ɑːr juː ˈfiː.lɪŋ oʊˈkeɪ, sɜːr? juː lʊk ə bɪt taɪərd/",
+        "translation": "Ông cảm thấy ổn không ạ? Trông ông có vẻ hơi mệt.",
+        "options": [
+            { "en": "A. Are you feeling okay, Sir? You look a bit tired.", "vi": "Ông cảm thấy ổn không? Trông ông hơi mệt ạ" },
+            { "en": "B. Why are you walking so fast, Sir?", "vi": "Tại sao ông đi bộ nhanh thế ạ?" },
+            { "en": "C. You need to hit the ball harder, Sir.", "vi": "Ông cần đánh bóng mạnh hơn ạ" },
+            { "en": "D. Please carry your golf bag yourself, Sir.", "vi": "Xin ông tự xách túi gậy ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "mcq",
+        "title": "[6.1 Luyện nghe] Nghe Caddy hỏi thăm tình trạng chóng mặt do nắng gắt:",
+        "audioText": "The sun is very strong. Do you feel dizzy, Sir?",
+        "phonetic": "/ðə sʌn ɪz ˈver.i strɑːŋ. duː juː fiːl ˈdɪz.i, sɜːr/",
+        "translation": "Nắng đang rất gắt. Ông có bị chóng mặt không ạ?",
+        "options": [
+            { "en": "A. The sun is very strong. Do you feel dizzy, Sir?", "vi": "Nắng rất gắt. Ông có bị chóng mặt không ạ?" },
+            { "en": "B. The weather is so cold today, Sir.", "vi": "Hôm nay thời tiết rất lạnh ạ" },
+            { "en": "C. Look at the clouds in the sky, Sir.", "vi": "Nhìn lên mây trên trời đi ạ" },
+            { "en": "D. Turn off the buggy lights now, Sir.", "vi": "Tắt đèn xe điện ngay đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "mcq",
+        "title": "[6.1 Luyện nghe] Nghe Caddy đề nghị phục vụ khăn lạnh chườm mát:",
+        "audioText": "Would you like an ice towel to cool down, Sir?",
+        "phonetic": "/wʊd juː laɪk æn aɪs ˈtaʊ.əl tə kuːl daʊn, sɜːr/",
+        "translation": "Ông có muốn dùng khăn lạnh để chườm mát không ạ?",
+        "options": [
+            { "en": "A. Would you like an ice towel to cool down, Sir?", "vi": "Ông có muốn dùng khăn lạnh chườm mát không ạ?" },
+            { "en": "B. Wash your hands in the lake, Sir.", "vi": "Rửa tay dưới hồ đi ạ" },
+            { "en": "C. Buy a new towel at the proshop, Sir.", "vi": "Mua khăn mới ở proshop đi ạ" },
+            { "en": "D. Clean your golf shoes with water, Sir.", "vi": "Lau giày golf bằng nước đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "mcq",
+        "title": "[6.1 Luyện nghe] Nghe Caddy gợi ý vị trí nghỉ ngơi tránh nắng:",
+        "audioText": "There is a shady spot ahead. Let's rest there for a moment, Sir.",
+        "phonetic": "/ðer ɪz ə ˈʃeɪ.di spɑːt əˈhed. lets rest ðer fɔːr ə ˈmoʊ.mənt, sɜːr/",
+        "translation": "Phía trước có chỗ bóng râm mát. Chúng ta nghỉ ở đó một chút nhé ông.",
+        "options": [
+            { "en": "A. There is a shady spot ahead. Let's rest there for a moment, Sir.", "vi": "Phía trước có bóng râm, nghỉ một chút nhé ông" },
+            { "en": "B. Stand under the bright sun for 30 minutes, Sir.", "vi": "Đứng dưới nắng chói 30 phút ạ" },
+            { "en": "C. Run as fast as you can to the green, Sir.", "vi": "Chạy nhanh nhất có thể lên green ạ" },
+            { "en": "D. Drive the buggy into the trees, Sir.", "vi": "Lái xe điện vào hàng cây ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "mcq",
+        "title": "[6.1 Luyện nghe] Nghe Caddy đề nghị hỗ trợ che ô chống nắng:",
+        "audioText": "Let me hold the umbrella for you, Sir.",
+        "phonetic": "/let miː hoʊld ðə ʌmˈbrel.ə fɔːr juː, sɜːr/",
+        "translation": "Để em che ô giúp ông nhé ạ.",
+        "options": [
+            { "en": "A. Let me hold the umbrella for you, Sir.", "vi": "Để em che ô giúp ông nhé ạ" },
+            { "en": "B. Open your own umbrella right now, Sir.", "vi": "Tự mở ô của ông ra đi ạ" },
+            { "en": "C. Throw the umbrella into the buggy, Sir.", "vi": "Ném chiếc ô vào xe điện ạ" },
+            { "en": "D. We don't need umbrellas in this heat, Sir.", "vi": "Trời nắng này không cần ô đâu ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "mcq",
+        "title": "[6.1 Luyện nghe] Nghe Caddy đề nghị bổ sung thức uống điện giải:",
+        "audioText": "Please drink some sports drink to replenish electrolytes, Sir.",
+        "phonetic": "/pliːz drɪŋk səm spɔːrts drɪŋk tə rɪˈplen.ɪʃ ɪˈlek.trə.laɪts, sɜːr/",
+        "translation": "Xin mời ông uống chút nước thể thao để bù điện giải ạ.",
+        "options": [
+            { "en": "A. Please drink some sports drink to replenish electrolytes, Sir.", "vi": "Xin uống nước thể thao để bù điện giải ạ" },
+            { "en": "B. Don't drink any water during the round, Sir.", "vi": "Đừng uống nước trong suốt vòng chơi ạ" },
+            { "en": "C. Drink hot tea under the sun, Sir.", "vi": "Uống trà nóng dưới nắng đi ạ" },
+            { "en": "D. Pour the drink on the grass, Sir.", "vi": "Đổ nước uống xuống cỏ đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "mcq",
+        "title": "[6.1 Luyện nghe] Nghe Caddy hỏi thăm cảm giác khát nước thời tiết oi bức:",
+        "audioText": "Are you feeling thirsty, Sir? Cold water is ready in the cooler box.",
+        "phonetic": "/ɑːr juː ˈfiː.lɪŋ ˈθɜːr.sti, sɜːr? koʊld ˈwɔː.tər ɪz ˈred.i ɪn ðə ˈkuː.lər bɑːks/",
+        "translation": "Ông có bị khát nước không ạ? Nước lạnh đã có sẵn trong thùng đá rồi ạ.",
+        "options": [
+            { "en": "A. Are you feeling thirsty, Sir? Cold water is ready in the cooler box.", "vi": "Ông có khát không? Nước lạnh có sẵn trong thùng đá ạ" },
+            { "en": "B. Drink water from the pond, Sir.", "vi": "Uống nước dưới ao đi ạ" },
+            { "en": "C. We ran out of water today, Sir.", "vi": "Hôm nay hết nước rồi ạ" },
+            { "en": "D. Don't touch the cooler box, Sir.", "vi": "Đừng chạm vào thùng đá ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "mcq",
+        "title": "[6.1 Luyện nghe] Nghe Caddy cảnh báo tác hại nắng gắt lên da:",
+        "audioText": "The UV is very high today. Please apply sunburn cream, Sir.",
+        "phonetic": "/ðə ˌjuːˈviː ɪz ˈver.i haɪ təˈdeɪ. pliːz əˈplaɪ ˈsʌn.bɜːrn kriːm, sɜːr/",
+        "translation": "Hôm nay tia UV rất cao. Xin ông bôi kem chống nắng ạ.",
+        "options": [
+            { "en": "A. The UV is very high today. Please apply sunburn cream, Sir.", "vi": "Tia UV cao, xin bôi kem chống nắng ạ" },
+            { "en": "B. Remove your hat under the sun, Sir.", "vi": "Bỏ mũ ra dưới nắng đi ạ" },
+            { "en": "C. Look directly at the sun, Sir.", "vi": "Nhìn thẳng vào mặt trời đi ạ" },
+            { "en": "D. Turn off the air conditioner, Sir.", "vi": "Tắt điều hòa đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "mcq",
+        "title": "[6.1 Luyện nghe] Nghe Caddy đưa ra xịt xua đuổi côn trùng khi tới vùng cỏ cao:",
+        "audioText": "Here is the bug spray, Sir. It will protect you from insects.",
+        "phonetic": "/hɪər ɪz ðə bʌɡ spreɪ, sɜːr. ɪt wɪl prəˈtekt juː frəm ˈɪn.sekts/",
+        "translation": "Đây là bình xịt côn trùng thưa ông. Nó sẽ bảo vệ ông khỏi sâu bọ ạ.",
+        "options": [
+            { "en": "A. Here is the bug spray, Sir. It will protect you from insects.", "vi": "Gửi ông xịt côn trùng để tránh sâu bọ ạ" },
+            { "en": "B. Insects are harmless, don't worry, Sir.", "vi": "Côn trùng vô hại thôi đừng lo ạ" },
+            { "en": "C. Catch the bees with your hand, Sir.", "vi": "Bắt ong bằng tay đi ạ" },
+            { "en": "D. Spray the bug spray on the golf ball, Sir.", "vi": "Xịt thuốc trừ sâu lên bóng golf đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "mcq",
+        "title": "[6.1 Luyện nghe] Nghe Caddy khuyên tạm dừng chơi khi sức khỏe không đảm bảo:",
+        "audioText": "If you feel unwell, please sit down. Your health is most important, Sir.",
+        "phonetic": "/ɪf juː fiːl ʌnˈwel, pliːz sɪt daʊn. jʊər helθ ɪz moʊst ɪmˈpɔːr.tənt, sɜːr/",
+        "translation": "Nếu ông thấy không khỏe, xin hãy ngồi xuống. Sức khỏe của ông là quan trọng nhất ạ.",
+        "options": [
+            { "en": "A. If you feel unwell, please sit down. Health is most important, Sir.", "vi": "Không khỏe xin ngồi nghỉ, sức khỏe quan trọng nhất ạ" },
+            { "en": "B. Keep playing even if you are sick, Sir.", "vi": "Dù ốm cũng phải đánh tiếp ạ" },
+            { "en": "C. Health doesn't matter on golf course, Sir.", "vi": "Sức khỏe không quan trọng trên sân golf đâu ạ" },
+            { "en": "D. Run 5 laps around the green, Sir.", "vi": "Chạy 5 vòng quanh green đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "mcq",
+        "title": "[6.1 Luyện nghe] Nghe Caddy đề nghị gọi đồ ăn nhẹ bổ sung năng lượng:",
+        "audioText": "Would you like some light snacks to gain energy, Sir?",
+        "phonetic": "/wʊd juː laɪk səm laɪt snæks tə ɡeɪn ˈen.ɚ.dʒi, sɜːr/",
+        "translation": "Ông có muốn dùng chút đồ ăn nhẹ để bổ sung năng lượng không ạ?",
+        "options": [
+            { "en": "A. Would you like some light snacks to gain energy, Sir?", "vi": "Ông muốn dùng đồ ăn nhẹ bổ sung năng lượng không ạ?" },
+            { "en": "B. Don't eat anything all day, Sir.", "vi": "Đừng ăn gì cả ngày ạ" },
+            { "en": "C. Pay extra money for snacks, Sir.", "vi": "Trả thêm tiền cho đồ ăn đi ạ" },
+            { "en": "D. Throw the food on the fairway, Sir.", "vi": "Vứt thức ăn ra fairway đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "mcq",
+        "title": "[6.1 Luyện nghe] Nghe Caddy hỏi thăm tình trạng đau nhức cơ bắp:",
+        "audioText": "Is your back hurting, Sir? Please take it easy.",
+        "phonetic": "/ɪz jʊər bæk ˈhɜːrt.ɪŋ, sɜːr? pliːz teɪk ɪt ˈiː.zi/",
+        "translation": "Lưng của ông có bị đau không ạ? Xin ông cứ nhẹ nhàng thôi ạ.",
+        "options": [
+            { "en": "A. Is your back hurting, Sir? Please take it easy.", "vi": "Lưng ông có đau không? Xin đánh nhẹ nhàng thôi ạ" },
+            { "en": "B. Swing as hard as possible with bad back, Sir.", "vi": "Đau lưng thì vung gậy thật mạnh vào ạ" },
+            { "en": "C. Carry two golf bags at once, Sir.", "vi": "Xách 2 túi gậy cùng lúc đi ạ" },
+            { "en": "D. Jump up and down 10 times, Sir.", "vi": "Nhảy lên nhảy xuống 10 lần đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "mcq",
+        "title": "[6.1 Luyện nghe] Nghe Caddy quan tâm khi khách bị khó thở do thời tiết oi bức:",
+        "audioText": "The air is humid. Please breathe slowly and relax, Sir.",
+        "phonetic": "/ðə er ɪz ˈhjuː.mɪd. pliːz briːð ˈsloʊ.li ænd rɪˈlæks, sɜːr/",
+        "translation": "Không khí hơi oi nồng. Xin ông hít thở chậm lại và thư giãn ạ.",
+        "options": [
+            { "en": "A. The air is humid. Please breathe slowly and relax, Sir.", "vi": "Không khí oi, xin hít thở chậm và thư giãn ạ" },
+            { "en": "B. Hold your breath for 2 minutes, Sir.", "vi": "Nín thở 2 phút đi ạ" },
+            { "en": "C. Run up the hill right now, Sir.", "vi": "Chạy lên dốc ngay bây giờ đi ạ" },
+            { "en": "D. Stop breathing completely, Sir.", "vi": "Ngừng thở hoàn toàn đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "mcq",
+        "title": "[6.1 Luyện nghe] Nghe Caddy đề nghị lái xe đến Kiosk gần nhất:",
+        "audioText": "Let me drive you to the nearest Kiosk for a short break, Sir.",
+        "phonetic": "/let miː draɪv juː tə ðə ˈnɪr.ɪst ˈkiː.ɑːsk fɔːr ə ʃɔːrt breɪk, sɜːr/",
+        "translation": "Để em lái xe chở ông tới trạm chòi Kiosk gần nhất nghỉ chút nhé ạ.",
+        "options": [
+            { "en": "A. Let me drive you to the nearest Kiosk for a short break, Sir.", "vi": "Để em chở ông tới Kiosk gần nhất nghỉ chút ạ" },
+            { "en": "B. Walk 5 miles to the Kiosk, Sir.", "vi": "Đi bộ 5 dặm tới Kiosk đi ạ" },
+            { "en": "C. The Kiosk is broken today, Sir.", "vi": "Nhà chòi Kiosk bị hỏng rồi ạ" },
+            { "en": "D. No stopping at Kiosk allowed, Sir.", "vi": "Không được dừng ở Kiosk đâu ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "mcq",
+        "title": "[6.1 Luyện nghe] Nghe Caddy nhắc nhở đeo kính râm bảo vệ mắt:",
+        "audioText": "Please wear your sunglasses to protect your eyes, Sir.",
+        "phonetic": "/pliːz wer jʊər ˈsʌnˌɡlæs.ɪz tə prəˈtekt jʊər aɪz, sɜːr/",
+        "translation": "Xin ông đeo kính râm vào để bảo vệ mắt ạ.",
+        "options": [
+            { "en": "A. Please wear your sunglasses to protect your eyes, Sir.", "vi": "Xin đeo kính râm để bảo vệ mắt ạ" },
+            { "en": "B. Throw your sunglasses into the lake, Sir.", "vi": "Ném kính râm xuống hồ đi ạ" },
+            { "en": "C. Look at the sun with bare eyes, Sir.", "vi": "Nhìn mặt trời bằng mắt trần đi ạ" },
+            { "en": "D. Close your eyes while swinging, Sir.", "vi": "Nhắm mắt khi vung gậy đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "fill",
+        "title": "[6.1 Điền từ] Nghe Caddy hỏi thăm tình trạng cảm giác mệt mỏi, ĐIỀN TỪ:",
+        "audioText": "Are you feeling tired, Sir?",
+        "phonetic": "/ɑːr juː ˈfiː.lɪŋ taɪərd, sɜːr/",
+        "translation": "Ông có đang cảm thấy mệt mỏi không ạ?",
+        "displaySentence": "Are you feeling _______, Sir?",
+        "targetWord": "tired",
+        "hint": "💡 Gợi ý: Từ gồm 5 ký tự chỉ trạng thái mệt mỏi."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "fill",
+        "title": "[6.1 Điền từ] Nghe Caddy khuyên nghỉ ngơi dưới bóng râm, ĐIỀN TỪ:",
+        "audioText": "Let's rest in the shade for a bit, Sir.",
+        "phonetic": "/lets rest ɪn ðə ʃeɪd fɔːr ə bɪt, sɜːr/",
+        "translation": "Chúng ta hãy nghỉ ngơi trong bóng râm một chút thưa ông.",
+        "displaySentence": "Let's rest in the _______ for a bit, Sir.",
+        "targetWord": "shade",
+        "hint": "💡 Gợi ý: Từ gồm 5 ký tự chỉ bóng râm mát."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "fill",
+        "title": "[6.1 Điền từ] Nghe Caddy đề nghị phục vụ khăn lạnh, ĐIỀN TỪ:",
+        "audioText": "Would you like an ice towel, Sir?",
+        "phonetic": "/wʊd juː laɪk æn aɪs ˈtaʊ.əl, sɜːr/",
+        "translation": "Ông có muốn dùng khăn lạnh không ạ?",
+        "displaySentence": "Would you like an ice _______, Sir?",
+        "targetWord": "towel",
+        "hint": "💡 Gợi ý: Từ chỉ chiếc khăn."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "fill",
+        "title": "[6.1 Điền từ] Nghe Caddy hỏi thăm xem khách có bị chóng mặt không, ĐIỀN TỪ:",
+        "audioText": "Do you feel dizzy, Sir?",
+        "phonetic": "/duː juː fiːl ˈdɪz.i, sɜːr/",
+        "translation": "Ông có thấy chóng mặt không ạ?",
+        "displaySentence": "Do you feel _______, Sir?",
+        "targetWord": "dizzy",
+        "hint": "💡 Gợi ý: Từ gồm 5 ký tự mang nghĩa chóng mặt."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "fill",
+        "title": "[6.1 Điền từ] Nghe Caddy mời uống chút nước lọc, ĐIỀN TỪ:",
+        "audioText": "Please drink some water, Sir.",
+        "phonetic": "/pliːz drɪŋk səm ˈwɔː.tər, sɜːr/",
+        "translation": "Xin mời ông uống chút nước ạ.",
+        "displaySentence": "Please drink some _______, Sir.",
+        "targetWord": "water",
+        "hint": "💡 Gợi ý: Từ chỉ nước uống."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "fill",
+        "title": "[6.1 Điền từ] Nghe Caddy nhắc nhở xịt thuốc chống muỗi/côn trùng, ĐIỀN TỪ:",
+        "audioText": "Here is the bug spray, Sir.",
+        "phonetic": "/hɪər ɪz ðə bʌɡ spreɪ, sɜːr/",
+        "translation": "Gửi ông bình xịt côn trùng ạ.",
+        "displaySentence": "Here is the bug _______, Sir.",
+        "targetWord": "spray",
+        "hint": "💡 Gợi ý: Từ gồm 5 ký tự chỉ bình xịt."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "fill",
+        "title": "[6.1 Điền từ] Nghe Caddy đề nghị che ô bảo vệ khách, ĐIỀN TỪ:",
+        "audioText": "Let me hold the umbrella, Sir.",
+        "phonetic": "/let miː hoʊld ðə ʌmˈbrel.ə, sɜːr/",
+        "translation": "Để em che chiếc ô cho ông nhé ạ.",
+        "displaySentence": "Let me hold the _______, Sir.",
+        "targetWord": "umbrella",
+        "hint": "💡 Gợi ý: Từ chỉ cái ô/dù."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "fill",
+        "title": "[6.1 Điền từ] Nghe Caddy hỏi xem ông có khát nước không, ĐIỀN TỪ:",
+        "audioText": "Are you feeling thirsty, Sir?",
+        "phonetic": "/ɑːr juː ˈfiː.lɪŋ ˈθɜːr.sti, sɜːr/",
+        "translation": "Ông có cảm thấy khát nước không ạ?",
+        "displaySentence": "Are you feeling _______, Sir?",
+        "targetWord": "thirsty",
+        "hint": "💡 Gợi ý: Từ gồm 7 ký tự mang nghĩa khát nước."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "fill",
+        "title": "[6.1 Điền từ] Nghe Caddy khuyên ông ngồi nghỉ một lát, ĐIỀN TỪ:",
+        "audioText": "Please sit down and rest, Sir.",
+        "phonetic": "/pliːz sɪt daʊn ænd rest, sɜːr/",
+        "translation": "Xin mời ông ngồi xuống nghỉ ngơi ạ.",
+        "displaySentence": "Please sit down and _______, Sir.",
+        "targetWord": "rest",
+        "hint": "💡 Gợi ý: Từ gồm 4 ký tự nghĩa là nghỉ ngơi."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "fill",
+        "title": "[6.1 Điền từ] Nghe Caddy nhắc nhở sức khỏe là quan trọng nhất, ĐIỀN TỪ:",
+        "audioText": "Your health is most important, Sir.",
+        "phonetic": "/jʊər helθ ɪz moʊst ɪmˈpɔːr.tənt, sɜːr/",
+        "translation": "Sức khỏe của ông là quan trọng nhất ạ.",
+        "displaySentence": "Your _______ is most important, Sir.",
+        "targetWord": "health",
+        "hint": "💡 Gợi ý: Từ chỉ sức khỏe."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "mcq",
+        "title": "[6.1 Tình huống] Khi thấy khách liên tục lau mồ hôi trên trán và thở dốc dưới trời nắng, Caddy ứng xử chuẩn:",
+        "audioText": "Dừng xe ở bóng râm, chủ động trao khăn lạnh bằng hai tay và mời khách dùng nước điện giải.",
+        "phonetic": "/aɪs ˈtaʊ.əl/",
+        "translation": "Chủ động mời khăn lạnh và nước điện giải tại khu vực bóng râm.",
+        "options": [
+            { "en": "A. Dừng xe ở bóng râm, đưa khăn lạnh bằng 2 tay và mời nước điện giải", "vi": "Tác phong quan tâm chu đáo" },
+            { "en": "B. Giục khách đánh nhanh lên cho xong hố", "vi": "Thiếu quan tâm sức khỏe" },
+            { "en": "C. Đứng nhìn và không làm gì cả", "vi": "Bị động" },
+            { "en": "D. Phàn nàn vì khách di chuyển quá chậm", "vi": "Thái độ sai" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "mcq",
+        "title": "[6.1 Tình huống] Tỷ lệ vàng 80/20 trong giao tiếp hỏi thăm chăm sóc sức khỏe khách gôn nghĩa là gì?",
+        "audioText": "80% listening to the guest, 20% asking open questions or giving short compliments.",
+        "phonetic": "/ˈlɪs.ən.ɪŋ ænd rɪˈspɑːnd.ɪŋ/",
+        "translation": "80% thời gian lắng nghe khách, 20% thời gian đặt câu hỏi quan tâm ngắn gọn.",
+        "options": [
+            { "en": "A. 80% thời gian lắng nghe khách, 20% thời gian phản hồi/hỏi thăm tinh tế", "vi": "Quy tắc 80/20 chuẩn Caddy" },
+            { "en": "B. 80% thời gian Caddy nói liên tục, 20% thời gian im lặng", "vi": "Gây phiền hà cho khách" },
+            { "en": "C. 80% thời gian nghỉ ngơi, 20% thời gian làm việc", "vi": "Sai quy trình" },
+            { "en": "D. 80% hỏi về tiền tip, 20% hỏi về kết quả đánh", "vi": "Vi phạm quy định" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.1",
+        "type": "mcq",
+        "title": "[6.1 Tình huống] Khi khách than thở bị ngứa do bị muỗi cắn trong vùng cỏ rậm (rough), Caddy lấy vật dụng gì?",
+        "audioText": "I have the bug spray on the buggy, Sir. Let me get it for you.",
+        "phonetic": "/bʌɡ spreɪ/",
+        "translation": "Em có sẵn bình xịt côn trùng trên xe điện ạ. Để em lấy cho ông.",
+        "options": [
+            { "en": "A. Lấy bình xịt côn trùng (bug spray) từ xe điện đưa cho khách", "vi": "Xử lý tình huống chuẩn" },
+            { "en": "B. Đưa gậy gạt putter cho khách", "vi": "Không liên quan" },
+            { "en": "C. Bảo khách tự gãi", "vi": "Thái độ thô lỗ" },
+            { "en": "D. Lấy nước đá đổ lên vết cắn", "vi": "Sai phương pháp" }
+        ],
+        "correct": 0
+    },
+
+    // =========================================================================
+    // SECTION 6.2: CẢM XÚC (EMOTIONS & MENTAL SUPPORT) - 30 CÂU
+    // =========================================================================
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "mcq",
+        "title": "[6.2 Luyện nghe] Nghe Caddy chúc mừng niềm vui khi khách có cú gạt bóng đẹp:",
+        "audioText": "Great shot, Sir! That was an amazing putt!",
+        "phonetic": "/ɡreɪt ʃɑːt, sɜːr! ðæt wɑːz æn əˈmeɪ.zɪŋ pʌt/",
+        "translation": "Cú đánh tuyệt vời quá ông ơi! Cú gạt bóng đó quá kinh ngạc ạ!",
+        "options": [
+            { "en": "A. Great shot, Sir! That was an amazing putt!", "vi": "Cú đánh tuyệt vời, cú gạt quá kinh ngạc ạ!" },
+            { "en": "B. Terrible shot, you got lucky, Sir.", "vi": "Cú đánh tệ, ông may thôi ạ" },
+            { "en": "C. Why didn't you hit further, Sir?", "vi": "Tại sao ông không đánh xa hơn ạ?" },
+            { "en": "D. You missed the hole completely, Sir.", "vi": "Ông đánh trượt hố hoàn toàn rồi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "mcq",
+        "title": "[6.2 Luyện nghe] Nghe Caddy xoa dịu cảm xúc thất vọng khi bóng rơi vào bẫy:",
+        "audioText": "Don't worry, Sir. Bad luck this time, next shot will be better.",
+        "phonetic": "/doʊnt ˈwɜːr.i, sɜːr. bæd lʌk ðɪs taɪm, nekst ʃɑːt wɪl biː ˈbet̬.ɚ/",
+        "translation": "Đừng lo lắng thưa ông. Lần này chỉ là kém may mắn thôi, cú sau sẽ tốt hơn ạ.",
+        "options": [
+            { "en": "A. Don't worry, Sir. Bad luck this time, next shot will be better.", "vi": "Đừng lo ạ, lần này chỉ kém may mắn thôi" },
+            { "en": "B. You always hit into the water, Sir.", "vi": "Lúc nào ông cũng đánh xuống nước ạ" },
+            { "en": "C. I am very disappointed with you, Sir.", "vi": "Em rất thất vọng về ông ạ" },
+            { "en": "D. Stop playing this hole, Sir.", "vi": "Dừng chơi hố này đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "mcq",
+        "title": "[6.2 Luyện nghe] Nghe Caddy khích lệ niềm tin trước cú đánh khó:",
+        "audioText": "Trust yourself, Sir! You can do it!",
+        "phonetic": "/trʌst jʊərˈself, sɜːr! juː kæn duː ɪt/",
+        "translation": "Hãy tin tưởng vào bản thân ông nhé! Ông làm được mà!",
+        "options": [
+            { "en": "A. Trust yourself, Sir! You can do it!", "vi": "Hãy tự tin lên ạ! Ông làm được mà!" },
+            { "en": "B. You will fail this shot, Sir.", "vi": "Ông sẽ đánh hỏng cú này thôi ạ" },
+            { "en": "C. Give the club back to me, Sir.", "vi": "Trả lại gậy cho em đi ạ" },
+            { "en": "D. I don't think you can hit over water, Sir.", "vi": "Em không nghĩ ông đánh qua nước được đâu ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "mcq",
+        "title": "[6.2 Luyện nghe] Nghe Caddy xoa dịu tâm lý khi khách đang bực bội:",
+        "audioText": "It's okay, Sir. Let's take a deep breath, relax and stay positive.",
+        "phonetic": "/ɪts oʊˈkeɪ, sɜːr. lets teɪk ə diːp breθ, rɪˈlæks ænd steɪ ˈpɑː.zə.t̬ɪv/",
+        "translation": "Không sao đâu ông. Cùng hít thở sâu, thư giãn và giữ tinh thần tích cực ạ.",
+        "options": [
+            { "en": "A. It's okay, Sir. Take a deep breath, relax and stay positive.", "vi": "Không sao đâu ạ, hít thở sâu, thư giãn và giữ tích cực" },
+            { "en": "B. You are so angry for no reason, Sir.", "vi": "Tự nhiên ông lại tức giận làm gì ạ" },
+            { "en": "C. Shout out loud to feel better, Sir.", "vi": "Hét thật to cho thoải mái đi ạ" },
+            { "en": "D. Go back to the hotel right now, Sir.", "vi": "Đi về khách sạn ngay bây giờ đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "mcq",
+        "title": "[6.2 Luyện nghe] Nghe Caddy tán thưởng tinh thần thi đấu xuất sắc:",
+        "audioText": "You are playing like a pro today, Sir! Keep it up!",
+        "phonetic": "/juː ɑːr ˈpleɪ.ɪŋ laɪk ə proʊ təˈdeɪ, sɜːr! kiːp ɪt ʌp/",
+        "translation": "Hôm nay ông đánh như một tay golf chuyên nghiệp vậy! Giữ vững phong độ nhé ông!",
+        "options": [
+            { "en": "A. You are playing like a pro today, Sir! Keep it up!", "vi": "Ông đánh như chuyên nghiệp vậy! Giữ phong độ ạ!" },
+            { "en": "B. You play like a beginner, Sir.", "vi": "Ông đánh như người mới tập chơi ạ" },
+            { "en": "C. I am bored of watching your game, Sir.", "vi": "Em chán xem ông đánh rồi ạ" },
+            { "en": "D. Stop bragging about your score, Sir.", "vi": "Đừng khoe khoang về điểm số nữa ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "mcq",
+        "title": "[6.2 Luyện nghe] Nghe Caddy tán thưởng cú phát bóng uy lực xuống giữa fairway:",
+        "audioText": "Wow! Beautiful drive, Sir! Straight down the fairway!",
+        "phonetic": "/waʊ! ˈbjuː.t̬ə.fəl draɪv, sɜːr! streɪt daʊn ðə ˈfer.weɪ/",
+        "translation": "Chà! Cú phát bóng đẹp quá ông ơi! Thẳng tắp xuống đường fairway rồi ạ!",
+        "options": [
+            { "en": "A. Wow! Beautiful drive, Sir! Straight down the fairway!", "vi": "Phát bóng đẹp quá! Thẳng tắp giữa fairway ạ!" },
+            { "en": "B. Ugly drive, ball went into the forest, Sir.", "vi": "Phát bóng xấu, bóng vào rừng rồi ạ" },
+            { "en": "C. You hit the ball with wrong side of club, Sir.", "vi": "Ông đánh bóng bằng sai mặt gậy rồi ạ" },
+            { "en": "D. The ball didn't fly at all, Sir.", "vi": "Bóng không bay chút nào ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "mcq",
+        "title": "[6.2 Luyện nghe] Nghe Caddy khen ngợi sự tập trung cao độ của khách:",
+        "audioText": "Great focus, Sir! That was a difficult line!",
+        "phonetic": "/ɡreɪt ˈfoʊ.kəs, sɜːr! ðæt wɑːz ə ˈdɪf.ə.kəlt laɪn/",
+        "translation": "Tập trung tuyệt vời thưa ông! Đó là một đường bóng rất khó ạ!",
+        "options": [
+            { "en": "A. Great focus, Sir! That was a difficult line!", "vi": "Tập trung tuyệt vời! Đường bóng rất khó ạ!" },
+            { "en": "B. You are not focusing at all, Sir.", "vi": "Ông hoàn toàn không tập trung ạ" },
+            { "en": "C. This line is for kids, Sir.", "vi": "Đường bóng này dành cho trẻ em ạ" },
+            { "en": "D. You got lucky on the line, Sir.", "vi": "Ông ăn may trên đường bóng này thôi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "mcq",
+        "title": "[6.2 Luyện nghe] Nghe Caddy động viên khi bóng nảy đập đá rơi lại vào vị trí an toàn:",
+        "audioText": "You are very lucky today, Sir! The ball bounced back to fairway!",
+        "phonetic": "/juː ɑːr ˈver.i ˈlʌk.i təˈdeɪ, sɜːr! ðə bɔːl baʊnst bæk tə ˈfer.weɪ/",
+        "translation": "Hôm nay ông rất may mắn luôn ạ! Bóng đã nảy ngược lại vào đường fairway rồi!",
+        "options": [
+            { "en": "A. You are very lucky today, Sir! Ball bounced back to fairway!", "vi": "Hôm nay ông rất may mắn! Bóng nảy lại fairway ạ!" },
+            { "en": "B. Unlucky, your ball is lost forever, Sir.", "vi": "Xui xẻo rồi, bóng mất vĩnh viễn ạ" },
+            { "en": "C. The stone broke your ball, Sir.", "vi": "Cục đá làm vỡ bóng của ông rồi ạ" },
+            { "en": "D. Pick up ball and throw into lake, Sir.", "vi": "Nhặt bóng ném xuống hồ đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "mcq",
+        "title": "[6.2 Luyện nghe] Nghe Caddy chia sẻ cảm xúc khi nhìn thấy đường bóng cứu hố xuất thần:",
+        "audioText": "Unbelievable shot, Sir! I didn't think it could clear the bunker!",
+        "phonetic": "/ˌʌn.bɪˈliː.və.bəl ʃɑːt, sɜːr! aɪ ˈdɪd.ənt θɪŋk ɪt kʊd klɪər ðə ˈbʌŋ.kər/",
+        "translation": "Cú đánh không thể tin được ông ơi! Em không nghĩ bóng có thể qua khỏi bẫy cát hay thế!",
+        "options": [
+            { "en": "A. Unbelievable shot, Sir! I didn't think it could clear the bunker!", "vi": "Cú đánh không thể tin nổi! Bóng qua bẫy cát quá hay ạ!" },
+            { "en": "B. Normal shot, anyone can do it, Sir.", "vi": "Đánh bình thường, ai cũng làm được ạ" },
+            { "en": "C. You should leave the ball inside bunker, Sir.", "vi": "Ông nên để bóng lại trong bẫy cát ạ" },
+            { "en": "D. You broke my rake, Sir.", "vi": "Ông làm gãy cái cào của em rồi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "mcq",
+        "title": "[6.2 Luyện nghe] Nghe Caddy chia sẻ sự đồng cảm nhẹ nhàng khi bóng dừng sát mép hố:",
+        "audioText": "So close, Sir! Just one centimeter more!",
+        "phonetic": "/soʊ kloʊs, sɜːr! dʒʌst wʌn ˈsen.təˌmiː.t̬ɚ mɔːr/",
+        "translation": "Suýt chút nữa thôi ông ơi! Chỉ thiếu đúng 1 xentimét nữa là lọt hố rồi ạ!",
+        "options": [
+            { "en": "A. So close, Sir! Just one centimeter more!", "vi": "Suýt chút nữa thôi! Chỉ thiếu 1 cm nữa ạ!" },
+            { "en": "B. Far away from the cup, terrible putt, Sir.", "vi": "Cách quá xa hố, gạt tệ quá ạ" },
+            { "en": "C. You missed by 10 meters, Sir.", "vi": "Ông đánh trượt 10 mét rồi ạ" },
+            { "en": "D. Kick the ball into the hole, Sir.", "vi": "Đá bóng vào hố đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "mcq",
+        "title": "[6.2 Luyện nghe] Nghe Caddy động viên hướng suy nghĩ tích cực về hố chơi tiếp theo:",
+        "audioText": "Forget the last hole, Sir. We have 9 holes left to recover!",
+        "phonetic": "/fɚˈɡet ðə læst hoʊl, sɜːr. wiː hæv naɪn hoʊlz left tə rɪˈkʌv.ɚ/",
+        "translation": "Hãy quên hố vừa rồi đi thưa ông. Mình còn hẳn 9 hố phía trước để gỡ lại ạ!",
+        "options": [
+            { "en": "A. Forget the last hole, Sir. We have 9 holes left to recover!", "vi": "Quên hố vừa rồi đi, còn 9 hố để gỡ lại ạ!" },
+            { "en": "B. You lost the whole match already, Sir.", "vi": "Ông thua cả trận đấu rồi ạ" },
+            { "en": "C. Give up and go to the clubhouse, Sir.", "vi": "Bỏ cuộc về nhà câu lạc bộ đi ạ" },
+            { "en": "D. You will lose on all remaining holes, Sir.", "vi": "Ông sẽ thua tất cả hố còn lại thôi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "mcq",
+        "title": "[6.2 Luyện nghe] Nghe Caddy cổ vũ tinh thần kiên nhẫn trong môn thể thao golf:",
+        "audioText": "Stay patient, Sir. Golf is a game of ups and downs.",
+        "phonetic": "/steɪ ˈpeɪ.ʃənt, sɜːr. ɡɑːlf ɪz ə ɡeɪm əv ʌps ænd daʊnz/",
+        "translation": "Hãy kiên nhẫn thưa ông. Golf là môn thể thao lúc thăng lúc trầm mà ạ.",
+        "options": [
+            { "en": "A. Stay patient, Sir. Golf is a game of ups and downs.", "vi": "Hãy kiên nhẫn ạ, golf luôn có lúc thăng lúc trầm" },
+            { "en": "B. Golf is too boring, quit now, Sir.", "vi": "Golf chán quá, bỏ chơi đi ạ" },
+            { "en": "C. You are always down, never up, Sir.", "vi": "Lúc nào ông cũng trầm, không bao giờ thăng ạ" },
+            { "en": "D. Throw all your clubs into the pond, Sir.", "vi": "Ném hết gậy xuống ao đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "mcq",
+        "title": "[6.2 Luyện nghe] Nghe Caddy khen ngợi nỗ lực cố gắng của khách dù kết quả chưa hoàn hảo:",
+        "audioText": "Good try, Sir! Great effort on that bunker shot!",
+        "phonetic": "/ɡʊd traɪ, sɜːr! ɡreɪt ˈef.ɚt ɑːn ðæt ˈbʌŋ.kər ʃɑːt/",
+        "translation": "Cố gắng rất tốt ông ơi! Sự nỗ lực tuyệt vời cho cú cứu cát đó ạ!",
+        "options": [
+            { "en": "A. Good try, Sir! Great effort on that bunker shot!", "vi": "Cố gắng rất tốt ạ! Nỗ lực tuyệt vời cú cứu cát!" },
+            { "en": "B. Bad try, you made no effort, Sir.", "vi": "Cố gắng tệ, ông chẳng có nỗ lực nào ạ" },
+            { "en": "C. Don't try anymore today, Sir.", "vi": "Đừng cố gắng thêm nữa hôm nay ạ" },
+            { "en": "D. You ruined the bunker, Sir.", "vi": "Ông làm hỏng bẫy cát rồi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "mcq",
+        "title": "[6.2 Luyện nghe] Nghe Caddy động viên tập trung vào thời điểm hiện tại:",
+        "audioText": "One shot at a time, Sir. Stay in the moment!",
+        "phonetic": "/wʌn ʃɑːt æt ə taɪm, sɜːr. steɪ ɪn ðə ˈmoʊ.mənt/",
+        "translation": "Tập trung từng cú đánh một thưa ông. Giữ tinh thần ở thời điểm hiện tại ạ!",
+        "options": [
+            { "en": "A. One shot at a time, Sir. Stay in the moment!", "vi": "Tập trung từng cú một, giữ tinh thần hiện tại ạ!" },
+            { "en": "B. Think about 10 shots in the future, Sir.", "vi": "Nghĩ về 10 cú đánh tương lai đi ạ" },
+            { "en": "C. Think about your work at the office, Sir.", "vi": "Nghĩ về công việc ở văn phòng đi ạ" },
+            { "en": "D. Don't look at the ball, Sir.", "vi": "Đừng nhìn vào quả bóng ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "mcq",
+        "title": "[6.2 Luyện nghe] Nghe Caddy nhắc nhở làm chủ những yếu tố có thể kiểm soát được:",
+        "audioText": "Focus on what you can control, Sir. Trust your routine!",
+        "phonetic": "/ˈfoʊ.kəs ɑːn wɑːt juː kæn kənˈtroʊl, sɜːr. trʌst jʊər ruːˈtiːn/",
+        "translation": "Hãy tập trung vào điều ông có thể kiểm soát ạ. Hãy tin vào thói quen chuẩn bị của mình!",
+        "options": [
+            { "en": "A. Focus on what you can control, Sir. Trust your routine!", "vi": "Tập trung điều kiểm soát được, tin vào thói quen ạ!" },
+            { "en": "B. You cannot control anything on course, Sir.", "vi": "Ông không kiểm soát được gì trên sân đâu ạ" },
+            { "en": "C. Change your routine completely now, Sir.", "vi": "Thay đổi thói quen hoàn toàn ngay đi ạ" },
+            { "en": "D. Blame the wind for everything, Sir.", "vi": "Đổ lỗi cho gió về mọi thứ đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "fill",
+        "title": "[6.2 Điền từ] Nghe Caddy động viên đừng lo lắng, ĐIỀN TỪ:",
+        "audioText": "Don't worry, Sir. The next shot will be better.",
+        "phonetic": "/doʊnt ˈwɜːr.i, sɜːr. ðə nekst ʃɑːt wɪl biː ˈbet̬.ɚ/",
+        "translation": "Đừng lo lắng thưa ông. Cú đánh sau sẽ tốt hơn.",
+        "displaySentence": "Don't _______, Sir. The next shot will be better.",
+        "targetWord": "worry",
+        "hint": "💡 Gợi ý: Từ chỉ sự lo lắng."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "fill",
+        "title": "[6.2 Điền từ] Nghe Caddy nhắc khách giữ tinh thần tích cực, ĐIỀN TỪ:",
+        "audioText": "Drink some water and stay positive, Sir!",
+        "phonetic": "/drɪŋk səm ˈwɔː.tər ænd steɪ ˈpɑː.zə.t̬ɪv, sɜːr/",
+        "translation": "Uống chút nước và giữ tinh thần tích cực thưa ông!",
+        "displaySentence": "Drink some water and stay _______, Sir!",
+        "targetWord": "positive",
+        "hint": "💡 Gợi ý: Từ mang nghĩa tích cực, lạc quan."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "fill",
+        "title": "[6.2 Điền từ] Nghe Caddy khen ngợi cú đánh xuất sắc, ĐIỀN TỪ:",
+        "audioText": "Excellent shot, Sir!",
+        "phonetic": "/ˈek.səl.ənt ʃɑːt, sɜːr/",
+        "translation": "Cú đánh xuất sắc thưa ông!",
+        "displaySentence": "_______ shot, Sir!",
+        "targetWord": "Excellent",
+        "hint": "💡 Gợi ý: Từ chỉ sự xuất sắc tuyệt vời."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "fill",
+        "title": "[6.2 Điền từ] Nghe Caddy nhắc ông hít thở sâu để thư giãn, ĐIỀN TỪ:",
+        "audioText": "Take a deep breath and relax, Sir.",
+        "phonetic": "/teɪk ə diːp breθ ænd rɪˈlæks, sɜːr/",
+        "translation": "Hãy hít một hơi thật sâu và thư giãn thưa ông.",
+        "displaySentence": "Take a deep breath and _______, Sir.",
+        "targetWord": "relax",
+        "hint": "💡 Gợi ý: Từ gồm 5 ký tự nghĩa là thư giãn."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "fill",
+        "title": "[6.2 Điền từ] Nghe Caddy khen ngợi cú vung gậy có nhịp điệu hoàn hảo, ĐIỀN TỪ:",
+        "audioText": "You have a perfect rhythm, Sir!",
+        "phonetic": "/juː hæv ə ˈpɜːr.fekt ˈrɪð.əm, sɜːr/",
+        "translation": "Ông có nhịp điệu vung gậy hoàn hảo thưa ông!",
+        "displaySentence": "You have a perfect _______, Sir!",
+        "targetWord": "rhythm",
+        "hint": "💡 Gợi ý: Từ chỉ nhịp điệu."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "fill",
+        "title": "[6.2 Điền từ] Nghe Caddy động viên cố gắng lần tới, ĐIỀN TỪ:",
+        "audioText": "Good try, Sir! Next time will be better.",
+        "phonetic": "/ɡʊd traɪ, sɜːr! nekst taɪm wɪl biː ˈbet̬.ɚ/",
+        "translation": "Cố gắng tốt lắm thưa ông! Lần tới sẽ tốt hơn.",
+        "displaySentence": "Good _______, Sir! Next time will be better.",
+        "targetWord": "try",
+        "hint": "💡 Gợi ý: Từ gồm 3 ký tự chỉ sự cố gắng."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "fill",
+        "title": "[6.2 Điền từ] Nghe Caddy khen ngợi đường gạt bóng xuất sắc, ĐIỀN TỪ:",
+        "audioText": "Perfect read on that putt, Sir!",
+        "phonetic": "/ˈpɜːr.fekt riːd ɑːn ðæt pʌt, sɜːr/",
+        "translation": "Đọc đường bóng gạt đó quá hoàn hảo thưa ông!",
+        "displaySentence": "Perfect _______ on that putt, Sir!",
+        "targetWord": "read",
+        "hint": "💡 Gợi ý: Từ chỉ việc đọc đường bóng/line."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "fill",
+        "title": "[6.2 Điền từ] Nghe Caddy nhắn nhủ giữ vững sự kiên nhẫn, ĐIỀN TỪ:",
+        "audioText": "Please stay patient, Sir.",
+        "phonetic": "/pliːz steɪ ˈpeɪ.ʃənt, sɜːr/",
+        "translation": "Xin hãy giữ sự kiên nhẫn thưa ông.",
+        "displaySentence": "Please stay _______, Sir.",
+        "targetWord": "patient",
+        "hint": "💡 Gợi ý: Từ gồm 7 ký tự nghĩa là kiên nhẫn."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "fill",
+        "title": "[6.2 Điền từ] Nghe Caddy khen ngợi cú đánh rất đẹp mắt, ĐIỀN TỪ:",
+        "audioText": "Beautiful shot, Sir!",
+        "phonetic": "/ˈbjuː.t̬ə.fəl ʃɑːt, sɜːr/",
+        "translation": "Cú đánh đẹp quá thưa ông!",
+        "displaySentence": "_______ shot, Sir!",
+        "targetWord": "Beautiful",
+        "hint": "💡 Gợi ý: Từ khen ngợi vẻ đẹp."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "fill",
+        "title": "[6.2 Điền từ] Nghe Caddy động viên ông làm được mà, ĐIỀN TỪ:",
+        "audioText": "You can do it, Sir!",
+        "phonetic": "/juː kæn duː ɪt, sɜːr/",
+        "translation": "Ông làm được mà thưa ông!",
+        "displaySentence": "You can _______ it, Sir!",
+        "targetWord": "do",
+        "hint": "💡 Gợi ý: Từ gồm 2 ký tự động viên."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "mcq",
+        "title": "[6.2 Quy tắc ứng xử] Quy tắc 3 giây vàng của Caddy khi khách thực hiện xong cú đánh là gì?",
+        "audioText": "Khen ngợi hoặc động viên chân thành trong vòng 3 giây ngay sau khi bóng dừng lại.",
+        "phonetic": "/θriː ˈsek.əndz/",
+        "translation": "Bấm phản hồi trong 3 giây sau khi bóng dừng để giữ cảm xúc khách rực cháy.",
+        "options": [
+            { "en": "A. Khen hoặc động viên chân thành trong vòng 3 giây sau khi bóng dừng hẳn", "vi": "Quy tắc 3 giây vàng Caddy" },
+            { "en": "B. Im lặng 5 phút mới nói", "vi": "Làm nguội cảm xúc" },
+            { "en": "C. Khen từ trước khi khách vung gậy", "vi": "Gây xao nhãng" },
+            { "en": "D. Chỉ khen khi ghi điểm Eagle", "vi": "Thiếu quan tâm" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "mcq",
+        "title": "[6.2 Tác phong] Khi khách đánh bóng hỏng vào bẫy và bực bội, cử chỉ NÀO sau đây Caddie KHÔNG ĐƯỢC làm?",
+        "audioText": "Never show disappointment, sighing, or frowning when guest misses a shot.",
+        "phonetic": "/noʊ saɪ.ɪŋ/",
+        "translation": "Tuyệt đối không thở dài, nhăn mặt hay tỏ vẻ chán nản.",
+        "options": [
+            { "en": "A. Thở dài, nhăn mặt hoặc tỏ thái độ chán nản", "vi": "Hành vi cấm đối với Caddy" },
+            { "en": "B. Nhanh chóng di chuyển lấy gậy tiếp theo cho khách", "vi": "Nên làm" },
+            { "en": "C. Mỉm cười nhẹ nhàng và nói lời động viên ngắn", "vi": "Nên làm" },
+            { "en": "D. Đưa khăn lạnh giúp khách giải tỏa căng thẳng", "vi": "Nên làm" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.2",
+        "type": "mcq",
+        "title": "[6.2 Từ vựng] Để khen ngợi khách một cách hào hứng và thật cảm xúc, Caddie nên ưu tiên dùng nhóm từ nào?",
+        "audioText": "Use strong adjectives: Great, Excellent, Beautiful, Amazing, Unbelievable.",
+        "phonetic": "/strɑːŋ ˈædʒ.ek.tɪvz/",
+        "translation": "Sử dụng các tính từ mạnh mẽ như Great, Excellent, Beautiful, Amazing.",
+        "options": [
+            { "en": "A. Dùng tính từ cảm xúc mạnh: Great, Excellent, Beautiful, Amazing, Unbelievable", "vi": "Từ vựng khích lệ chuẩn" },
+            { "en": "B. Chỉ nói duy nhất từ 'Ok' trong suốt 18 hố", "vi": "Thiếu cảm xúc" },
+            { "en": "C. Dùng các từ 'Bad', 'Terrible', 'Poor'", "vi": "Gây tiêu cực" },
+            { "en": "D. Không sử dụng từ tiếng Anh nào", "vi": "Vi phạm tác phong" }
+        ],
+        "correct": 0
+    },
+
+    // =========================================================================
+    // SECTION 6.3: TÌNH HUỐNG KHẨN CẤP (EMERGENCY SITUATIONS) - 30 CÂU
+    // =========================================================================
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "mcq",
+        "title": "[6.3 Luyện nghe] Nghe tiếng hô cảnh báo bóng nguy hiểm toàn cầu trên sân:",
+        "audioText": "FORE! FORE! Cover your head, Sir!",
+        "phonetic": "/fɔːr! fɔːr! ˈkʌv.ər jʊər hed, sɜːr/",
+        "translation": "CÓ BÓNG! CÓ BÓNG! Che đầu lại thưa ông!",
+        "options": [
+            { "en": "A. FORE! FORE! Cover your head, Sir!", "vi": "CÓ BÓNG! Che đầu lại thưa ông!" },
+            { "en": "B. FOUR! FOUR! Four players on green, Sir.", "vi": "Số 4! Có 4 người chơi trên green ạ" },
+            { "en": "C. GO AHEAD! Hit the ball now, Sir.", "vi": "Đi tiếp đi! Đánh bóng ngay đi ạ" },
+            { "en": "D. LOOK AT ME! Watch my swing, Sir.", "vi": "Nhìn em này! Xem cú swing của em ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "mcq",
+        "title": "[6.3 Luyện nghe] Nghe Caddy phát lệnh dừng chơi khẩn cấp do sấm sét:",
+        "audioText": "Stop playing, please! There is lightning warning!",
+        "phonetic": "/stɑːp ˈpleɪ.ɪŋ, pliːz! ðer ɪz ˈlaɪt.nɪŋ ˈwɔːr.nɪŋ/",
+        "translation": "Xin vui lòng dừng chơi ngay ạ! Đang có cảnh báo giông sét!",
+        "options": [
+            { "en": "A. Stop playing, please! There is lightning warning!", "vi": "Xin dừng chơi! Đang có cảnh báo giông sét ạ!" },
+            { "en": "B. Keep playing in the heavy rain, Sir.", "vi": "Tiếp tục đánh dưới mưa lớn đi ạ" },
+            { "en": "C. Hold your iron club high in the sky, Sir.", "vi": "Giơ cao gậy sắt lên trời đi ạ" },
+            { "en": "D. Swim in the lake to stay safe, Sir.", "vi": "Bơi dưới hồ cho an toàn ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "mcq",
+        "title": "[6.3 Luyện nghe] Nghe Caddy trấn an và hỗ trợ sơ cứu tại chỗ:",
+        "audioText": "Please sit down and don't move. Where does it hurt, Sir?",
+        "phonetic": "/pliːz sɪt daʊn ænd doʊnt muːv. wer dʌz ɪt hɜːrt, sɜːr/",
+        "translation": "Xin ông ngồi xuống và đừng di chuyển. Ông bị đau ở đâu ạ?",
+        "options": [
+            { "en": "A. Please sit down and don't move. Where does it hurt, Sir?", "vi": "Xin ngồi xuống đừng di chuyển. Ông đau ở đâu ạ?" },
+            { "en": "B. Stand up and run 100 meters, Sir.", "vi": "Đứng dậy và chạy 100 mét đi ạ" },
+            { "en": "C. Show me your wallet, Sir.", "vi": "Cho em xem ví của ông đi ạ" },
+            { "en": "D. It is your fault for getting injured, Sir.", "vi": "Tự ông làm ông bị thương đấy ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "mcq",
+        "title": "[6.3 Luyện nghe] Nghe Caddy phát tín hiệu báo động khẩn cấp và gọi cứu hộ:",
+        "audioText": "Emergency! Medical buggy is coming right now, Sir!",
+        "phonetic": "/ɪˈmɜːr.dʒən.si! ˈmed.ɪ.kəl ˈbʌɡ.i ɪz ˈkʌm.ɪŋ raɪt naʊ, sɜːr/",
+        "translation": "Trường hợp khẩn cấp! Xe y tế đang chạy đến ngay đây rồi thưa ông!",
+        "options": [
+            { "en": "A. Emergency! Medical buggy is coming right now, Sir!", "vi": "Khẩn cấp! Xe y tế đang chạy tới ngay rồi ạ!" },
+            { "en": "B. No medical help available on this course, Sir.", "vi": "Sân này không có trợ giúp y tế đâu ạ" },
+            { "en": "C. Walk to the hospital by yourself, Sir.", "vi": "Tự đi bộ tới bệnh viện đi ạ" },
+            { "en": "D. Drive the buggy into the wall, Sir.", "vi": "Lái xe điện tông vào tường đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "mcq",
+        "title": "[6.3 Luyện nghe] Nghe Caddy hướng dẫn thao tác sơ cứu cầm máu khẩn cấp:",
+        "audioText": "Everything will be okay. Press firmly here to stop bleeding, Sir.",
+        "phonetic": "/ˈev.ri.θɪŋ wɪl biː oʊˈkeɪ. pres ˈfɜːrm.li hɪər tə stɑːp ˈbliː.dɪŋ, sɜːr/",
+        "translation": "Mọi chuyện sẽ ổn thôi ạ. Ông ấn chặt vào đây để cầm máu nhé ông.",
+        "options": [
+            { "en": "A. Everything will be okay. Press firmly here to stop bleeding, Sir.", "vi": "Mọi chuyện sẽ ổn, ấn chặt vào đây cầm máu ạ" },
+            { "en": "B. Wash the bleeding wound with muddy water, Sir.", "vi": "Rửa vết thương đang chảy máu bằng nước bùn ạ" },
+            { "en": "C. Keep hitting the ball with bleeding hand, Sir.", "vi": "Tiếp tục đánh bóng bằng tay đang chảy máu ạ" },
+            { "en": "D. Ignore the blood and play fast, Sir.", "vi": "Kệ vết máu và đánh nhanh lên ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "mcq",
+        "title": "[6.3 Luyện nghe] Nghe Caddy cảnh báo bóng bay nguy hiểm cực nhanh:",
+        "audioText": "WATCH OUT! BALL IS COMING!",
+        "phonetic": "/wɑːtʃ aʊt! bɔːl ɪz ˈkʌm.ɪŋ/",
+        "translation": "COI CHỪNG! BÓNG ĐANG BAY TỚI!",
+        "options": [
+            { "en": "A. WATCH OUT! BALL IS COMING!", "vi": "COI CHỪNG! BÓNG ĐANG BAY TỚI!" },
+            { "en": "B. WELCOME TO GOLDEN SANDS RESORT!", "vi": "CHÀO MỪNG TỚI SÂN GOLDEN SANDS!" },
+            { "en": "C. NICE SHOT DOWN THE FAIRWAY!", "vi": "CÚ ĐÁNH ĐẸP XUỐNG FAIRWAY!" },
+            { "en": "D. WE HAVE 10 MINUTES BREAK!", "vi": "CHÚNG TA CÓ 10 PHÚT NGHỈ!" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "mcq",
+        "title": "[6.3 Luyện nghe] Nghe Caddy hướng dẫn điểm trú ẩn an toàn khẩn cấp:",
+        "audioText": "Lightning alarm active! Please run to Kiosk 2 for shelter, Sir!",
+        "phonetic": "/ˈlaɪt.nɪŋ əˈlɑːrm ˈæk.tɪv! pliːz rʌn tə ˈkiː.ɑːsk tuː fɔːr ˈʃel.t̬ɚ, sɜːr/",
+        "translation": "Còi sấm sét đã kích hoạt! Xin chạy tới nhà chòi 2 trú ẩn thưa ông!",
+        "options": [
+            { "en": "A. Lightning alarm active! Please run to Kiosk 2 for shelter, Sir!", "vi": "Còi sấm sét báo động! Chạy tới chòi 2 trú ẩn ạ!" },
+            { "en": "B. Stand under the tallest iron pole, Sir.", "vi": "Đứng dưới cột sắt cao nhất ạ" },
+            { "en": "C. Hold metallic umbrella in the open field, Sir.", "vi": "Cầm ô kim loại giữa bãi trống ạ" },
+            { "en": "D. Stay inside the lake water, Sir.", "vi": "Ở dưới nước hồ đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "mcq",
+        "title": "[6.3 Luyện nghe] Nghe Caddy xử lý khi khách bị lật cổ chân trên dốc:",
+        "audioText": "Oh, you twisted your ankle! Please sit on the buggy, don't move!",
+        "phonetic": "/oʊ, juː ˈtwɪs.tɪd jʊər ˈæŋ.kəl! pliːz sɪt ɑːn ðə ˈbʌɡ.i, doʊnt muːv/",
+        "translation": "Ôi ông bị lật cổ chân rồi! Xin ngồi lên xe điện và đừng di chuyển ạ!",
+        "options": [
+            { "en": "A. You twisted your ankle! Sit on buggy and don't move, Sir!", "vi": "Bị lật cổ chân! Ngồi lên xe và đừng di chuyển ạ!" },
+            { "en": "B. Run 3 laps to stretch your ankle, Sir.", "vi": "Chạy 3 vòng cho giãn cổ chân ạ" },
+            { "en": "C. Walk 18 holes without shoes, Sir.", "vi": "Đi bộ 18 hố không đi giày ạ" },
+            { "en": "D. It is not hurting at all, keep playing, Sir.", "vi": "Chẳng đau tẹo nào đâu đánh tiếp đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "mcq",
+        "title": "[6.3 Luyện nghe] Nghe Caddy cảnh báo khu vực ong/côn trùng nguy hiểm:",
+        "audioText": "Be careful! There is a beehive in those trees, Sir!",
+        "phonetic": "/biː ˈker.fəl! ðer ɪz ə ˈbiː.haɪv ɪn ðoʊz triːz, sɜːr/",
+        "translation": "Cẩn thận ạ! Có tổ ong trong rặng cây kia thưa ông!",
+        "options": [
+            { "en": "A. Be careful! There is a beehive in those trees, Sir!", "vi": "Cẩn thận! Có tổ ong trong lùm cây ạ!" },
+            { "en": "B. Touch the beehive with your driver, Sir.", "vi": "Chọc vào tổ ong bằng gậy driver đi ạ" },
+            { "en": "C. Bees are friendly, hug them, Sir.", "vi": "Ong thân thiện lắm ôm chúng đi ạ" },
+            { "en": "D. Shake the tree branches hard, Sir.", "vi": "Rung mạnh cành cây đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "mcq",
+        "title": "[6.3 Luyện nghe] Nghe Caddy thông báo gọi cấp cứu y tế gấp qua bộ đàm:",
+        "audioText": "Emergency! I am calling Marshall and Doctor right now, Sir!",
+        "phonetic": "/ɪˈmɜːr.dʒən.si! aɪ æm ˈkɑːl.ɪŋ ˈmɑːr.ʃəl ænd ˈdɑːk.tɚ raɪt naʊ, sɜːr/",
+        "translation": "Khẩn cấp! Em đang gọi Marshall và Bác sĩ ngay bây giờ đây ạ!",
+        "options": [
+            { "en": "A. Emergency! I am calling Marshall and Doctor right now, Sir!", "vi": "Khẩn cấp! Em đang gọi Marshall và Bác sĩ ngay ạ!" },
+            { "en": "B. Nobody answers the radio, you are alone, Sir.", "vi": "Không ai trả lời bộ đàm, ông một mình đấy ạ" },
+            { "en": "C. Call the police, Sir.", "vi": "Gọi cảnh sát đi ạ" },
+            { "en": "D. Turn off the radio power, Sir.", "vi": "Tắt nguồn bộ đàm đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "mcq",
+        "title": "[6.3 Luyện nghe] Nghe Caddy cảnh báo mép vách vực nguy hiểm:",
+        "audioText": "Danger! Stay away from the edge of the cliff, Sir!",
+        "phonetic": "/ˈdeɪn.dʒɚ! steɪ əˈweɪ frəm ðə edʒ əv ðə klɪf, sɜːr/",
+        "translation": "Nguy hiểm! Xin tránh xa mép vách đá thưa ông!",
+        "options": [
+            { "en": "A. Danger! Stay away from the edge of the cliff, Sir!", "vi": "Nguy hiểm! Tránh xa mép vách đá ạ!" },
+            { "en": "B. Jump off the cliff to get your ball, Sir.", "vi": "Nhảy xuống vách đá lấy bóng đi ạ" },
+            { "en": "C. Park the buggy on the cliff edge, Sir.", "vi": "Đỗ xe điện ngay sát mép vách ạ" },
+            { "en": "D. Stand on one leg near the cliff, Sir.", "vi": "Đứng 1 chân gần vách đá đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "mcq",
+        "title": "[6.3 Luyện nghe] Nghe Caddy nhắc nhở không chui xuống hồ mò bóng nguy hiểm:",
+        "audioText": "Do not climb down the steep lake bank! It is not safe, Sir!",
+        "phonetic": "/duː nɑːt klaɪm daʊn ðə stiːp leɪk bæŋk! ɪt ɪz nɑːt seɪf, sɜːr/",
+        "translation": "Đừng leo xuống bờ hồ dốc đứng! Không an toàn đâu thưa ông!",
+        "options": [
+            { "en": "A. Do not climb down the steep lake bank! It's not safe, Sir!", "vi": "Đừng leo xuống bờ hồ dốc! Không an toàn ạ!" },
+            { "en": "B. Jump into the deep lake water now, Sir.", "vi": "Nhảy xuống hồ nước sâu ngay đi ạ" },
+            { "en": "C. Swim across the lake to get 10 balls, Sir.", "vi": "Bơi qua hồ lấy 10 quả bóng đi ạ" },
+            { "en": "D. Leave your shoes in the deep mud, Sir.", "vi": "Bỏ giày lại dưới bùn sâu đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "mcq",
+        "title": "[6.3 Luyện nghe] Nghe Caddy hướng dẫn dùng bình xịt lạnh từ túi sơ cứu:",
+        "audioText": "I have the cold spray in the first aid kit. Let me apply it, Sir.",
+        "phonetic": "/aɪ hæv ðə koʊld spreɪ ɪn ðə ˌfɜːrst ˈeɪd kɪt. let miː əˈplaɪ ɪt, sɜːr/",
+        "translation": "Em có bình xịt lạnh trong túi sơ cứu. Để em xịt cho ông nhé ạ.",
+        "options": [
+            { "en": "A. I have cold spray in first aid kit. Let me apply it, Sir.", "vi": "Có xịt lạnh trong túi sơ cứu, để em xịt cho ông ạ" },
+            { "en": "B. Pour boiling hot water on your injury, Sir.", "vi": "Dội nước sôi nóng lên chỗ thương đi ạ" },
+            { "en": "C. We don't have first aid kit on buggy, Sir.", "vi": "Trên xe không có túi sơ cứu đâu ạ" },
+            { "en": "D. Rub sand on your wound, Sir.", "vi": "Chà cát vào vết thương đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "mcq",
+        "title": "[6.3 Luyện nghe] Nghe Caddy nhắc nhở cúi thấp đầu giấu sau thành xe điện khi có bóng bay tới:",
+        "audioText": "Duck down! Hide behind the buggy frame right now, Sir!",
+        "phonetic": "/dʌk daʊn! haɪd bɪˈhaɪnd ðə ˈbʌɡ.i freɪm raɪt naʊ, sɜːr/",
+        "translation": "Cúi đầu xuống! Núp sau khung xe điện ngay lập tức thưa ông!",
+        "options": [
+            { "en": "A. Duck down! Hide behind the buggy frame right now, Sir!", "vi": "Cúi xuống! Núp sau khung xe điện ngay ạ!" },
+            { "en": "B. Stand on top of the buggy roof, Sir.", "vi": "Đứng lên mái xe điện đi ạ" },
+            { "en": "C. Catch the flying ball with your forehead, Sir.", "vi": "Hứng bóng bay bằng trán đi ạ" },
+            { "en": "D. Drive buggy towards the flying ball, Sir.", "vi": "Lái xe điện về phía bóng bay đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "mcq",
+        "title": "[6.3 Luyện nghe] Nghe Caddy báo xe cấp cứu y tế đã tới vị trí hố:",
+        "audioText": "The ambulance cart has arrived at hole 7, Sir!",
+        "phonetic": "/ðə ˈæm.bjə.ləns kɑːrt hæz əˈraɪvd æt hoʊl ˈsev.ən, sɜːr/",
+        "translation": "Xe cấp cứu đã tới hố số 7 rồi thưa ông!",
+        "options": [
+            { "en": "A. The ambulance cart has arrived at hole 7, Sir!", "vi": "Xe cấp cứu đã tới hố số 7 rồi ạ!" },
+            { "en": "B. The ambulance got lost in the city, Sir.", "vi": "Xe cấp cứu bị lạc ở thành phố rồi ạ" },
+            { "en": "C. Walk to the hospital by foot, Sir.", "vi": "Tự đi bộ tới bệnh viện đi ạ" },
+            { "en": "D. The doctor refused to come, Sir.", "vi": "Bác sĩ từ chối tới rồi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "fill",
+        "title": "[6.3 Điền từ] Nghe Caddy hô lệnh dừng chơi vì dông sét, ĐIỀN TỪ:",
+        "audioText": "Stop playing! There is lightning, Sir!",
+        "phonetic": "/stɑːp ˈpleɪ.ɪŋ! ðer ɪz ˈlaɪt.nɪŋ, sɜːr/",
+        "translation": "Dừng chơi ngay! Đang có sấm sét thưa ông!",
+        "displaySentence": "Stop playing! There is _______, Sir!",
+        "targetWord": "lightning",
+        "hint": "💡 Gợi ý: Từ chỉ hiện tượng sấm sét."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "fill",
+        "title": "[6.3 Điền từ] Nghe Caddy báo xe y tế đang tới cấp cứu, ĐIỀN TỪ:",
+        "audioText": "The medical buggy is coming, Sir.",
+        "phonetic": "/ðə ˈmed.ɪ.kəl ˈbʌɡ.i ɪz ˈkʌm.ɪŋ, sɜːr/",
+        "translation": "Xe y tế đang tới thưa ông.",
+        "displaySentence": "The _______ buggy is coming, Sir.",
+        "targetWord": "medical",
+        "hint": "💡 Gợi ý: Từ gồm 7 ký tự thuộc về y tế."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "fill",
+        "title": "[6.3 Điền từ] Nghe Caddy hô to từ cảnh báo bóng bay toàn cầu, ĐIỀN TỪ:",
+        "audioText": "FORE! Cover your head, Sir!",
+        "phonetic": "/fɔːr! ˈkʌv.ər jʊər hed, sɜːr/",
+        "translation": "CÓ BÓNG! Che đầu lại thưa ông!",
+        "displaySentence": "_______! Cover your head, Sir!",
+        "targetWord": "FORE",
+        "hint": "💡 Gợi ý: Từ hét cảnh báo gồm 4 ký tự."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "fill",
+        "title": "[6.3 Điền từ] Nghe Caddy nhắc bảo vệ đầu, ĐIỀN TỪ:",
+        "audioText": "Please cover your head, Sir!",
+        "phonetic": "/pliːz ˈkʌv.ər jʊər hed, sɜːr/",
+        "translation": "Xin hãy che đầu lại thưa ông!",
+        "displaySentence": "Please cover your _______, Sir!",
+        "targetWord": "head",
+        "hint": "💡 Gợi ý: Từ chỉ cái đầu."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "fill",
+        "title": "[6.3 Điền từ] Nghe Caddy hỏi thăm xem ông bị đau ở đâu, ĐIỀN TỪ:",
+        "audioText": "Where does it hurt, Sir?",
+        "phonetic": "/wer dʌz ɪt hɜːrt, sɜːr/",
+        "translation": "Ông bị đau ở đâu thưa ông?",
+        "displaySentence": "Where does it _______, Sir?",
+        "targetWord": "hurt",
+        "hint": "💡 Gợi ý: Từ gồm 4 ký tự nghĩa là đau."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "fill",
+        "title": "[6.3 Điền từ] Nghe Caddy báo trường hợp khẩn cấp, ĐIỀN TỪ:",
+        "audioText": "I need help! Emergency!",
+        "phonetic": "/aɪ niːd help! ɪˈmɜːr.dʒən.si/",
+        "translation": "Tôi cần giúp đỡ! Trường hợp khẩn cấp!",
+        "displaySentence": "I need help! _______!",
+        "targetWord": "Emergency",
+        "hint": "💡 Gợi ý: Từ chỉ tình huống khẩn cấp."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "fill",
+        "title": "[6.3 Điền từ] Nghe Caddy nhắc ấn chặt vết thương cầm máu, ĐIỀN TỪ:",
+        "audioText": "Press here to stop bleeding, Sir.",
+        "phonetic": "/pres hɪər tə stɑːp ˈbliː.dɪŋ, sɜːr/",
+        "translation": "Ấn vào đây để cầm máu thưa ông.",
+        "displaySentence": "Press here to stop _______, Sir.",
+        "targetWord": "bleeding",
+        "hint": "💡 Gợi ý: Từ chỉ việc chảy máu."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "fill",
+        "title": "[6.3 Điền từ] Nghe Caddy nhắc nhở đừng di chuyển khi chấn thương, ĐIỀN TỪ:",
+        "audioText": "Don't move, please, Sir.",
+        "phonetic": "/doʊnt muːv, pliːz, sɜːr/",
+        "translation": "Xin Đừng cử động/di chuyển thưa ông.",
+        "displaySentence": "Don't _______, please, Sir.",
+        "targetWord": "move",
+        "hint": "💡 Gợi ý: Từ gồm 4 ký tự nghĩa là cử động."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "fill",
+        "title": "[6.3 Điền từ] Nghe Caddy báo em đang gọi Marshall hỗ trợ, ĐIỀN TỪ:",
+        "audioText": "I am calling the Marshall right now, Sir.",
+        "phonetic": "/aɪ æm ˈkɑːl.ɪŋ ðə ˈmɑːr.ʃəl raɪt naʊ, sɜːr/",
+        "translation": "Em đang gọi Marshall ngay bây giờ thưa ông.",
+        "displaySentence": "I am calling the _______ right now, Sir.",
+        "targetWord": "Marshall",
+        "hint": "💡 Gợi ý: Từ chỉ bộ phận Điều hành sân."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "fill",
+        "title": "[6.3 Điền từ] Nghe Caddy nhắc coi chừng cẩn thận, ĐIỀN TỪ:",
+        "audioText": "Watch out, Sir! Ball is coming!",
+        "phonetic": "/wɑːtʃ aʊt, sɜːr! bɔːl ɪz ˈkʌm.ɪŋ/",
+        "translation": "Coi chừng thưa ông! Bóng đang tới!",
+        "displaySentence": "Watch _______, Sir! Ball is coming!",
+        "targetWord": "out",
+        "hint": "💡 Gợi ý: Từ gồm 3 ký tự đi sau Watch."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "mcq",
+        "title": "[6.3 Quy trình sơ cứu] Khi khách bị bóng va chạm gây chảy máu nhẹ ở tay, hành động ĐÚNG ĐẮN đầu tiên của Caddie là gì?",
+        "audioText": "Clean the wound, apply pressure to stop bleeding, and use the first-aid kit.",
+        "phonetic": "/stɑːp ˈbliː.dɪŋ/",
+        "translation": "Rửa sạch vết thương, ấn chặt cầm máu và sử dụng hộp sơ cứu y tế trên xe.",
+        "options": [
+            { "en": "A. Lấy bông gạc từ hộp sơ cứu, ấn chặt vết thương để cầm máu và trấn an khách", "vi": "Sơ cứu đúng quy trình" },
+            { "en": "B. Bỏ mặc khách tự làm", "vi": "Bị động" },
+            { "en": "C. Rửa vết thương bằng nước dừa", "vi": "Sai y tế" },
+            { "en": "D. Cho khách chạy bộ về nhà câu lạc bộ", "vi": "Nguy hiểm" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "mcq",
+        "title": "[6.3 Quy định an toàn] Khi còi báo động giông sét (lightning alarm) vang lên, Caddie tuyệt đối KHÔNG ĐƯỢC làm gì?",
+        "audioText": "Never let guests hold metallic iron clubs or stand under high trees during lightning.",
+        "phonetic": "/noʊ ˈlaɪt.nɪŋ ˈdeɪn.dʒɚ/",
+        "translation": "Tuyệt đối không để khách cầm gậy sắt kim loại hoặc đứng trú dưới gốc cây to.",
+        "options": [
+            { "en": "A. Cho khách cầm gậy sắt tiếp tục thi đấu hoặc trú dưới gốc cây to", "vi": "Hành vi nguy hiểm chết người" },
+            { "en": "B. Mời khách bỏ lại túi gậy và lên xe điện sơ tán ngay", "vi": "Nên làm" },
+            { "en": "C. Hướng dẫn khách di chuyển về nhà chòi Kiosk gần nhất", "vi": "Nên làm" },
+            { "en": "D. Gọi bộ đàm báo vị trí nhóm cho Điều hành sân", "vi": "Nên làm" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.3",
+        "type": "mcq",
+        "title": "[6.3 Hành động khẩn cấp] Tiếng hét toàn cầu 'FORE!' trên sân gôn bắt buộc phải hô khi nào?",
+        "audioText": "Shout FORE immediately when a ball is flying towards other people.",
+        "phonetic": "/fɔːr/",
+        "translation": "Hô FORE lập tức khi thấy đường bóng có nguy cơ bay trúng người khác.",
+        "options": [
+            { "en": "A. Ngay khi phát hiện bóng bay chệch hướng có nguy cơ trúng người khác", "vi": "Nguyên tắc an toàn bắt buộc" },
+            { "en": "B. Chỉ hô khi bóng đã rơi trúng người", "vi": "Quá muộn" },
+            { "en": "C. Hô khi khách ghi điểm Birdie", "vi": "Dùng sai hoàn cảnh" },
+            { "en": "D. Hô khi chuẩn bị ăn trưa", "vi": "Sai ngữ cảnh" }
+        ],
+        "correct": 0
+    },
+
+    // =========================================================================
+    // SECTION 6.4: THỰC HÀNH & LUYỆN TẬP PHẢN XẠ (ROLE-PLAY DRILLS) - 30 CÂU
+    // =========================================================================
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "mcq",
+        "title": "[6.4 Đóng vai 1] Tình huống khách say nắng choáng váng: Caddy xử lý phản xạ nhanh ra sao?",
+        "audioText": "Please sit down in the shade, Sir. Drink this electrolyte water and use this ice towel. I will call Medical now.",
+        "phonetic": "/pliːz sɪt daʊn ɪn ðə ʃeɪd, sɜːr. drɪŋk ðɪs ɪˈlek.trə.laɪt ˈwɔː.tər ænd juːz ðɪs aɪs ˈtaʊ.əl/",
+        "translation": "Xin mời ông ngồi xuống bóng râm ạ. Ông uống nước điện giải và dùng khăn lạnh này nhé. Em sẽ gọi y tế ngay ạ.",
+        "options": [
+            { "en": "A. Sit in shade, drink electrolyte water, use ice towel. I will call Medical, Sir.", "vi": "Ngồi bóng râm, uống điện giải, dùng khăn lạnh. Em gọi y tế ngay ạ" },
+            { "en": "B. Keep running in the sun to cure heatstroke, Sir.", "vi": "Chạy tiếp dưới nắng cho khỏi say nắng ạ" },
+            { "en": "C. Stand up and finish 18 holes immediately, Sir.", "vi": "Đứng dậy đánh cho xong 18 hố ngay ạ" },
+            { "en": "D. Leave the guest lying on the grass alone.", "vi": "Bỏ mặc khách nằm trên cỏ một mình" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "mcq",
+        "title": "[6.4 Đóng vai 2] Tình huống bóng hố bên bay chệch hướng lao về phía khách: Caddy xử lý chuẩn an toàn:",
+        "audioText": "FORE! Get down and cover your head behind the buggy, Sir!",
+        "phonetic": "/fɔːr! ɡet daʊn ænd ˈkʌv.ər jʊər hed bɪˈhaɪnd ðə ˈbʌɡ.i, sɜːr/",
+        "translation": "CÓ BÓNG! Cúi thấp người và che đầu lại phía sau xe điện thưa ông!",
+        "options": [
+            { "en": "A. FORE! Get down and cover your head behind the buggy, Sir!", "vi": "CÓ BÓNG! Cúi xuống che đầu sau xe điện ạ!" },
+            { "en": "B. Stand up high and try to catch the ball with your hands, Sir.", "vi": "Đứng cao lên bắt bóng bằng tay ạ" },
+            { "en": "C. Look up into the sky to see where the ball hits.", "vi": "Ngước nhìn lên trời xem bóng rơi vào đâu" },
+            { "en": "D. Run out into the middle of the fairway.", "vi": "Chạy ra giữa đường fairway" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "mcq",
+        "title": "[6.4 Đóng vai 3] Tình huống khách đánh bóng lướt cỏ (top bóng) đi ngắn và bất an: Caddy động viên thế nào?",
+        "audioText": "Never mind, Sir! The ball is still on the fairway. We have a great angle for the next shot!",
+        "phonetic": "/ˈnev.ɚ maɪnd, sɜːr! ðə bɔːl ɪz stɪl ɑːn ðə ˈfer.weɪ. wiː hæv ə ɡreɪt ˈæŋ.ɡəl fɔːr ðə nekst ʃɑːt/",
+        "translation": "Không sao đâu ông ơi! Bóng vẫn ở trên fairway mà. Cú sau mình có góc đánh rất đẹp ạ!",
+        "options": [
+            { "en": "A. Never mind, Sir! Ball is on fairway. We have a great angle for next shot!", "vi": "Không sao đâu ạ! Bóng vẫn trên fairway, cú sau góc rất đẹp ạ!" },
+            { "en": "B. Terrible shot, you messed up completely, Sir.", "vi": "Cú đánh quá tệ, ông hỏng hoàn toàn rồi ạ" },
+            { "en": "C. Pick up the ball and walk home, Sir.", "vi": "Nhặt bóng lên và đi bộ về đi ạ" },
+            { "en": "D. You should buy easier golf clubs, Sir.", "vi": "Ông nên mua bộ gậy dễ hơn đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "mcq",
+        "title": "[6.4 Đóng vai 4] Tình huống dừng chân tại Halfway House: Caddy điều phối nhịp độ chơi (Pace of play) ra sao?",
+        "audioText": "Sir, we have about 10 minutes for a break. Please enjoy your sandwich, I will remind you when it's time.",
+        "phonetic": "/sɜːr, wiː hæv əˈbaʊt ten ˈmɪn.ɪts fɔːr ə breɪk. pliːz ɪnˈdʒɔɪ jʊər ˈsæn.wɪdʒ/",
+        "translation": "Thưa ông, chúng ta có khoảng 10 phút nghỉ ngơi. Mời ông dùng bánh mì kẹp, em sẽ nhắc ông khi đến giờ xuất phát ạ.",
+        "options": [
+            { "en": "A. We have 10 minutes break. Enjoy your food, I will remind you when it's time, Sir.", "vi": "Có 10 phút nghỉ, mời ông dùng đồ ăn, tới giờ em sẽ nhắc ạ" },
+            { "en": "B. You can sleep here for 3 hours, Sir.", "vi": "Ông có thể ngủ ở đây 3 tiếng ạ" },
+            { "en": "C. No eating or drinking allowed at Kiosk, Sir.", "vi": "Không được ăn uống gì ở Kiosk đâu ạ" },
+            { "en": "D. Hurry up and eat in 30 seconds, Sir.", "vi": "Ăn nhanh lên trong 30 giây đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "mcq",
+        "title": "[6.4 Quy tắc phục vụ] Quy tắc 5-2-1 của Caddy tại trạm dừng nghỉ Halfway House quy định các khoảng thời gian nào?",
+        "audioText": "5 minutes for guest setup and order, 2 minutes for club cleaning, 1 minute to remind departure time.",
+        "phonetic": "/faɪv ˈmɪn.ɪts fɔːr ɡest ˈset.ʌp, tuː ˈmɪn.ɪts fɔːr klʌb ˈkliː.nɪŋ, wʌn ˈmɪn.ɪt tə rɪˈmaɪnd/",
+        "translation": "5 phút đầu ổn định chỗ ngồi/gọi món, 2 phút giữa vệ sinh gậy/nước mát, 1 phút cuối nhắc giờ di chuyển.",
+        "options": [
+            { "en": "A. 5 phút hỗ trợ chỗ ngồi/đồ ăn - 2 phút lau gậy/lấy nước - 1 phút nhắc giờ ra xe", "vi": "Quy tắc 5-2-1 chuẩn Caddy" },
+            { "en": "B. 5 phút ngủ - 2 phút ăn uống - 1 phút trò chuyện", "vi": "Sai quy trình" },
+            { "en": "C. 5 giờ nghỉ - 2 giờ chơi - 1 giờ ăn trưa", "vi": "Vi phạm nhịp độ chơi" },
+            { "en": "D. 5 phút lái xe - 2 phút tìm bóng - 1 phút nhặt rác", "vi": "Không liên quan" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "mcq",
+        "title": "[6.4 Đóng vai 5] Tình huống khách ghi điểm Par thành công ở hố khó: Caddy khen ngợi hào hứng:",
+        "audioText": "Nice Par, Sir! You played this difficult hole very well!",
+        "phonetic": "/naɪs pɑːr, sɜːr! juː pleɪd ðɪs ˈdɪf.ə.kəlt hoʊl ˈver.i wel/",
+        "translation": "Điểm Par đẹp quá ông ơi! Ông xử lý hố khó này quá tuyệt vời ạ!",
+        "options": [
+            { "en": "A. Nice Par, Sir! You played this difficult hole very well!", "vi": "Nice Par! Ông xử lý hố khó này quá tuyệt vời ạ!" },
+            { "en": "B. Par is a bad score on this hole, Sir.", "vi": "Par là điểm tệ ở hố này ạ" },
+            { "en": "C. Why didn't you get an Eagle, Sir?", "vi": "Sao ông không làm được Eagle ạ?" },
+            { "en": "D. The hole was too short, Sir.", "vi": "Hố này ngắn quá thôi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "mcq",
+        "title": "[6.4 Đóng vai 6] Tình huống khách cứu bóng cát ngoạn mục (bunker save): Caddy khích lệ chân thành:",
+        "audioText": "Excellent save out of the bunker, Sir! Good job!",
+        "phonetic": "/ˈek.səl.ənt seɪv aʊt əv ðə ˈbʌŋ.kər, sɜːr! ɡʊd dʒɑːb/",
+        "translation": "Cứu bóng ra khỏi bẫy cát xuất sắc quá ông ơi! Làm tốt lắm ạ!",
+        "options": [
+            { "en": "A. Excellent save out of the bunker, Sir! Good job!", "vi": "Cứu bóng bẫy cát xuất sắc! Làm tốt lắm ạ!" },
+            { "en": "B. You hit the sand instead of ball, Sir.", "vi": "Ông đánh vào cát chứ không phải bóng ạ" },
+            { "en": "C. Leave the ball in the bunker, Sir.", "vi": "Đẩy bóng lại trong cát đi ạ" },
+            { "en": "D. You got lucky in the sand, Sir.", "vi": "Ông may trong cát thôi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "mcq",
+        "title": "[6.4 Đóng vai 7] Tình huống Caddy mời khách ngồi chỗ mát nhất tại trạm dừng nghỉ:",
+        "audioText": "Please take a seat here, Sir. It's very cool and breezy.",
+        "phonetic": "/pliːz teɪk ə siːt hɪər, sɜːr. ɪts ˈver.i kuːl ænd ˈbriː.zi/",
+        "translation": "Mời ông ngồi đây ạ. Chỗ này rất mát mẻ và thoáng gió.",
+        "options": [
+            { "en": "A. Please take a seat here, Sir. It's very cool and breezy.", "vi": "Mời ông ngồi đây, chỗ này rất mát và thoáng gió ạ" },
+            { "en": "B. Sit under the hot direct sun, Sir.", "vi": "Ngồi dưới nắng gắt trực tiếp đi ạ" },
+            { "en": "C. Stand up during the whole break, Sir.", "vi": "Đứng suốt thời gian nghỉ đi ạ" },
+            { "en": "D. The chairs are dirty, don't sit, Sir.", "vi": "Ghế bẩn lắm đừng ngồi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "mcq",
+        "title": "[6.4 Đóng vai 8] Tình huống Caddy chủ động xin phép lấy thực đơn đồ ăn/uống tại Kiosk:",
+        "audioText": "May I get the menu for you, Sir? We have fresh coconut and sandwiches.",
+        "phonetic": "/meɪ aɪ ɡet ðə ˈmen.juː fɔːr juː, sɜːr? wiː hæv freʃ ˈkoʊ.kə.nʌt ænd ˈsæn.wɪdʒ.ɪz/",
+        "translation": "Em xin phép lấy thực đơn cho ông nhé ạ? Nhà chòi có dừa tươi và bánh mì kẹp ạ.",
+        "options": [
+            { "en": "A. May I get the menu for you, Sir? We have fresh coconut and sandwiches.", "vi": "Em lấy thực đơn cho ông nhé? Có dừa tươi và bánh mì ạ" },
+            { "en": "B. Buy all food items at once, Sir.", "vi": "Mua hết đồ ăn cùng lúc đi ạ" },
+            { "en": "C. We don't have menu here, Sir.", "vi": "Ở đây không có thực đơn đâu ạ" },
+            { "en": "D. Go get the menu by yourself, Sir.", "vi": "Tự đi lấy thực đơn đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "mcq",
+        "title": "[6.4 Đóng vai 9] Tình huống hết giờ nghỉ, Caddy nhắc khách ra xe di chuyển sang hố tiếp theo:",
+        "audioText": "Sir, the group ahead is moving. Are you ready to continue to the next tee?",
+        "phonetic": "/sɜːr, ðə ɡruːp əˈhed ɪz ˈmuː.vɪŋ. ɑːr juː ˈred.i tə kənˈtɪn.juː tə ðə nekst tiː/",
+        "translation": "Thưa ông, nhóm phía trước đang di chuyển rồi ạ. Ông đã sẵn sàng sang tee box tiếp theo chưa ạ?",
+        "options": [
+            { "en": "A. Group ahead is moving. Are you ready to continue to next tee, Sir?", "vi": "Nhóm trước di chuyển rồi, ông sẵn sàng tiếp tục chưa ạ?" },
+            { "en": "B. Stay here for 2 more hours, Sir.", "vi": "Ở lại đây thêm 2 tiếng nữa đi ạ" },
+            { "en": "C. We are cancelling the remaining holes, Sir.", "vi": "Chúng em hủy các hố còn lại rồi ạ" },
+            { "en": "D. Hurry up, run fast to the cart, Sir.", "vi": "Nhanh lên chạy thật nhanh ra xe đi ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "mcq",
+        "title": "[6.4 Đóng vai 10] Tình huống golfer chuẩn bị gạt bóng trên green: Caddy đứng né vị trí gây xao nhãng:",
+        "audioText": "Quiet, please. I will move over there so I don't distract your putting line, Sir.",
+        "phonetic": "/ˈkwaɪ.ət, pliːz. aɪ wɪl muːv ˈoʊ.vɚ ðer soʊ aɪ doʊnt dɪˈstrækt jʊər ˈpʊt.ɪŋ laɪn, sɜːr/",
+        "translation": "Xin giữ yên lặng ạ. Em sẽ di chuyển sang bên kia để không làm vướng đường gạt bóng của ông ạ.",
+        "options": [
+            { "en": "A. Quiet, please. I will move over there so I don't distract your line, Sir.", "vi": "Xin yên lặng. Em đứng sang kia để không làm vướng line ạ" },
+            { "en": "B. Stand directly on the putting line, Sir.", "vi": "Đứng trực tiếp trên đường gạt bóng ạ" },
+            { "en": "C. Make loud noises during putt, Sir.", "vi": "Tạo tiếng động to khi gạt bóng ạ" },
+            { "en": "D. Cast shadow over the cup, Sir.", "vi": "Đổ bóng che khuất hố gôn ạ" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "fill",
+        "title": "[6.4 Điền từ] Nghe Caddy nhắc giữ yên lặng khi gạt bóng, ĐIỀN TỪ:",
+        "audioText": "Quiet, please! He is putting on the green.",
+        "phonetic": "/ˈkwaɪ.ət, pliːz! hiː ɪz ˈpʊt.ɪŋ ɑːn ðə ɡriːn/",
+        "translation": "Xin giữ yên lặng! Anh ấy đang gạt bóng trên green.",
+        "displaySentence": "_______, please! He is putting on the green.",
+        "targetWord": "Quiet",
+        "hint": "💡 Gợi ý: Từ yêu cầu sự yên lặng."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "fill",
+        "title": "[6.4 Điền từ] Nghe Caddy nhắc di chuyển né tầm mắt golfer, ĐIỀN TỪ:",
+        "audioText": "I will move over there so I don't distract you, Sir.",
+        "phonetic": "/aɪ wɪl muːv ˈoʊ.vɚ ðer soʊ aɪ doʊnt dɪˈstrækt juː, sɜːr/",
+        "translation": "Em sẽ đứng sang bên kia để không làm ông bị phân tâm thưa ông.",
+        "displaySentence": "I will move over there so I don't _______ you, Sir.",
+        "targetWord": "distract",
+        "hint": "💡 Gợi ý: Từ mang nghĩa làm xao nhãng, phân tâm."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "fill",
+        "title": "[6.4 Điền từ] Nghe Caddy nhắc lùi lại vị trí an toàn, ĐIỀN TỪ:",
+        "audioText": "Please stand back, Sir. It is safer here.",
+        "phonetic": "/pliːz stænd bæk, sɜːr. ɪt ɪz ˈseɪf.ər hɪər/",
+        "translation": "Xin đứng lùi lại thưa ông. Đứng ở đây an toàn hơn.",
+        "displaySentence": "Please stand _______, Sir. It is safer here.",
+        "targetWord": "back",
+        "hint": "💡 Gợi ý: Từ đi sau Stand nghĩa là lùi lại."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "fill",
+        "title": "[6.4 Điền từ] Nghe Caddy hỏi xin phép đứng theo dõi bóng giúp khách, ĐIỀN TỪ:",
+        "audioText": "May I stand here to watch your ball, Sir?",
+        "phonetic": "/meɪ aɪ stænd hɪər tə wɑːtʃ jʊər bɔːl, sɜːr/",
+        "translation": "Em xin phép đứng đây để theo dõi bóng giúp ông nhé ạ?",
+        "displaySentence": "May I stand here to _______ your ball, Sir?",
+        "targetWord": "watch",
+        "hint": "💡 Gợi ý: Từ chỉ việc quan sát/theo dõi bóng."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "fill",
+        "title": "[6.4 Điền từ] Nghe Caddy khen ngợi cú gạt bóng đẹp, ĐIỀN TỪ:",
+        "audioText": "Nice putt, Sir! Excellent focus!",
+        "phonetic": "/naɪs pʌt, sɜːr! ˈek.səl.ənt ˈfoʊ.kəs/",
+        "translation": "Cú gạt đẹp quá thưa ông! Sự tập trung xuất sắc!",
+        "displaySentence": "Nice putt, Sir! Excellent _______!",
+        "targetWord": "focus",
+        "hint": "💡 Gợi ý: Từ chỉ sự tập trung."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "fill",
+        "title": "[6.4 Điền từ] Nghe Caddy mời ông lên xe tiếp tục trận đấu, ĐIỀN TỪ:",
+        "audioText": "Are you ready to continue, Sir?",
+        "phonetic": "/ɑːr juː ˈred.i tə kənˈtɪn.juː, sɜːr/",
+        "translation": "Ông đã sẵn sàng tiếp tục chưa ạ?",
+        "displaySentence": "Are you ready to _______, Sir?",
+        "targetWord": "continue",
+        "hint": "💡 Gợi ý: Từ mang nghĩa tiếp tục."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "fill",
+        "title": "[6.4 Điền từ] Nghe Caddy nhắc nhở khoảng cách an toàn, ĐIỀN TỪ:",
+        "audioText": "Please keep a safety distance, Sir.",
+        "phonetic": "/pliːz kiːp ə ˈseɪf.ti ˈdɪs.təns, sɜːr/",
+        "translation": "Xin giữ khoảng cách an toàn thưa ông.",
+        "displaySentence": "Please keep a safety _______, Sir.",
+        "targetWord": "distance",
+        "hint": "💡 Gợi ý: Từ chỉ khoảng cách."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "fill",
+        "title": "[6.4 Điền từ] Nghe Caddy nhắc đứng yên khi khách chuẩn bị vung gậy, ĐIỀN TỪ:",
+        "audioText": "Please stay still while he swings, Sir.",
+        "phonetic": "/pliːz steɪ stɪl waɪl hiː swɪŋz, sɜːr/",
+        "translation": "Xin hãy đứng yên khi anh ấy vung gậy thưa ông.",
+        "displaySentence": "Please stay _______ while he swings, Sir.",
+        "targetWord": "still",
+        "hint": "💡 Gợi ý: Từ gồm 5 ký tự nghĩa là đứng yên lặng."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "fill",
+        "title": "[6.4 Điền từ] Nghe Caddy nhắc né bóng của mình đè lên line gạt bóng, ĐIỀN TỪ:",
+        "audioText": "Watch your shadow on the green, Sir.",
+        "phonetic": "/wɑːtʃ jʊər ˈʃæd.oʊ ɑːn ðə ɡriːn, sɜːr/",
+        "translation": "Hãy chú ý cái bóng của mình trên green thưa ông.",
+        "displaySentence": "Watch your _______ on the green, Sir.",
+        "targetWord": "shadow",
+        "hint": "💡 Gợi ý: Từ chỉ cái bóng nắng."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "fill",
+        "title": "[6.4 Điền từ] Nghe Caddy nhắc tránh chắn tầm nhìn của khách, ĐIỀN TỪ:",
+        "audioText": "Don't stand in his line of sight, Sir.",
+        "phonetic": "/doʊnt stænd ɪn hɪz laɪn əv saɪt, sɜːr/",
+        "translation": "Đừng đứng chắn tầm nhìn của anh ấy thưa ông.",
+        "displaySentence": "Don't stand in his line of _______, Sir.",
+        "targetWord": "sight",
+        "hint": "💡 Gợi ý: Từ chỉ tầm nhìn, ánh mắt."
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "mcq",
+        "title": "[6.4 Văn hóa phục vụ] Khi di chuyển trong khu vực gạt bóng (Green), hành động giao tiếp phi ngôn ngữ ĐÚNG của Caddie là gì?",
+        "audioText": "Stand still like a statue, avoid casting shadow on putting line, and maintain total silence.",
+        "phonetic": "/ˈseɪf.ti/",
+        "translation": "Đứng yên như tượng, không để cái bóng đè lên line gạt và giữ im lặng tuyệt đối.",
+        "options": [
+            { "en": "A. Đứng yên lặng như tượng, tránh để cái bóng (shadow) đè lên đường gạt bóng", "vi": "Tác phong phi ngôn ngữ chuẩn Caddy" },
+            { "en": "B. Vừa đi lại vừa trò chuyện to tiếng bằng điện thoại", "vi": "Gây xao nhãng nghiêm trọng" },
+            { "en": "C. Giẫm trực tiếp lên đường gạt bóng (putting line) của khách", "vi": "Vi phạm văn hóa Golf" },
+            { "en": "D. Khua gậy gây tiếng động lớn", "vi": "Thiếu chuyên nghiệp" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "mcq",
+        "title": "[6.4 Khoảng cách an toàn] Vị trí đứng chuẩn an toàn của Caddie khi Golfer thực hiện cú swing phát bóng là ở đâu?",
+        "audioText": "Stand on the right side out of swing zone and behind the golfer's line of sight.",
+        "phonetic": "/ˈseɪf.ti ˈdɪs.təns/",
+        "translation": "Đứng phía bên phải, ngoài vùng vung gậy và đằng sau tầm nhìn của khách.",
+        "options": [
+            { "en": "A. Đứng bên phải, ngoài vùng vung gậy và phía sau tầm nhìn của khách", "vi": "Vị trí đứng chuẩn an toàn" },
+            { "en": "B. Đứng ngay trực diện trước mặt khách", "vi": "Cực kỳ nguy hiểm" },
+            { "en": "C. Đứng ngay sát sau lưng đường backswing gậy", "vi": "Nguy hiểm va chạm" },
+            { "en": "D. Quỳ xuống ngay cạnh quả bóng", "vi": "Sai kỹ thuật" }
+        ],
+        "correct": 0
+    },
+    {
+        "lesson": "6",
+        "section": "section6.4",
+        "type": "mcq",
+        "title": "[6.4 Tác phong giao tiếp] Khi trao menu, đồ ăn nhẹ hoặc nước uống cho khách tại trạm dừng Halfway House, Caddie thực hiện ra sao?",
+        "audioText": "Always hand over with both hands, mỉm cười nhẹ nhàng và xưng hô Sir/Madam lịch sự.",
+        "phonetic": "/boʊθ hændz/",
+        "translation": "Luôn dùng hai tay, mỉm cười tự nhiên và giao tiếp lịch sự kèm Sir/Madam.",
+        "options": [
+            { "en": "A. Luôn dùng hai tay, mỉm cười tự nhiên và xưng hô Sir/Madam lịch sự", "vi": "Tiêu chuẩn phục vụ 5 sao" },
+            { "en": "B. Đưa bằng 1 tay và quay mặt đi chỗ khác", "vi": "Thiếu tôn trọng" },
+            { "en": "C. Đặt mạnh đồ ăn lên bàn không nói câu nào", "vi": "Thái độ kém" },
+            { "en": "D. Bắt khách tự tới xe lấy đồ", "vi": "Vi phạm tác phong" }
+        ],
+        "correct": 0
+    }
+);
